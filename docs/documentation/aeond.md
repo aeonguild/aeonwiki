@@ -10,22 +10,21 @@ It is a tool to manage network connections.
 ## Options
 
 
-### `--config`
+### `--config-file`
 
-Specify configuration file. Previously `--config-file`
 
 ### `--help`                                
 
 Produce help message
 
-### `--bootstrap-address`
+### `--bootstrap-daemon-address`
 
 URL of a 'bootstrap' remote daemon that the connected wallets can use 
-while this daemon is still not fully synced.  Previously `--bootstrap-daemon-address`.
+while this daemon is still not fully synced.  
 
-### `--bootstrap-login`
+### `--bootstrap-daemon-login`
 
-Specify username:password for the bootstrap daemon login. Previously `--bootstrap-daemon-login`.
+Specify username:password for the bootstrap daemon login. 
 
 ### `--data-dir`
 
@@ -52,17 +51,17 @@ Sync up most of the way by using embedded, known block hashes.s
 How many blocks to sync at once during chain synchronization (0 = adaptive). 
 Previously `--block-sync-size`.
 
-### `--limit-mempool`
+### `--max-txpool-weight`
 
-Set maximum txpool weight in bytes. Previously `--max-txpool-weight`.
+Set maximum txpool weight in bytes.
 
-### `--limit-peers-in`
+### `--in-peers`
 
-set max number of in peers. Previously `--in-peers`.
+set max number of in peers. 
 
-### `--limit-peers-out`
+### `--out-peers`
 
-set max number of out peers. Previously `--out-peers`.
+set max number of out peers.
 
 ### `--limit-rate`
 
@@ -76,38 +75,34 @@ set limit-rate-up [kB/s]
 
 set limit-rate-down [kB/s]
 
-### `--limit-threads`
+### `--max-concurrency`
 
-Max number of threads to use for a parallel job. Previously `--max-concurrency`.
-
-### `--limit-threads-blocks`
+### `--prep-blocks-threads`
 
 Max number of threads to use when preparing block hashes in groups. 
-Previously `--prep-blocks-threads`.
 
 ### `--log-file` 
 
 Specify log file
 
-### `--log-file-size`
+### `--max-log-file-size`
 
-Specify maximum log file size [B]. Previously `--max-log-file-size`.
+Specify maximum log file size [B]. 
 
-### `--log-file-count`
+### `--max-log-files`
 
 Specify maximum number of rotated log files to be saved 
-(no limit by setting to 0). Previously `--max-log-files`.
+(no limit by setting to 0). 
 
 ### `--log-level` 
 
 Specify log level 0-4.
 
-### `--notify-block`                    
+### `--block-notify`                    
 
 Run a program for each new block, '%s' will be replaced by the block hash. 
-Previously `--block-notify`.
 
-### `--notify-block-rate`               
+### `--block-rate-notify`               
 
 Run a program when the block rate undergoes large fluctuations. 
 This might be a sign of large amounts of hash rate going on and 
@@ -117,84 +112,83 @@ observation window, %b by the number of blocks observed within
 that window, and %e by the number of blocks that was expected 
 in that window. It issuggested that this notification is used 
 to automatically increase the number of confirmations required 
-before a payment is acted upon. Previously `--block-rate-notify`.
+before a payment is acted upon. 
 
-### `--notify-reorg`                    
+### `--reorg-notify`                    
 
 Run a program for each reorg, '%s' will be replaced by the split height, 
 '%h' will be replaced by the new blockchain height, '%n' will be replaced 
 by the  number of new blocks in the new chain, and '%d' will be replaced 
 by the number of blocks discarded from the old chain. 
-Previously `--reorg-notify`.
+Previously ``.
 
-### `--node-ip`
+### `--p2p-bind-ip`
 
-Interface for p2p network protocol. Previously `--p2p-bind-ip`.
+Interface for p2p network protocol. 
  
-### `--node-offline`
+### `--offline`
 
-Do not listen for peers, nor connect to any. Previously `--offline`.
+Do not listen for peers, nor connect to any.
 
-### `--node-port` 
+### `--p2p-bind-port` 
 
-Port for p2p network protocol. Previously `--p2p-bind-port`.
+Port for p2p network protocol. Previously ``.
 
-### `--node-port-hide`
+### `--hide-my-port`
 
-Do not announce yourself as peerlist candidate.  Previously `--hide-my-port`.
+Do not announce yourself as peerlist candidate.
 
-### `--node-port-external`
+### `--p2p-external-port`
 
 External port for p2p network protocol (if port forwarding used with NAT).   
-Previously `--p2p-external-port`.
 
-### `--node-port-external-confirm`
+### `--confirm-external-bind`
 
-Confirm ip value is NOT a loopback (local) IP. Previously `--confirm-external-bind`.
+Confirm ip value is NOT a loopback (local) IP.
 
-### `--peer`
+### `--add-peer`
 
-Manually add peer to local peerlist. Previously `--add-peer`.
+Manually add peer to local peerlist. 
 
-### `--peer-exclusive`
+### `--add-exclusive-node`
 
 Specify list of peers to connect to only. If this option is given the options 
-add-priority-node and seed-node are ignored. Previously `--add-exclusive-node`
+add-priority-node and seed-node are ignored. 
 
 ### `--peer-priority`
 
 Specify list of peers to connect to and attempt to keep the connection open
 
-### `--rpc-ip`
+### `--rpc-bind-ip`
 
-Specify IP to bind RPC server. Previously `--rpc-bind-ip`.
+Specify IP to bind RPC server.
 
 ### `--rpc-login`
 
 Specify `username[:password]` required for RPC server.
 
-### `--rpc-origins`
-Specify a comma separated list of origins to allow cross origin resource sharing. Previously `--rpc-access-control-origins`.
+### `--rpc-access-control-origins`
+Specify a comma separated list of origins to allow cross origin resource sharing.
 
-### `--rpc-port`
+### `--rpc-bind-port`
 
-Specify IP to bind RPC server. Previously `--rpc-bind-port`.
+Specify IP to bind RPC server.
 
-### `--rpc-safe-mode`
+### `--restricted-rpc`
 
-Restrict RPC to view only commands and do not return privacy sensitive data in RPC calls. Previously `--restricted-rpc`.
+Restrict RPC to view only commands and do not return privacy sensitive data in RPC calls. 
 
-### `--rpc-safe-mode-port`
+### `--rpc-restricted-port`
 
-Port for restricted RPC server. Previously `--rpc-restricted-port`.
+Port for restricted RPC server. 
 
-### `--rpc-zmq-ip`
+### `--zmq-rpc-bind-ip`
 
-IP for ZMQ RPC server to listen on. Previously `--zmq-rpc-bind-ip`.
+IP for ZMQ RPC server to listen on. 
 
-### `--rpc-zmq-port`
+### `--zmq-rpc-bind-port`
 
-Port for ZMQ RPC server to listen on. Previously `--zmq-rpc-bind-port`.
+Port for ZMQ RPC server to listen on. 
 
 ### `--test-dbg-lock-sleep`
 
@@ -208,79 +202,78 @@ For net tests: in download, discard ALL blocks instead checking/saving them (ver
 
 Like test-drop-download but discards only after around certain height.
 
-### `--test-fixed-diff`
+### `--fixed-difficulty`
 
-Fixed difficulty used for testing. Previously `--fixed-difficulty`.
+Fixed difficulty used for testing. 
 
-### `--test-blocks-fluffy`
+### `--fluffy-blocks`
 
-Relay blocks as fluffy blocks (obsolete, now default)Previously `--fluffy-blocks`.
+Relay blocks as fluffy blocks (obsolete, now default)
 
-### `--test-blocks-no-fluffy`
+### `--no-fluffy-blocks`
 
-Relay blocks as normal blocks. Previously `--no-fluffy-blocks`.
+Relay blocks as normal blocks. 
 
-### `--test-local-ip`
+### `--allow-local-ip`
 
-Allow local ip add to peer list, mostly in debug purposes. Previously `--allow-local-ip`.
+Allow local ip add to peer list, mostly in debug purposes.
 
-### `--test-pow-enable-bg`
+### `--bg-mining-enable`
 
-enable/disable background mining. Previously `--bg-mining-enable`.
+enable/disable background mining. Previously .
 
-### `--test-pow-ignore-battery`
+### `--bg-mining-ignore-battery`
 
-if true, assumes plugged in when unable to query system power status. Previously `--bg-mining-ignore-battery`.
+if true, assumes plugged in when unable to query system power status.
 
-### `--test-pow-idle-interval`
+### `--bg-mining-min-idle-interval`
 
-Specify min lookback interval in seconds for determining idle state. Previously `--bg-mining-min-idle-interval`.
+Specify min lookback interval in seconds for determining idle state.
 
-### `--test-pow-idle-threshold`
+### `--bg-mining-idle-threshold`
 
-Specify minimum avg idle percentage over lookback interval. Previously `--bg-mining-idle-threshold`.
+Specify minimum avg idle percentage over lookback interval. 
 
-### `--test-pow-cpu-limit`
+### `--bg-mining-miner-target`
 
-Specify maximum percentage cpu use by miner(s). Previously `--bg-mining-miner-target`.
+Specify maximum percentage cpu use by miner(s).
 
-### `--test-pow-address`
+### `--start-mining`
 
-Specify wallet address to mining for. Previously `--start-mining`.
+Specify wallet address to mining for.
 
-### `--test-pow-threads`
+### `--mining-threads`
 
-Specify mining threads count. Previously `--mining-threads`.
+Specify mining threads count. 
 
-### `--test-reg`
+### `--regtest`
 
-Run in a regression testing mode. Previously `--regtest`.
+Run in a regression testing mode. 
 
-### Other
 
 #### `--coinbase-message` 
 
 Specify file for extra messages to include into ransactions
 
-#### `--daemon`
+#### `--detach`
 
-Run as background process. Previously `--detach`.
+Run as background process.
 
-#### `--dns-checkpoint`
+#### `--enforce-dns-checkpoints`
 
-checkpoints from DNS server will be enforced. Previously `--enforce-dns-checkpoints`.
+checkpoints from DNS server will be enforced.
 
-#### `--dns-checkpoint-disable`             
+#### `--disable-dns-checkpoints`        
 
-Do not retrieve checkpoints from DNS. Previously `--disable-dns-checkpoints`.
+Do not retrieve checkpoints from DNS..
 
 #### `--non-interactive`
 
 Run non-interactive
 
-#### `--pid`
+#### `--pidfile`
 
-File path to write the daemon's PID to a file. Previously `--pidfile`.
+File path to write the daemon's PID to a file. .
 
 #### `--stagenet`
 
@@ -290,29 +283,29 @@ Run on stagenet. The wallet must be launched with --stagenet flag.
 
 Run on testnet. The wallet must be launched with --testnet flag.
 
-#### `--time-stats`
+#### `--show-time-stats`
 
-Show time-stats when processing blocks/txs and disk synchronization. Previously `--show-time-stats`.
+Show time-stats when processing blocks/txs and disk synchronization.
 
 #### `--tos-flag`
 
 set terms of service flag
 
-#### `--update` 
+#### `--check-update` 
 
-Check for new versions of Aeon. Previously `--check-update`.
+Check for new versions of Aeon.
 
-#### `--upnp-disable`
+#### `--no-idg`
 
-Disable UPnP port mapping. Previously `--no-idg`.
+Disable UPnP port mapping. 
 
 #### `--version`                            
 
 Output version information
 
-#### `--version-compile`                          
+#### `--os-version`                  
 
-OS for which this executable was compiled. Previously `--os-version`.
+OS for which this executable was compiled.
 
 
 ## Commands

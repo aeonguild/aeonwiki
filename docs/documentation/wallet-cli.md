@@ -11,9 +11,9 @@ work correctly.
 
 ## Options
 
-### `--config`
+### `--config-file`
 
-Config file. Previously `--config-file`.
+Config file. 
 
 ### `--help`
 
@@ -23,138 +23,138 @@ Produce a help message with a list of available options.
 
 Specify log file.
 
-### `--log-file-size`
+### `--max-log-file-size`
 
-Specify maximum log file size [B].  Previously `--max-log-file-size`.
+Specify maximum log file size [B].  
 
-### `--log-file-count`
+### `--max-log-files`
 
-Specify maximum number of rotated log files to be saved (no limit by setting to 0).  Previously `--max-log-files`.
+Specify maximum number of rotated log files to be saved (no limit by setting to 0).  
 
 ### `--log-level`
 
 0-4 or categories
 
-### `--node-address`
+### `--daemon-address`
 
-Use aeon daemon at ###host###:###port###. Previously `--daemon-address`.
+Use aeon daemon at ###host###:###port###. 
 ```
 ./aeon-wallet-cli --daemon-address=192.168.0.1:9149
 ```
 
-### `--node-ip`
+### `--daemon-host`
 
-Use daemon instance at host arg instead of localhost. Previously `--node-ip`.
+Use daemon instance at host arg instead of localhost. 
 
-### `--node-login`
+### `--daemon-login`
 
-Specify `username[:password]` for daemon RPC client. Previously `--daemon-login`.
+Specify `username[:password]` for daemon RPC client. 
 
-### `--node-no-relay`
+### `--do-not-relay`
 
-The newly created transaction will not be relayed to the Aeon network. Previously `--do-not-relay`.
+The newly created transaction will not be relayed to the Aeon network.
 
-### `--node-port`
+### `--daemon-port`
 
-Use daemon instance at port arg instead of 11181. Previously `--daemon-port`.
+Use daemon instance at port arg instead of 11181. 
 
-### `--node-trusted`
+### `--trusted-daemon`
 
-Enable commands which rely on a trusted daemon. Previously `--trusted-daemon`.
+Enable commands which rely on a trusted daemon. 
 
-### `--node-untrusted`
+### `--untrusted-daemon`
 
-Disable commands which rely on a trusted daemon. Previously `--untrusted-daemon.`.
+Disable commands which rely on a trusted daemon. 
 
-### `--node-version-conflict`
+### `--allow-mismatched-daemon-version`
 
-Allow communicating with a daemon that uses a different RPC version. Previously `--allow-mismatched-daemon-version`.
+Allow communicating with a daemon that uses a different RPC version. 
 
-### `--restore-from-seed`
+### `--restore-deterministic-wallet`
 
-Recover wallet using Electrum-style mnemonic seed. Previously `--restore-deterministic-wallet`.
+Recover wallet using Electrum-style mnemonic seed. 
 
-### `--restore-from-seed-multisig`
+### `--restore-multisig-wallet`
 
-Recover multisig wallet using Electrum-style mnemonic seed.Previously `--restore-multisig-wallet`.
+Recover multisig wallet using Electrum-style mnemonic seed.
 
-### `--wallet`
+### `--generate-new-wallet`
 
-Generate new wallet and save it to arg. Previously `--generate-new-wallet`.
+Generate new wallet and save it to arg. 
 
-### `--wallet-address-file`
+### `--create-address-file`
 
-Create an address file for new wallets. Previously `--create-address-file`.
+Create an address file for new wallets. 
 
-### `--wallet-from-file`
+### `--wallet-file`
 
-Use wallet Previously `--wallet-file`.
+Use wallet 
 
-### `--wallet-from-json`
+### `--generate-from-json`
 
-Generate wallet from JSON format file. Previously `--generate-from-json`.
+Generate wallet from JSON format file. 
 
-### `--wallet-from-keys`
+### `--generate-from-keys`
 
-Generate wallet from private keys Previously `--generate-from-keys`.
+Generate wallet from private keys 
 
-### `--wallet-from-seed`
+### `--electrum-seed`
 
-Specify Electrum seed for wallet recovery/creation. Previously `--electrum-seed`.
+Specify Electrum seed for wallet recovery/creation. 
 
-### `--wallet-from-spend-key`
+### `--generate-from-spend-key`
 
-Generate deterministic wallet from spend key. Previously `--generate-from-spend-key`.
+Generate deterministic wallet from spend key. 
 
-### `--wallet-from-view-key`
+### `--generate-from-view-key`
 
-Generate incoming-only wallet from view key. Previously `--generate-from-view-key`.
+Generate incoming-only wallet from view key. 
 
-### `--wallet-height`
+### `--restore-height`
 
-Restore from specific blockchain height. Previously `--restore-height`.
+Restore from specific blockchain height. 
 
-### `--wallet-language`
+### `--mnemonic-language`
 
-Language for mnemonic.  Previously `--mnemonic-language`.
+Language for mnemonic.  
 
 ### `--wallet-non-deterministic`
 
 Generate non-deterministic view and spend keys
 
-### `--wallet-multisig`
+### `--generate-from-multisig-keys`
 
-Generate a master wallet from multisig wallet keys Previously `--generate-from-multisig-keys`.
+Generate a master wallet from multisig wallet keys 
 
-### `--wallet-password`
+### `--password`
 
-Wallet password (escape/quote as needed). Previously `--password`.
+Wallet password (escape/quote as needed). 
 
-### `--wallet-password-file`
+### `--password-file`
 
-Wallet password file. Previously `--password-file`.
+Wallet password file. 
 
-### `--wallet-ringdb-dir`
+### `--shared-ringdb-dir`
 
-Set shared ring database path. Previously `--shared-ringdb-dir`.
+Set shared ring database path. 
 
 ### Other
 
-#### `--english`
+#### `--use-english-language-names`
 
-Display English language names. Previously `--use-english-language-names`.
+Display English language names. 
 
-#### `--key-rounds`
+#### `--kdf-rounds`
 
-Number of rounds for the key derivation function.  Previously `--kdf-rounds`.
+Number of rounds for the key derivation function.  
 
-#### `--limit-threads`
+#### `--max-concurrency`
 
-Max number of threads to use for a parallel job.  Previously `--max-concurrency`.
+Max number of threads to use for a parallel job.  
 
-#### `--notify-tx`                     
+#### `--tx-notify`                 
 
-Run a program for each new incoming transaction, '%s' will be replaced by the transaction hash. Previously `--tx-notify`.
+Run a program for each new incoming transaction, '%s' will be replaced by the transaction hash. 
 
 #### `--stagenet`
 
@@ -174,161 +174,88 @@ Output version information ###Aeon 'Chronos' (v0.14.0.0-release)###
 
 ## Commands
 ## Commands
-
-### Account
 #### `account`
-#### `account_balance`
-#### `account_balance_proof`
-  check reserve proof
-#### `account_balance_verify`
-  get reserve proof
-#### `account_new`
-#### `account_label`
-#### `account_spendkey`
- spendkey
-#### `account_tag`
-#### `account_tag_delete`
-account untag
-#### `account_tag_description`
-#### `account_viewkey`
- viewkey
-### Address
-#### `address`
-#### `address_all`
-#### `address_integrated`
-integrated address
-#### `address_label`
-integrated address
-#### `address_new`
-### Contacts
-#### `contacts`
-address_book
-#### `contacts_add`
-address_book add
-#### `contacts_delete`
-address_book delete
-### Multisig
-#### `multisig_new`
-make multisig
-#### `multisig_prepare`
-prepare multisig
-#### `multisig_exchange_keys`
-exchange multisig keys
-#### `multisig_export`
-export multisig info
-#### `multisig_finalize`
-finalize multisig
-#### `multisig_import`
-import multisig info
-#### `multisig_sign`
-sign multisig
-#### `multisig_submit`
-submit multisig
-### Outputs
-#### `output_is_spent`
-is output spent
-#### `output_mark_spent`
-mark output spent
-#### `output_mark_unspent`
-mark output unspent
-#### `output_export`
-export outputs
-#### `output_import`
-import outputs
-#### `output_unspent`
-unspent outputs
-### Transfer
-#### `transfer`
-#### `transfer_locked`
-locked transfer
-#### `transfer_locked_sweep_all`
-locked sweep all
-#### `transfer_sweep_all`
-sweep all
-#### `transfer_sweep_below`
-sweep_below
-#### `transfer_sweep_single`
-sweep single
-#### `transfer_sweep_unmixable`
-sweep unmixable
-### Txs
-#### `tx_export`
-export transfers
-#### `tx_incoming`
-incoming transfers
-#### `tx_key_export`
-export key images
-#### `tx_key_import`
-import key images
-#### `tx_key_set`
-set_tx_key
-#### `tx_multisig_export_raw`
-export raw multisig tx
-#### `tx_note`
-set_tx_note
-#### `tx_payment_id`
-payment id
-#### `tx_prove_address`
-get tx proof
-#### `tx_prove_amount`
-get spend proof
-#### `tx_prove_key`
-get tx key
-#### `tx_ring_print`
-print ring
-#### `tx_sign`
-sign transfer
-#### `tx_verify_address`
-check tx proof
-#### `tx_verify_amount`
-check spend proof
-#### `tx_verify_key`
-check tx key
-#### `tx_view`
-show transfer
-#### `tx_view_type`
-show transfers
-### Wallet
-#### `wallet`
-get description
-#### `wallet_info`
-#### `wallet_password`
-password
-#### `wallet_rescan`
-rescan_bc
-#### `wallet_rescan_spent`
-rescan_spent
-#### `wallet_seed`
-seed
-#### `wallet_seed_encrypt`
-encrypted seed
-#### `wallet_set_account`
-account switch
-#### `wallet_set_description`
-set_description
-#### `wallet_sync`
-refresh
-#### `wallet_watch_only_export`
-save_watch_only
-### Other
-#### `help`
-#### `donate`
-#### `payments`
-set daemon
-#### `height`
-bc height
+#### `account new <label text with white spaces allowed>`
+#### `account switch <index>`
+#### `account label <index> <label text with white spaces allowed>`
+#### `account tag <tag_name> <account_index_1> [<account_index_2> ...]`
+#### `account untag <account_index_1> [<account_index_2> ...]`
+#### `account tag_description <tag_name> <description>`
+#### `address [ new <label text with white spaces allowed> | all | <index_min> [<index_max>] | label <index> <label text with white spaces allowed>]`
+#### `address_book [(add ((<address> [pid <id>])|<integrated address>) [<description possibly with whitespaces>])|(delete <index>)]`
+#### `balance [detail]`
+#### `bc_height`
+#### `check_reserve_proof <address> <signature_file> [<message>]`
+#### `check_spend_proof <txid> <signature_file> [<message>]`
+#### `check_tx_key <txid> <txkey> <address>`
+#### `check_tx_proof <txid> <address> <signature_file> [<message>]`
+#### `donate [index=<N1>[,<N2>,...]] [<priority>] [<ring_size>] <amount> [<payment_id>]`
+#### `encrypted_seed`
+#### `exchange_multisig_keys <string> [<string>...]`
+#### `export_key_images <file>`
+#### `export_multisig_info <filename>`
+#### `export_outputs <file>`
+#### `export_raw_multisig_tx <filename>`
+#### `export_transfers [in|out|all|pending|failed|coinbase] [index=<N1>[,<N2>,...]] [<min_height> [<max_height>]] [output=<filepath>]`
+#### `finalize_multisig <string> [<string>...]`
+#### `get_description`
+#### `get_reserve_proof (all|<amount>) [<message>]`
+#### `get_spend_proof <txid> [<message>]`
+#### `get_tx_key <txid>`
+#### `get_tx_note <txid>`
+#### `get_tx_proof <txid> <address> [<message>]`
+#### `help [<command>]`
+#### `import_key_images <file>`
+#### `import_multisig_info <filename> [<filename>...]`
+#### `import_outputs <file>`
+#### `incoming_transfers [available|unavailable] [verbose] [index=<N1>[,<N2>[,...]]]`
+#### `integrated_address [<payment_id> | <address>]`
+#### `is_output_spent <amount>/<offset>`
+#### `locked_sweep_all [index=<N1>[,<N2>,...]] [<priority>] [<ring_size>] <address> <lockblocks> [<payment_id>]`
+#### `locked_transfer [index=<N1>[,<N2>,...]] [<priority>] [<ring_size>] (<URI> | <addr> <amount>) <lockblocks> [<payment_id>]`
+#### `make_multisig <threshold> <string1> [<string>...]`
+#### `mark_output_spent <amount>/<offset> | <filename> [add]`
+#### `mark_output_unspent <amount>/<offset>`
+#### `password`
+#### `payment_id`
+#### `payments <PID_1> [<PID_2> ... <PID_N>]`
+#### `prepare_multisig`
+#### `print_ring <key_image> | <txid>`
+#### `refresh`
+#### `rescan_bc`
+#### `rescan_spent`
 #### `save`
 #### `save_bc`
 #### `save_known_rings`
-#### `set`
-#### `set log`
-#### `set node`
-#### `set_ring`
-#### `sign`
+#### `save_watch_only`
+#### `seed`
+#### `set <option> [<value>]`
+#### `set_daemon <host>[:<port>] [trusted|untrusted]`
+#### `set_description [free text note]`
+#### `set_log <level>|{+,-,}<categories>`
+#### `set_ring <filename> | ( <key_image> absolute|relative <index> [<index>...] )`
+#### `set_tx_key <txid> <tx_key>`
+#### `set_tx_note <txid> [free text note]`
+#### `show_transfer <txid>`
+#### `show_transfers [in|out|pending|failed|pool|coinbase] [index=<N1>[,<N2>,...]] [<min_height> [<max_height>]]`
+#### `sign <file>`
+#### `sign_multisig <filename>`
+#### `sign_transfer [export_raw]`
+#### `spendkey`
+#### `start_mining [<number_of_threads>] [bg_mining] [ignore_battery]`
 #### `status`
-#### `start_mining`
 #### `stop_mining`
-#### `verify`
+#### `submit_multisig <filename>`
+#### `submit_transfer`
+#### `sweep_all [index=<N1>[,<N2>,...]] [<priority>] [<ring_size>] <address> [<payment_id>]`
+#### `sweep_below <amount_threshold> [index=<N1>[,<N2>,...]] [<priority>] [<ring_size>] <address> [<payment_id>]`
+#### `sweep_single [<priority>] [<ring_size>] <key_image> <address> [<payment_id>]`
+#### `sweep_unmixable`
+#### `transfer [index=<N1>[,<N2>,...]] [<priority>] [<ring_size>] (<URI> | <address> <amount>) [<payment_id>]`
+#### `unspent_outputs [index=<N1>[,<N2>,...]] [<min_amount> [<max_amount>]]`
+#### `verify <filename> <address> <signature>`
 #### `version`
+#### `viewkey`
+#### `wallet_info`
 
 
