@@ -1,0 +1,39 @@
+site_name: Aeon Docs
+nav:
+  - Introduction: 'index.md'
+  - Tutorial:
+    - Getting started: 'tutorial/getting-started.md'
+    - Basic examples: 'tutorial/basic-examples.md'
+    - FAQ: 'tutorial/faq.md'
+  - Documentation:
+    - Node: 'documentation/aeond.md'
+    - Wallet CLI: 'documentation/wallet-cli.md'
+    - Wallet RPC: 'documentation/wallet-rpc.md'
+  - The project:
+    - Bug report: 'the-project/bug-report.md'
+    - Code of conduct: 'the-project/code-of-conduct.md'
+    - Dependencies: 'the-project/dependencies.md'
+    - Donate: 'the-project/donate.md'
+    - Features: 'the-project/features.md'
+    - History: 'the-project/history.md'
+    - Install: 'the-project/install.md'
+    - Known bugs: 'the-project/known-bugs.md'
+    - TODO: 'the-project/todo.md'
+    - Website info: 'the-project/website-info.md'
+  - Releases:
+    - Chronos: 'releases/chronos.md'
+  - Who and why:
+    - Companies: 'who-and-why/companies.md'
+    - Copyright: 'who-and-why/copyright.md'
+    - Sponsors: 'who-and-why/sponsors.md'
+    - Thanks: 'who-and-why/thanks.md'
+    - The name: 'who-and-why/the-name.md'
+theme: 
+  palette:
+    scheme: slate
+  name: material
+  font:
+    text: Ubuntu
+    code: Ubuntu Mono
+extra_css:
+  - extra.css
