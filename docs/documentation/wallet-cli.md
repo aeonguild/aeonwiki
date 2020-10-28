@@ -13,33 +13,70 @@ work correctly.
 
 ### `--config-file`
 
-Config file. 
+Specify a config file to load options from.
+
+An example config file is shown below.
+
+```
+# /aeon-wallet-cli.conf
+
+daemon-port=18080
+daemon-address=192.168.0.1:9149
+daemon-login=user:rpcpassword
+trusted-daemon=1
+password=walletpassword
+```
+
+Then launch wallet-cli with the following command:
+
+`./aeon-wallet-cli --config-file=/path/to/file/aeon-wallet-cli.conf`
+
+Default argument: 
+
 
 ### `--help`
 
-Produce a help message with a list of available options.
+Produce a help message with a list of these available options.
 
 ### `--log-file`
 
-Specify log file.
+The path to be used for the log file.
+
+Default argument: `aeon-wallet-cli.log`
 
 ### `--max-log-file-size`
 
-Specify maximum log file size [B].  
+Maximum log file size in bytes.
+
+Default argument: `104850000` (100 MB - 7600 bytes.)
 
 ### `--max-log-files`
 
-Specify maximum number of rotated log files to be saved (no limit by setting to 0).  
+Maximum number of rotated log files to be saved (no limit by setting to 0).  
+
+Default argument: `50`
 
 ### `--log-level`
 
-0-4 or categories
+Accepts arugments of `<level|category>`. Aeon code has five log levels: 0 ERROR, 1 WARN, 2 INFO, 3 DEBUG, 4 TRACE. Each of the higher log levels contains the log levels below them. So for example
+
+```
+--log-level=3
+``` 
+
+will display levels 0, 1, 2, and 3. To restrict the log to a specific category, you can use the following example
+
+```
+--log-level=net.p2p:INFO
+```
+
+This will log all ERROR, WARN, and INFO only for net.p2p. To view all net.p2p logs use TRACE as that will log all lower levels.
 
 ### `--daemon-address`
 
-Use aeon daemon at ###host###:###port###. 
+Use aeon daemon at ip-address:port. 
 ```
-./aeon-wallet-cli --daemon-address=192.168.0.1:9149
+--daemon-address=192.168.0.1:9149
 ```
 
 ### `--daemon-host`
@@ -175,52 +212,92 @@ Output version information ###Aeon 'Chronos' (v0.14.0.0-release)###
 ## Commands
 ## Commands
 #### `account`
-#### `account new <label text with white spaces allowed>`
-#### `account switch <index>`
-#### `account label <index> <label text with white spaces allowed>`
-#### `account tag <tag_name> <account_index_1> [<account_index_2> ...]`
-#### `account untag <account_index_1> [<account_index_2> ...]`
-#### `account tag_description <tag_name> <description>`
-#### `address [ new <label text with white spaces allowed> | all | <index_min> [<index_max>] | label <index> <label text with white spaces allowed>]`
-#### `address_book [(add ((<address> [pid <id>])|<integrated address>) [<description possibly with whitespaces>])|(delete <index>)]`
-#### `balance [detail]`
+#### `account new`
+` <label text with white spaces allowed>`
+#### `account switch `
+`<index>`
+#### `account label `
+`<index> <label text with white spaces allowed>`
+#### `account tag `
+`<tag_name> <account_index_1> [<account_index_2> ...]`
+#### `account untag `
+`<account_index_1> [<account_index_2> ...]`
+#### `account tag_description `
+`<tag_name> <description>`
+#### `address `
+`[ new <label text with white spaces allowed> | all | <index_min> [<index_max>] | label <index> <label text with white spaces allowed>]`
+#### `address_book `
+`[(add ((<address> [pid <id>])|<integrated address>) [<description possibly with whitespaces>])|(delete <index>)]`
+#### `balance`
+`[detail]`
 #### `bc_height`
-#### `check_reserve_proof <address> <signature_file> [<message>]`
-#### `check_spend_proof <txid> <signature_file> [<message>]`
-#### `check_tx_key <txid> <txkey> <address>`
-#### `check_tx_proof <txid> <address> <signature_file> [<message>]`
-#### `donate [index=<N1>[,<N2>,...]] [<priority>] [<ring_size>] <amount> [<payment_id>]`
+#### `check_reserve_proof`
+`<address> <signature_file> [<message>]`
+#### `check_spend_proof `
+`<txid> <signature_file> [<message>]`
+#### `check_tx_key `
+`<txid> <txkey> <address>`
+#### `check_tx_proof `
+`<txid> <address> <signature_file> [<message>]`
+#### `donate `
+`[index=<N1>[,<N2>,...]] [<priority>] [<ring_size>] <amount> [<payment_id>]`
 #### `encrypted_seed`
-#### `exchange_multisig_keys <string> [<string>...]`
-#### `export_key_images <file>`
-#### `export_multisig_info <filename>`
-#### `export_outputs <file>`
-#### `export_raw_multisig_tx <filename>`
-#### `export_transfers [in|out|all|pending|failed|coinbase] [index=<N1>[,<N2>,...]] [<min_height> [<max_height>]] [output=<filepath>]`
-#### `finalize_multisig <string> [<string>...]`
+#### `exchange_multisig_keys `
+`<string> [<string>...]`
+#### `export_key_images`
+` <file>`
+#### `export_multisig_info `
+`<filename>`
+#### `export_outputs`
+` <file>`
+#### `export_raw_multisig_tx `
+`<filename>`
+#### `export_transfers`
+` [in|out|all|pending|failed|coinbase] [index=<N1>[,<N2>,...]] [<min_height> [<max_height>]] [output=<filepath>]`
+#### `finalize_multisig`
+`<string> [<string>...]`
 #### `get_description`
-#### `get_reserve_proof (all|<amount>) [<message>]`
-#### `get_spend_proof <txid> [<message>]`
-#### `get_tx_key <txid>`
-#### `get_tx_note <txid>`
-#### `get_tx_proof <txid> <address> [<message>]`
-#### `help [<command>]`
-#### `import_key_images <file>`
-#### `import_multisig_info <filename> [<filename>...]`
-#### `import_outputs <file>`
-#### `incoming_transfers [available|unavailable] [verbose] [index=<N1>[,<N2>[,...]]]`
-#### `integrated_address [<payment_id> | <address>]`
-#### `is_output_spent <amount>/<offset>`
-#### `locked_sweep_all [index=<N1>[,<N2>,...]] [<priority>] [<ring_size>] <address> <lockblocks> [<payment_id>]`
-#### `locked_transfer [index=<N1>[,<N2>,...]] [<priority>] [<ring_size>] (<URI> | <addr> <amount>) <lockblocks> [<payment_id>]`
-#### `make_multisig <threshold> <string1> [<string>...]`
-#### `mark_output_spent <amount>/<offset> | <filename> [add]`
-#### `mark_output_unspent <amount>/<offset>`
+#### `get_reserve_proof `
+`(all|<amount>) [<message>]`
+#### `get_spend_proof`
+` <txid> [<message>]`
+#### `get_tx_key `
+`<txid>`
+#### `get_tx_note `
+`<txid>`
+#### `get_tx_proof `
+`<txid> <address> [<message>]`
+#### `help `
+`[<command>]`
+#### `import_key_images`
+` <file>`
+#### `import_multisig_info`
+` <filename> [<filename>...]`
+#### `import_outputs`
+` <file>`
+#### `incoming_transfers`
+` [available|unavailable] [verbose] [index=<N1>[,<N2>[,...]]]`
+#### `integrated_address`
+` [<payment_id> | <address>]`
+#### `is_output_spent`
+` <amount>/<offset>`
+#### `locked_sweep_all`
+` [index=<N1>[,<N2>,...]] [<priority>] [<ring_size>] <address> <lockblocks> [<payment_id>]`
+#### `locked_transfer`
+` [index=<N1>[,<N2>,...]] [<priority>] [<ring_size>] (<URI> | <addr> <amount>) <lockblocks> [<payment_id>]`
+#### `make_multisig`
+` <threshold> <string1> [<string>...]`
+#### `mark_output_spent`
+` <amount>/<offset> | <filename> [add]`
+#### `mark_output_unspent`
+` <amount>/<offset>`
 #### `password`
 #### `payment_id`
-#### `payments <PID_1> [<PID_2> ... <PID_N>]`
+#### `payments`
+` <PID_1> [<PID_2> ... <PID_N>]`
 #### `prepare_multisig`
-#### `print_ring <key_image> | <txid>`
+#### `print_ring`
+` <key_image> | <txid>`
 #### `refresh`
 #### `rescan_bc`
 #### `rescan_spent`
@@ -229,31 +306,51 @@ Output version information ###Aeon 'Chronos' (v0.14.0.0-release)###
 #### `save_known_rings`
 #### `save_watch_only`
 #### `seed`
-#### `set <option> [<value>]`
-#### `set_daemon <host>[:<port>] [trusted|untrusted]`
-#### `set_description [free text note]`
-#### `set_log <level>|{+,-,}<categories>`
-#### `set_ring <filename> | ( <key_image> absolute|relative <index> [<index>...] )`
-#### `set_tx_key <txid> <tx_key>`
-#### `set_tx_note <txid> [free text note]`
-#### `show_transfer <txid>`
-#### `show_transfers [in|out|pending|failed|pool|coinbase] [index=<N1>[,<N2>,...]] [<min_height> [<max_height>]]`
-#### `sign <file>`
-#### `sign_multisig <filename>`
-#### `sign_transfer [export_raw]`
+#### `set`
+` <option> [<value>]`
+#### `set_daemon`
+` <host>[:<port>] [trusted|untrusted]`
+#### `set_description`
+` [free text note]`
+#### `set_log`
+` <level>|{+,-,}<categories>`
+#### `set_ring`
+` <filename> | ( <key_image> absolute|relative <index> [<index>...] )`
+#### `set_tx_key`
+` <txid> <tx_key>`
+#### `set_tx_note`
+` <txid> [free text note]`
+#### `show_transfer`
+` <txid>`
+#### `show_transfers`
+` [in|out|pending|failed|pool|coinbase] [index=<N1>[,<N2>,...]] [<min_height> [<max_height>]]`
+#### `sign`
+` <file>`
+#### `sign_multisig`
+` <filename>`
+#### `sign_transfer`
+` [export_raw]`
 #### `spendkey`
-#### `start_mining [<number_of_threads>] [bg_mining] [ignore_battery]`
+#### `start_mining`
+` [<number_of_threads>] [bg_mining] [ignore_battery]`
 #### `status`
 #### `stop_mining`
-#### `submit_multisig <filename>`
+#### `submit_multisig`
+` <filename>`
 #### `submit_transfer`
-#### `sweep_all [index=<N1>[,<N2>,...]] [<priority>] [<ring_size>] <address> [<payment_id>]`
-#### `sweep_below <amount_threshold> [index=<N1>[,<N2>,...]] [<priority>] [<ring_size>] <address> [<payment_id>]`
-#### `sweep_single [<priority>] [<ring_size>] <key_image> <address> [<payment_id>]`
+#### `sweep_all`
+` [index=<N1>[,<N2>,...]] [<priority>] [<ring_size>] <address> [<payment_id>]`
+#### `sweep_below `
+`<amount_threshold> [index=<N1>[,<N2>,...]] [<priority>] [<ring_size>] <address> [<payment_id>]`
+#### `sweep_single`
+` [<priority>] [<ring_size>] <key_image> <address> [<payment_id>]`
 #### `sweep_unmixable`
-#### `transfer [index=<N1>[,<N2>,...]] [<priority>] [<ring_size>] (<URI> | <address> <amount>) [<payment_id>]`
-#### `unspent_outputs [index=<N1>[,<N2>,...]] [<min_amount> [<max_amount>]]`
-#### `verify <filename> <address> <signature>`
+#### `transfer`
+` [index=<N1>[,<N2>,...]] [<priority>] [<ring_size>] (<URI> | <address> <amount>) [<payment_id>]`
+#### `unspent_outputs`
+` [index=<N1>[,<N2>,...]] [<min_amount> [<max_amount>]]`
+#### `verify`
+` <filename> <address> <signature>`
 #### `version`
 #### `viewkey`
 #### `wallet_info`
