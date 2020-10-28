@@ -6,9 +6,15 @@ nav:
     - Basic examples: 'tutorial/basic-examples.md'
     - FAQ: 'tutorial/faq.md'
   - Documentation:
-    - Node: 'documentation/aeond.md'
-    - Wallet CLI: 'documentation/wallet-cli.md'
-    - Wallet RPC: 'documentation/wallet-rpc.md'
+    - Node:
+      - Options: 'documentation/aeond/options.md'
+      - Commands: 'documentation/aeond/commands.md'
+    - Wallet CLI: 
+      - Options: 'documentation/wallet-cli/options.md'
+      - Commands: 'documentation/wallet-cli/commands.md'
+    - Wallet RPC: 
+      - Options: 'documentation/wallet-rpc/options.md'
+      - Commands: 'documentation/wallet-rpc/commands.md'
   - The project:
     - Bug report: 'the-project/bug-report.md'
     - Code of conduct: 'the-project/code-of-conduct.md'
