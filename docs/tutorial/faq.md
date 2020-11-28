@@ -1,4 +1,4 @@
-# Welcome to AeonDocs
+# Welcome to the Aeon Documentation
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 

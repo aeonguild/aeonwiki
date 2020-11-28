@@ -1,3 +1,52 @@
 .md-nav__link {
-    margin: .2em;
+    margin: .0em;
+    white-space: nowrap;
+}
+.md-typeset h3{
+    margin: 0 0 0 0;
+    line-height: 1;
+}
+.md-typeset hr{
+    margin: 0.5 0 0 0.5;
+    line-height: 1;
+}
+.md-typeset{
+    font-size: .7rem;
+    line-height: 1;
+}
+.md-content {
+  max-width: 100ch;
+}
+p {
+  max-width: 100ch;
+}
+pre {
+  max-width: 100ch;
+}
+.md-sidebar {
+  width:auto; 
+}
+.md-grid {
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+:root {
+  --md-primary-fg-color:        #000000;
+  --md-primary-fg-color--dark:  #444444;
+  --md-primary-fg-color--light: #5fbcd3;
+  --md-accent-fg-color: #5fbcd3;
+}
+.md-typeset .md-button {
+    display: inline;
+    float:right;
+    padding: 0.25em;
+    font-weight: 500;
+    border: 0rem solid currentColor;
+    transition: color 125ms,background-color 125ms,border-color 125ms;
+}
+.label:after{
+    content:'?';
+}
+.label:hover:after{
+    content:'ASK A QUESTION';
 }

@@ -1,4 +1,4 @@
-site_name: Aeon Docs
+site_name: Aeon Documentation
 nav:
   - Introduction: 'index.md'
   - Tutorial:
@@ -6,7 +6,7 @@ nav:
     - Basic examples: 'tutorial/basic-examples.md'
     - FAQ: 'tutorial/faq.md'
   - Documentation:
-    - Node:
+    - aeond:
       - Options: 'documentation/aeond/options.md'
       - Commands: 'documentation/aeond/commands.md'
     - Wallet CLI: 
@@ -18,6 +18,37 @@ nav:
   - The project:
     - Bug report: 'the-project/bug-report.md'
     - Code of conduct: 'the-project/code-of-conduct.md'
+    - Data: 
+      - Block Count Daily: 'the-project/data/block_count_24h.md'
+      - Block Count Total: 'the-project/data/block_height.md'
+      - Block Difficulty: 'the-project/data/block_difficulty.md'
+      - Block Reward: 'the-project/data/block_reward.md'
+      - Block Size Median: 'the-project/data/block_size_median_24h.md'
+      - Block Size Total: 'the-project/data/block_size_cum.md'
+      - Block Time Median: 'the-project/data/block_time_median_24h.md'
+      - Fee Daily: 'the-project/data/fee_24h.md'
+      - Fee Daily USD: 'the-project/data/fee_24h_usd.md'
+      - Inflation: 'the-project/data/inflation_1Y.md'
+      - Marketcap USD: 'the-project/data/marketcap.md'
+      - Marketcap BTC: 'the-project/data/marketcap_btc.md'
+      - Marketcap XMR: 'the-project/data/marketcap_xmr.md'
+      - Miner Revenue Daily: 'the-project/data/miner_revenue_24h.md'
+      - Miner Revenue Yearly: 'the-project/data/miner_revenue_1Y.md'
+      - Nonce: 'the-project/data/nonce.md'
+      - Nonce Randomness: 'the-project/data/nonce_dist.md'
+      - Price BTC: 'the-project/data/price_btc.md'
+      - Price USD: 'the-project/data/price.md'
+      - Price XMR: 'the-project/data/price_xmr.md'
+      - Supply: 'the-project/data/supply_total.md'
+      - Supply Locked: 'the-project/data/supply_locked.md'
+      - Transaction Inputs: 'the-project/data/inputs.md'
+      - Transaction Output Volume: 'the-project/data/volume.md'
+      - Transaction Output Volume BTC: 'the-project/data/volume_btc.md'
+      - Transaction Output Volume USD: 'the-project/data/volume_usd.md'
+      - Transaction Outputs: 'the-project/data/outputs.md'
+      - Transaction Outputs-Inputs: 'the-project/data/outputs_inputs.md'
+      - Transactions Daily: 'the-project/data/tx_24h.md'
+      - Version: 'the-project/data/version.md'
     - Dependencies: 'the-project/dependencies.md'
     - Donate: 'the-project/donate.md'
     - Features: 'the-project/features.md'
@@ -35,11 +66,15 @@ nav:
     - Thanks: 'who-and-why/thanks.md'
     - The name: 'who-and-why/the-name.md'
 theme: 
+  logo: img.svg
   palette:
-    scheme: slate
+    scheme: default
   name: material
+  custom_dir: overrides
   font:
-    text: Ubuntu
-    code: Ubuntu Mono
+    text: Ubuntu Mono
+    code: Courier
+markdown_extensions:
+  - attr_list
 extra_css:
   - extra.css
