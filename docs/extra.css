@@ -30,6 +30,10 @@ pre {
     margin-right: 2rem;
     margin-left: 2rem;
 }
+.md-sidebar__scrollwrap::-webkit-scrollbar {
+    width: 0px; 
+    background: transparent;  
+}
 :root {
   --md-primary-fg-color:        #000000;
   --md-primary-fg-color--dark:  #444444;
@@ -41,7 +45,7 @@ pre {
     float:right;
     padding: 0.25em;
     font-weight: 500;
-    border: 0rem solid currentColor;
+    border: 0.01rem solid currentColor;
     transition: color 125ms,background-color 125ms,border-color 125ms;
 }
 .label:after{
