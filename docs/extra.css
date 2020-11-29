@@ -61,3 +61,9 @@ pre {
 .label:hover:after{
     content:'ASK A QUESTION';
 }
+.label_source:after{
+    content:'...';
+}
+.label_source:hover:after{
+    content:'FIND IN SOURCE CODE';
+}
