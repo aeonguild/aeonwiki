@@ -26,9 +26,16 @@ pre {
 .md-sidebar {
   width:auto; 
 }
-.md-grid {
-    margin-right: 2rem;
-    margin-left: 2rem;
+.md-nav__title[for=__toc]{
+  height:0;
+}
+.md-main {
+    margin: 0 auto;
+    width: auto;
+    max-width: fit-content;
+}
+.md-header-nav{
+  max-width: 47rem;
 }
 .md-sidebar__scrollwrap::-webkit-scrollbar {
     width: 0px; 

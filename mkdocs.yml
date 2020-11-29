@@ -18,35 +18,46 @@ nav:
   - The project:
     - Bug report: 'the-project/bug-report.md'
     - Charts: 
-      - Block Count Daily: 'the-project/charts/block_count_24h.md'
-      - Block Count Total: 'the-project/charts/block_height.md'
+      - Block Count:
+        - Daily: 'the-project/charts/block_count_24h.md'
+        - Total: 'the-project/charts/block_height.md'
       - Block Difficulty: 'the-project/charts/block_difficulty.md'
       - Block Reward: 'the-project/charts/block_reward.md'
-      - Block Size Median: 'the-project/charts/block_size_median_24h.md'
-      - Block Size Total: 'the-project/charts/block_size_cum.md'
-      - Block Time Median: 'the-project/charts/block_time_median_24h.md'
-      - Fee Daily: 'the-project/charts/fee_24h.md'
-      - Fee Daily USD: 'the-project/charts/fee_24h_usd.md'
+      - Block Size: 
+        - Median: 'the-project/charts/block_size_median_24h.md'
+        - Total: 'the-project/charts/block_size_cum.md'
+      - Block Time: 'the-project/charts/block_time_median_24h.md'
+      - Fees:
+        - AEON: 'the-project/charts/fee_24h.md'
+        - USD: 'the-project/charts/fee_24h_usd.md'
       - Inflation: 'the-project/charts/inflation_1Y.md'
-      - Marketcap USD: 'the-project/charts/marketcap.md'
-      - Marketcap BTC: 'the-project/charts/marketcap_btc.md'
-      - Marketcap XMR: 'the-project/charts/marketcap_xmr.md'
-      - Miner Revenue Daily: 'the-project/charts/miner_revenue_24h.md'
-      - Miner Revenue Yearly: 'the-project/charts/miner_revenue_1Y.md'
-      - Nonce: 'the-project/charts/nonce.md'
-      - Nonce Randomness: 'the-project/charts/nonce_dist.md'
-      - Price BTC: 'the-project/charts/price_btc.md'
-      - Price USD: 'the-project/charts/price.md'
-      - Price XMR: 'the-project/charts/price_xmr.md'
-      - Supply: 'the-project/charts/supply_total.md'
-      - Supply Locked: 'the-project/charts/supply_locked.md'
-      - Transaction Inputs: 'the-project/charts/inputs.md'
-      - Transaction Output Volume: 'the-project/charts/volume.md'
-      - Transaction Output Volume BTC: 'the-project/charts/volume_btc.md'
-      - Transaction Output Volume USD: 'the-project/charts/volume_usd.md'
-      - Transaction Outputs: 'the-project/charts/outputs.md'
-      - Transaction Outputs-Inputs: 'the-project/charts/outputs_inputs.md'
-      - Transactions Daily: 'the-project/charts/tx_24h.md'
+      - Marketcap:
+        - USD: 'the-project/charts/marketcap.md'
+        - BTC: 'the-project/charts/marketcap_btc.md'
+        - XMR: 'the-project/charts/marketcap_xmr.md'
+      - Miner Revenue:
+        - Daily: 'the-project/charts/miner_revenue_24h.md'
+        - Yearly: 'the-project/charts/miner_revenue_1Y.md'
+      - Nonces:
+        - Values: 'the-project/charts/nonce.md'
+        - Randomness: 'the-project/charts/nonce_dist.md'
+      - Price:
+        - BTC: 'the-project/charts/price_btc.md'
+        - USD: 'the-project/charts/price.md'
+        - XMR: 'the-project/charts/price_xmr.md'
+      - Supply:
+        - Circulating: 'the-project/charts/supply_total.md'
+        - Locked: 'the-project/charts/supply_locked.md'
+      - Transaction Volume: 
+        - AEON: 'the-project/charts/volume.md'
+        - BTC: 'the-project/charts/volume_btc.md'
+        - USD: 'the-project/charts/volume_usd.md'
+      - Transaction Signatures: 
+        - Inputs: 'the-project/charts/inputs.md'
+        - Outputs: 'the-project/charts/outputs.md'
+        - Outputs-Inputs: 'the-project/charts/outputs_inputs.md'
+      - Transactions:
+        - Daily: 'the-project/charts/tx_24h.md'
       - Version: 'the-project/charts/version.md'
     - Code of conduct: 'the-project/code-of-conduct.md'
     - Dependencies: 'the-project/dependencies.md'
@@ -56,7 +67,7 @@ nav:
     - Install: 'the-project/install.md'
     - Known bugs: 'the-project/known-bugs.md'
     - TODO: 'the-project/todo.md'
-    - Website info: 'the-project/website-info.md'
+    - Website info: 'the-project/web-site-info.md'
   - Releases:
     - Chronos: 'releases/chronos.md'
   - Who and why:
