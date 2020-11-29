@@ -16,55 +16,89 @@ work correctly.
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `account`
+
+`account`
+
+Shows all the existing accounts along with their balances.
+
 ---
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `account new`
 
-` <label text with white spaces allowed>`
+`account new <label text with white spaces allowed>`
+
+Creates a new account with its label initialized by the provided label text (which can be empty).
 
 ---
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
-### `account switch `
-`<index>`
+### `account switch`
+`account switch <index>`
+
+Switches to the account specified by `<index>`.
+  
+---
+
+[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+### `account label`
+`account label <index> <label text with white spaces allowed>`
+
+Sets the label of the account specified by <index> to the provided label text.
+  
+---
+
+[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+### `account tag`
+`account tag <tag_name> <account_index_1> [<account_index_2> ...]`
+
+A tag `<tag_name>` is assigned to the specified accounts `<account_index_1>`, `<account_index_2>`, ....
 
 ---
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
-### `account label `
-`<index> <label text with white spaces allowed>`
+### `account untag`
+`account untag <account_index_1> [<account_index_2> ...]`
+
+The tags assigned to the specified accounts `<account_index_1>`, `<account_index_2>` ..., are removed.
 
 ---
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
-### `account tag `
-`<tag_name> <account_index_1> [<account_index_2> ...]`
+### `account tag_description`
+`account tag_description <tag_name> <description>`
+
+The tag `<tag_name>` is assigned an arbitrary text `<description>`.
+
 
 ---
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
-### `account untag `
-`<account_index_1> [<account_index_2> ...]`
+### `address`
+`address (<index_min> [<index_max>]|all)`
+
+  Shows the default or specified address.
+
+---
+[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+### `address new`
+`address new <label text with white spaces allowed>`
+
+Creates a new address with the provided label text (which can be empty).
+
+---
+[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+### `address label`
+`address label <index> <label text with white spaces allowed>`
+
+Sets the label of the address specified by `<index>` to the provided label text.
 
 ---
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
-### `account tag_description `
-`<tag_name> <description>`
-
----
-
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
-### `address `
-`[ new <label text with white spaces allowed> | all | <index_min> [<index_max>] | label <index> <label text with white spaces allowed>]`
-
----
-
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
-### `address_book `
+### `address_book`
 `[(add ((<address> [pid <id>])|<integrated address>) [<description possibly with whitespaces>])|(delete <index>)]`
 
 ---
