@@ -15,7 +15,7 @@ work correctly.
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
-### `--config-file`
+### `config-file`
 
 Specify a config file to load options from.
 
@@ -40,7 +40,7 @@ Then launch wallet-cli with the following command:
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
-### `--help`
+### `help`
 
 Produce a help message with a list of these available options.
 
@@ -48,7 +48,7 @@ Produce a help message with a list of these available options.
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
-### `--log-file`
+### `log-file`
 
 The path to be used for the log file.
 
@@ -58,7 +58,7 @@ Default argument: `aeon-wallet-cli.log`
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
-### `--max-log-file-size`
+### `max-log-file-size`
 
 Maximum log file size in bytes.
 
@@ -68,7 +68,7 @@ Default argument: `104850000`
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
-### `--max-log-files`
+### `max-log-files`
 
 Maximum number of rotated log files to be saved (no limit by setting to 0).  
 
@@ -79,7 +79,7 @@ Default argument: `50`
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 
-### `--log-level`
+### `log-level`
 
 Accepts arugments of `<level|category>`. Aeon source code has five log levels: 0 ERROR, 1 WARN, 2 INFO, 3 DEBUG, 4 TRACE. Each of the higher log levels contains the log levels below them. So for example
 
@@ -99,7 +99,7 @@ This will log all ERROR, WARN, and INFO only for net.p2p. To view all net.p2p lo
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
-### `--daemon-address`
+### `daemon-address`
 
 Use aeon daemon at ip-address:port. 
 ```
@@ -111,7 +111,7 @@ Use aeon daemon at ip-address:port.
 
 
 
-### `--daemon-host`
+### `daemon-host`
 
 Use daemon instance at specific IP address instead of localhost.
 ```
@@ -123,7 +123,7 @@ Use daemon instance at specific IP address instead of localhost.
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 
-### `--daemon-login`
+### `daemon-login`
 
 `username:password` or `username` credentials for daemon RPC client. 
 
@@ -131,7 +131,7 @@ Use daemon instance at specific IP address instead of localhost.
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
-### `--do-not-relay`
+### `do-not-relay`
 
 Newly created transactions received by this daemon will not be relayed to the Aeon network.
 
@@ -142,7 +142,7 @@ Default argument: `0`
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 
-### `--daemon-port`
+### `daemon-port`
 
 Use daemon instance at specified port. 
 
@@ -153,7 +153,7 @@ Default argument: `11181`
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 
-### `--trusted-daemon`
+### `trusted-daemon`
 
 Enable the following commands which rely on a trusted daemon:
 
@@ -170,7 +170,7 @@ A local connection is trusted by default whereas a remote connection is untruste
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 
-### `--untrusted-daemon`
+### `untrusted-daemon`
 
 Disable the following commands which rely on a trusted daemon:
 
@@ -186,7 +186,7 @@ A local connection is trusted by default whereas a remote connection is untruste
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 
-### `--allow-mismatched-daemon-version`
+### `allow-mismatched-daemon-version`
 
 Allow communicating with a daemon that uses a different RPC version. 
 
@@ -194,7 +194,7 @@ Allow communicating with a daemon that uses a different RPC version.
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
-### `--restore-deterministic-wallet`
+### `restore-deterministic-wallet`
 
 Recover wallet using mnemonic seed. 
 
@@ -202,7 +202,7 @@ Recover wallet using mnemonic seed.
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
-### `--restore-multisig-wallet`
+### `restore-multisig-wallet`
 
 Recover multisig wallet using mnemonic seed.
 
@@ -210,7 +210,7 @@ Recover multisig wallet using mnemonic seed.
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
-### `--generate-new-wallet`
+### `generate-new-wallet`
 
 Generate new wallet and save it to a file set by the argument. 
 ```
@@ -222,7 +222,7 @@ This will create two new files: mynewwallet and mynewwallet.keys
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
-### `--create-address-file`
+### `create-address-file`
 
 Create an address file for new wallets. 
 
@@ -230,7 +230,7 @@ Create an address file for new wallets.
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
-### `--wallet-file`
+### `wallet-file`
 
 Use wallet 
 
@@ -238,7 +238,7 @@ Use wallet
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
-### `--generate-from-json`
+### `generate-from-json`
 
 Generate wallet from JSON format file. 
 
@@ -246,7 +246,7 @@ Generate wallet from JSON format file.
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
-### `--generate-from-keys`
+### `generate-from-keys`
 
 Generate wallet from private keys 
 
@@ -254,7 +254,7 @@ Generate wallet from private keys
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
-### `--electrum-seed`
+### `electrum-seed`
 
 Specify Electrum seed for wallet recovery/creation. 
 
@@ -262,7 +262,7 @@ Specify Electrum seed for wallet recovery/creation.
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
-### `--generate-from-spend-key`
+### `generate-from-spend-key`
 
 Generate deterministic wallet from spend key. 
 
@@ -270,7 +270,7 @@ Generate deterministic wallet from spend key.
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
-### `--generate-from-view-key`
+### `generate-from-view-key`
 
 Generate incoming-only wallet from view key. 
 
@@ -278,7 +278,7 @@ Generate incoming-only wallet from view key.
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
-### `--restore-height`
+### `restore-height`
 
 Restore from specific blockchain height. 
 
@@ -286,7 +286,7 @@ Restore from specific blockchain height.
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
-### `--mnemonic-language`
+### `mnemonic-language`
 
 Language for mnemonic.  
 
@@ -294,7 +294,7 @@ Language for mnemonic.
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
-### `--wallet-non-deterministic`
+### `wallet-non-deterministic`
 
 Generate non-deterministic view and spend keys
 
@@ -302,7 +302,7 @@ Generate non-deterministic view and spend keys
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
-### `--generate-from-multisig-keys`
+### `generate-from-multisig-keys`
 
 Generate a master wallet from multisig wallet keys 
 
@@ -310,7 +310,7 @@ Generate a master wallet from multisig wallet keys
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
-### `--password`
+### `password`
 
 Wallet password (escape/quote as needed). 
 
@@ -318,7 +318,7 @@ Wallet password (escape/quote as needed).
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
-### `--password-file`
+### `password-file`
 
 Wallet password file. 
 
@@ -326,7 +326,7 @@ Wallet password file.
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
-### `--shared-ringdb-dir`
+### `shared-ringdb-dir`
 
 Set shared ring database path. 
 
@@ -334,7 +334,7 @@ Set shared ring database path.
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
-### `--use-english-language-names`
+### `use-english-language-names`
 
 Display English language names. 
 
@@ -342,7 +342,7 @@ Display English language names.
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
-### `--kdf-rounds`
+### `kdf-rounds`
 
 Number of rounds for the key derivation function.  
 
@@ -350,7 +350,7 @@ Number of rounds for the key derivation function.
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
-### `--max-concurrency`
+### `max-concurrency`
 
 Max number of threads to use for a parallel job.  
 
@@ -358,7 +358,7 @@ Max number of threads to use for a parallel job.
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
-### `--tx-notify`                 
+### `tx-notify`                 
 
 Run a program for each new incoming transaction, '%s' will be replaced by the transaction hash. 
 
@@ -366,7 +366,7 @@ Run a program for each new incoming transaction, '%s' will be replaced by the tr
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
-### `--stagenet`
+### `stagenet`
 
 For stagenet. Daemon must also be launched with --stagenet flag
 
@@ -374,7 +374,7 @@ For stagenet. Daemon must also be launched with --stagenet flag
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
-### `--subaddress-lookahead`
+### `subaddress-lookahead`
 
 Set subaddress lookahead sizes to major:minor
 
@@ -382,7 +382,7 @@ Set subaddress lookahead sizes to major:minor
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
-### `--testnet`
+### `testnet`
 
 For testnet. Daemon must also be launched with --testnet flag
 
@@ -390,7 +390,7 @@ For testnet. Daemon must also be launched with --testnet flag
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
-### `--version`
+### `version`
 
 Output version information ###Aeon 'Chronos' (v0.14.0.0-release)###
 

@@ -710,6 +710,8 @@ Mining stopped
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `sync_info`
+
+`sync_info`
   
 Prints network sychronization information.
   

@@ -24,6 +24,8 @@ nav:
     - History: 'the-project/history.md'
     - Install: 'the-project/install.md'
     - Known bugs: 'the-project/known-bugs.md'
+    - Releases:
+      - Chronos: 'the-project/releases/chronos.md'
     - TODO: 'the-project/todo.md'
     - Website info: 'the-project/web-site-info.md'
   - Network info: 
@@ -69,8 +71,6 @@ nav:
         - Outputs-Inputs: 'network-info/charts/outputs_inputs.md'
       - Transactions: 'network-info/charts/tx_24h.md'
       - Version: 'network-info/charts/version.md'
-  - Releases:
-    - Chronos: 'releases/chronos.md'
   - Who and why:
     - Companies: 'who-and-why/companies.md'
     - Copyright: 'who-and-why/copyright.md'
@@ -79,6 +79,7 @@ nav:
     - The name: 'who-and-why/the-name.md'
 theme: 
   logo: img.svg
+  favicon: img.svg
   palette:
     scheme: default
   name: material
