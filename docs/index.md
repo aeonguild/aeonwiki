@@ -8,15 +8,15 @@ Getting Started, Basic Examples, FAQ
 
 * Documentation
 
-aeon-wallet-cli, aeon-wallet-rpc, aeond
+Wallet CLI, Wallet RPC, aeond
 
 * The project
 
+Bug Report, Code of conduct, Dependencies, Donate, Features, History, Install, Known Bugs, TODO, Web Site Info, Releases
+
+* Network info
+
 Bug Report, Code of conduct, Dependencies, Donate, Features, History, Install, Known Bugs, TODO, Web Site Info
-
-* Releases
-
-Changelog, Release Table, Security, Version Nums. Vulnerabilities
 
 * Who and why
 
