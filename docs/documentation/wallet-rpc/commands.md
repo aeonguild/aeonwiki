@@ -1,3 +1,4 @@
+[<span class="label_source"></span>](#){: .md-button }
 # Wallet RPC
 
 ## Usage

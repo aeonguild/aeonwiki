@@ -1,3 +1,4 @@
+[<span class="label_source"></span>](#){: .md-button }
 # aeond
 
 ## Usage
@@ -11,7 +12,7 @@ It is a tool to manage network connections.
 
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 
 ### `alt_chain_info`
@@ -28,7 +29,7 @@ Displays alternate competing blockchains and the height at which they differ.
 
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `ban`
 
@@ -42,7 +43,7 @@ Ban a given IP for a given amount of seconds. Omit the seconds to ban indefinite
 
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `bans`
 
@@ -52,7 +53,7 @@ Show the currently banned IPs.
 
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `bc_dyn_stats`
 
@@ -70,7 +71,7 @@ Voting for: 60 v9
 
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `diff`
 
@@ -85,7 +86,7 @@ BH: 1286123, TH: 5852f84187a1c3a2bb457c8335fba70ce1f608cb835431e3372f07104aef51f
 
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `exit`
 
@@ -95,7 +96,7 @@ Stops the daemon process.
 
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `flush_txpool`
 
@@ -109,7 +110,7 @@ Pool successfully flushed
 ```
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `hard_fork_info`
 `hard_fork_info`
@@ -124,7 +125,7 @@ current version 9, voting for version 9
 
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `help`
 
@@ -142,7 +143,7 @@ Command description:
 ```
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `hide_hr`
 
@@ -158,7 +159,7 @@ Hash rate logging is off
 
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `in_peers`
 
@@ -171,7 +172,7 @@ Max number of in peers set to 50
 ```
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `is_key_image_spent`
 
@@ -185,7 +186,7 @@ Print whether a given key image is in the spent key images set.
 ```
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `limit`
 
@@ -204,7 +205,7 @@ Set limit-up to 8192 kB/s
 
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `limit_down`
 
@@ -221,7 +222,7 @@ Set limit-down to 2048 kB/s
 
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `limit_up`
 
@@ -238,7 +239,7 @@ Set limit_up to 2048 kB/s
 
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `out_peers`
 
@@ -255,7 +256,7 @@ Max number of out peers set to 50
 
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `output_histogram`
 
@@ -273,7 +274,7 @@ Print the output histogram of transaction outputs. The first column is the frequ
 ```
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `print_bc`
 
@@ -306,7 +307,7 @@ difficulty: 2163955, nonce 1954583209, reward 17.590458075213
 ```
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `print_block`
 
@@ -392,7 +393,7 @@ reward: 17.590508402013
 
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `print_cn`
 
@@ -411,7 +412,7 @@ OUT xxx.xxx.xxx.xxx:20111     574b999fa8fc68c3    1                   8702(8)/21
 
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `print_coinbase_tx_sum`
 
@@ -426,7 +427,7 @@ Sum of coinbase transactions between block heights [100, 103) is 52.771474879207
 
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `print_height`
 
@@ -441,7 +442,7 @@ Prints the total number of mined blocks.
 
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `print_pl`
 
@@ -465,7 +466,7 @@ gray       d6b4738bxxxx3c7f          xxx.160.xxx.83:11180      d1.h13.m34.s25
 
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `print_pl_stats`
 
@@ -481,7 +482,7 @@ Gray list size: 486/5000 (9.72%)
 
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `print_pool`
 
@@ -493,7 +494,7 @@ Print the transaction pool using a long format.
 
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `print_pool_sh`
 
@@ -504,7 +505,7 @@ Print transaction pool using a short format.
 ```
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `print_pool_stats`
 
@@ -520,7 +521,7 @@ fees 0.000000000000 (avg 0.000000000000 per tx, 0.000000000000 per byte)
 ```
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `print_status`
 
@@ -530,7 +531,7 @@ fees 0.000000000000 (avg 0.000000000000 per tx, 0.000000000000 per byte)
 
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `print_tx`
 `print_tx <tx_hash> [+hex] [+json]`
@@ -584,7 +585,7 @@ Found in blockchain at height 1286136
 ```
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `relay_tx`
 
@@ -595,7 +596,7 @@ Relay a transaction based on its id.
 
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `save`
 `save`
@@ -607,7 +608,7 @@ Blockchain saved
 ```
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `set_log`
 `set_log <level>|<{+,-,}categories>`
@@ -636,7 +637,7 @@ Log categories are now net.p2p:NONE
 ```
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `show_hr`
 
@@ -651,7 +652,7 @@ hashrate: 321685.937540986
 ```
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `start_mining`
 
@@ -666,7 +667,7 @@ Spawns mining process.
 ```
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `status`
 
@@ -681,7 +682,7 @@ Height: 1286128/1286128 (100.0%) on mainnet, not mining, net hash 12.23 TH/s, v9
 
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `stop_daemon`
 
@@ -691,7 +692,7 @@ Stops the daemon process.
 
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `stop_mining`
 
@@ -707,7 +708,7 @@ Mining stopped
 
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `sync_info`
 
@@ -725,7 +726,7 @@ Downloading at 0 kB/s
 ```
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `unban`
 
@@ -739,7 +740,7 @@ Unban a given IP.
 
 ---
 
-[<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `version`
 `version`
