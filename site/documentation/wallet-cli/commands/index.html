@@ -472,6 +472,20 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#address_book-add" class="md-nav__link">
+    address_book add
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#address_book-delete" class="md-nav__link">
+    address_book delete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#balance" class="md-nav__link">
     balance
   </a>
@@ -2138,6 +2152,20 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#address_book-add" class="md-nav__link">
+    address_book add
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#address_book-delete" class="md-nav__link">
+    address_book delete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#balance" class="md-nav__link">
     balance
   </a>
@@ -2735,43 +2763,82 @@ work correctly.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="address_book"><code>address_book</code></h3>
-<p><code>[(add ((&lt;address&gt; [pid &lt;id&gt;])|&lt;integrated address&gt;) [&lt;description possibly with whitespaces&gt;])|(delete &lt;index&gt;)]</code></p>
+<p><code>address_book</code></p>
+<p>Print all saved addresses in local storage.</p>
+<pre><code>&gt;&gt;&gt; address_book
+address_book
+Index: 0
+Address: WmsBWTyNwnbDwjkU1LDTNRaeYK2XNASvHFfHxxxxxxxxxS74f8q3CVwL3RigWN7WTFaFQg6k3SWUFdn2SSaZuidZ2UAyQ9yVo
+Payment ID: &lt;0000000000000000000000000000000000000000000000000000000000000000&gt;
+Description: test
+
+Index: 1
+Address: WmsBWTyNwnbDwjkU1LDTNRaeYK2XNASvHFfHxxxxxxxxxS74f8q3CVwL3RigWN7WTFaFQg6k3SWUFdn2SSaZuidZ2UAyQ9yVo
+Payment ID: &lt;0000000000000000000000000000000000000000000000000000000000000000&gt;
+Description: test
+</code></pre>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="address_book-add"><code>address_book add</code></h3>
+<p><code>address_book add ((&lt;address&gt; [pid &lt;id&gt;])|&lt;integrated address&gt;) [&lt;description possibly with whitespaces&gt;]</code></p>
+<p>Add an address to the local address book.</p>
+<pre><code>&gt;&gt;&gt; address_book add WmsBWTyNwnbDwjkU1LDTNRaeYK2XNASvHFfHxxxxxxxxxS74f8q3CVwL3RigWN7WTFaFQg6k3SWUFdn2SSaZuidZ2UAyQ9yVo test
+Index: 0
+Address: WmsBWTyNwnbDwjkU1LDTNRaeYK2XNASvHFfHcYcQgVsqPS74f8q3CVwL3RigWN7WTFaFQg6k3SWUFdn2SSaZuidZ2UAyQ9yVo
+Payment ID: &lt;0000000000000000000000000000000000000000000000000000000000000000&gt;
+Description: test
+</code></pre>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
+<h3 id="address_book-delete"><code>address_book delete</code></h3>
+<p><code>address_book delete &lt;index&gt;</code></p>
+<p>Delete address at <code>&lt;index&gt;</code>.</p>
+<pre><code>&gt;&gt;&gt;  address_book delete 1
+</code></pre>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="balance"><code>balance</code></h3>
-<p><code>[detail]</code></p>
+<p><code>balance [detail]</code></p>
+<p>Show the wallet's balance of the currently selected account.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="bc_height"><code>bc_height</code></h3>
+<p><code>bc_height</code></p>
+<p>Prints the connected daemon's height.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="check_reserve_proof"><code>check_reserve_proof</code></h3>
-<p><code>&lt;address&gt; &lt;signature_file&gt; [&lt;message&gt;]</code></p>
+<p><code>check_reserve_proof &lt;address&gt; &lt;signature_file&gt; [&lt;message&gt;]</code></p>
+<p>Check a signature proving that the owner of <code>&lt;address&gt;</code> holds at least this much, optionally with a challenge string <code>&lt;message&gt;</code>.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="check_spend_proof"><code>check_spend_proof</code></h3>
-<p><code>&lt;txid&gt; &lt;signature_file&gt; [&lt;message&gt;]</code></p>
+<p><code>check_spend_proof &lt;txid&gt; &lt;signature_file&gt; [&lt;message&gt;]</code></p>
+<p>Check a signature proving that the signer generated <code>&lt;txid&gt;</code>, optionally with a challenge string <code>&lt;message&gt;</code>.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="check_tx_key"><code>check_tx_key</code></h3>
-<p><code>&lt;txid&gt; &lt;txkey&gt; &lt;address&gt;</code></p>
+<p><code>check_tx_key &lt;txid&gt; &lt;txkey&gt; &lt;address&gt;</code></p>
+<p>Check the amount going to <code>&lt;address&gt;</code> in <code>&lt;txid&gt;</code>.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="check_tx_proof"><code>check_tx_proof</code></h3>
-<p><code>&lt;txid&gt; &lt;address&gt; &lt;signature_file&gt; [&lt;message&gt;]</code></p>
+<p><code>check_tx_proof &lt;txid&gt; &lt;address&gt; &lt;signature_file&gt; [&lt;message&gt;]</code></p>
+<p>Check the proof for funds going to <code>&lt;address&gt;</code> in <code>&lt;txid&gt;</code> with the challenge string <code>&lt;message&gt;</code> if any.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="donate"><code>donate</code></h3>
-<p><code>[index=&lt;N1&gt;[,&lt;N2&gt;,...]] [&lt;priority&gt;] [&lt;ring_size&gt;] &lt;amount&gt; [&lt;payment_id&gt;]</code></p>
+<p><code>donate [index=&lt;N1&gt;[,&lt;N2&gt;,...]] [&lt;priority&gt;] [&lt;ring_size&gt;] &lt;amount&gt; [&lt;payment_id&gt;]</code></p>
+<p>Donate <code>&lt;amount&gt;</code> to the development team (<code>donate.aeon.cash</code>).</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="encrypted_seed"><code>encrypted_seed</code></h3>
+<p><code>encrypted_seed</code></p>
+<p>Display the encrypted Electrum-style mnemonic seed.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="exchange_multisig_keys"><code>exchange_multisig_keys</code></h3>
-<hr />
-<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a>
-<code>&lt;string&gt; [&lt;string&gt;...]</code></p>
+<p><code>exchange_multisig_keys &lt;string&gt; [&lt;string&gt;...]</code></p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="export_key_images"><code>export_key_images</code></h3>

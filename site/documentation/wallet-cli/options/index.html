@@ -2157,7 +2157,7 @@ password=walletpassword
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="restore-multisig-wallet"><code>restore-multisig-wallet</code></h3>
 <p><code>restore-multisig-wallet[=&lt;1|0&gt;]</code></p>
-<p>Recover multisig wallet using mnemonic seed.</p>
+<p>Recover multisig wallet using seed.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="generate-new-wallet"><code>generate-new-wallet</code></h3>
@@ -2179,10 +2179,20 @@ password=walletpassword
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="generate-from-json"><code>generate-from-json</code></h3>
-<p>Generate wallet from JSON format file. </p>
+<p><code>generate-from-json=&lt;path_to_json&gt;</code></p>
+<p>Generate wallet from JSON format file with content.</p>
+<pre><code>{
+  &quot;version&quot;: 1,
+  &quot;filename&quot;: &quot;aeonwallet&quot;,
+  &quot;scan_from_height&quot;: 1796000,
+  &quot;password&quot;: &quot;pass&quot;,
+  &quot;seed&quot;: &quot;some valid seed ...&quot;
+}
+</code></pre>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="generate-from-keys"><code>generate-from-keys</code></h3>
+<p><code>generate-from-keys=&lt;path_to_new_wallet&gt;</code></p>
 <p>Generate wallet from private keys </p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
@@ -2192,10 +2202,12 @@ password=walletpassword
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="generate-from-spend-key"><code>generate-from-spend-key</code></h3>
+<p><code>generate-from-spend-key=&lt;path_to_new_wallet&gt;</code></p>
 <p>Generate deterministic wallet from spend key. </p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="generate-from-view-key"><code>generate-from-view-key</code></h3>
+<p><code>generate-from-view-key=&lt;path_to_new_wallet&gt;</code></p>
 <p>Generate incoming-only wallet from view key. </p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
@@ -2215,7 +2227,8 @@ password=walletpassword
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="generate-from-multisig-keys"><code>generate-from-multisig-keys</code></h3>
-<p>Generate a master wallet from multisig wallet keys </p>
+<p><code>generate-from-multisig-keys=&lt;path_to_new_wallet&gt;</code></p>
+<p>Generate a master wallet from multisig wallet keys.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="password"><code>password</code></h3>
@@ -2259,7 +2272,8 @@ password=walletpassword
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="subaddress-lookahead"><code>subaddress-lookahead</code></h3>
-<p>Set subaddress lookahead sizes to major:minor</p>
+<p><code>subaddress-lookahead=&lt;num_accounts&gt;:&lt;num_subaddresses&gt;</code></p>
+<p>When pair with a new wallet, creates a lookup table of <code>num_accounts</code> each with <code>num_subaddresses</code>. In total, <code>num_accounts * num_subaddresses</code> addresses.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="testnet"><code>testnet</code></h3>
