@@ -1,6 +1,6 @@
-# Introduction
+# Welcome to aeon.wiki
 
-The main documentation is sub divided into several categories. Each category holds a number of documentation pages.
+The wiki is sub divided into several categories. Each category holds a number of documentation pages.
 
 * Tutorial
 
@@ -12,11 +12,11 @@ Wallet CLI, Wallet RPC, aeond
 
 * The project
 
-Bug Report, Code of conduct, Dependencies, Donate, Features, History, Install, Known Bugs, TODO, Web Site Info, Releases
+Bug Report, Code of conduct, Dependencies, Donate, Features, History, Install, Known Bugs, Releases, TODO, Web Site Info
 
 * Network info
 
-Bug Report, Code of conduct, Dependencies, Donate, Features, History, Install, Known Bugs, TODO, Web Site Info
+Block explorer, charts
 
 * Who and why
 
