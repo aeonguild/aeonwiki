@@ -722,7 +722,7 @@ File path to write the daemon's PID to a file.
 
 `stagenet[=<1|0>]`
 
-Run on stagenet. The wallet must be launched with --stagenet flag.
+Run on stagenet. The daemon must be launched with --stagenet flag.
 
 
 

@@ -12,17 +12,17 @@ work correctly.
 ## Options
 
 ---
-
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+### `config-file` 
 
-### `config-file`
+`config-file=<path>`
 
 Specify a config file to load options from.
 
 An example config file is shown below.
 
-```bash
-# /aeon-wallet-cli.conf
+```
+# /path/to/file/aeond.conf
 
 daemon-address=192.168.0.1:9149
 daemon-login=user:rpcpassword
@@ -33,22 +33,25 @@ password=walletpassword
 Then launch wallet-cli with the following command:
 
 ```
-./aeon-wallet-cli --config-file=/path/to/file/aeon-wallet-cli.conf
+./aeond --config-file=/path/to/file/aeond.conf
 ```
 
 ---
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
-
 ### `help`
 
-Produce a help message with a list of these available options.
+`help`
+
+Produce a help message with this list available options.
 
 ---
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `log-file`
+
+`log-file=<path>`
 
 The path to be used for the log file.
 
@@ -57,8 +60,9 @@ Default argument: `aeon-wallet-cli.log`
 ---
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
-
 ### `max-log-file-size`
+
+`max-log-file-size=<bytes>`
 
 Maximum log file size in bytes.
 
@@ -67,8 +71,9 @@ Default argument: `104850000`
 ---
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
-
 ### `max-log-files`
+
+`max-log-files=<number>`
 
 Maximum number of rotated log files to be saved (no limit by setting to 0).  
 
@@ -77,11 +82,11 @@ Default argument: `50`
 ---
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
-
-
 ### `log-level`
 
-Accepts arugments of `<level|category>`. Aeon source code has five log levels: 0 ERROR, 1 WARN, 2 INFO, 3 DEBUG, 4 TRACE. Each of the higher log levels contains the log levels below them. So for example
+`log-level=<level|category>`
+
+Aeon source code has five log levels: 0 ERROR, 1 WARN, 2 INFO, 3 DEBUG, 4 TRACE. Each of the higher log levels contains the log levels below them. So for example
 
 ```
 --log-level=3
@@ -101,6 +106,8 @@ This will log all ERROR, WARN, and INFO only for net.p2p. To view all net.p2p lo
 
 ### `daemon-address`
 
+`daemon-address=<ip_address>:<port>`
+
 Use aeon daemon at ip-address:port. 
 ```
 --daemon-address=192.168.0.1:9149
@@ -112,6 +119,9 @@ Use aeon daemon at ip-address:port.
 
 
 ### `daemon-host`
+
+`daemon-host=<ip_address>`
+
 
 Use daemon instance at specific IP address instead of localhost.
 ```
@@ -125,6 +135,8 @@ Use daemon instance at specific IP address instead of localhost.
 
 ### `daemon-login`
 
+`daemon-login=<username>[:<password>]`
+
 `username:password` or `username` credentials for daemon RPC client. 
 
 ---
@@ -132,6 +144,8 @@ Use daemon instance at specific IP address instead of localhost.
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `do-not-relay`
+
+`do-not-relay[=<1|0>]`
 
 Newly created transactions received by this daemon will not be relayed to the Aeon network.
 
@@ -144,6 +158,8 @@ Default argument: `0`
 
 ### `daemon-port`
 
+`daemon-port=<port>`
+
 Use daemon instance at specified port. 
 
 Default argument: `11181`
@@ -154,6 +170,8 @@ Default argument: `11181`
 
 
 ### `trusted-daemon`
+
+`trusted-daemon[=<1|0>]`
 
 Enable the following commands which rely on a trusted daemon:
 
@@ -172,6 +190,8 @@ A local connection is trusted by default whereas a remote connection is untruste
 
 ### `untrusted-daemon`
 
+`untrusted-daemon[=<1|0>]`
+
 Disable the following commands which rely on a trusted daemon:
 
 + `rescan_spent`
@@ -188,6 +208,8 @@ A local connection is trusted by default whereas a remote connection is untruste
 
 ### `allow-mismatched-daemon-version`
 
+`allow-mismatched-daemon-version[=<1|0>]`
+
 Allow communicating with a daemon that uses a different RPC version. 
 
 ---
@@ -195,6 +217,8 @@ Allow communicating with a daemon that uses a different RPC version.
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `restore-deterministic-wallet`
+
+`restore-deterministic-wallet[=<1|0>]`
 
 Recover wallet using mnemonic seed. 
 
@@ -204,6 +228,8 @@ Recover wallet using mnemonic seed.
 
 ### `restore-multisig-wallet`
 
+`restore-multisig-wallet[=<1|0>]`
+
 Recover multisig wallet using mnemonic seed.
 
 ---
@@ -211,6 +237,8 @@ Recover multisig wallet using mnemonic seed.
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `generate-new-wallet`
+
+`generate-new-wallet=<path>`
 
 Generate new wallet and save it to a file set by the argument. 
 ```
@@ -224,6 +252,8 @@ This will create two new files: mynewwallet and mynewwallet.keys
 
 ### `create-address-file`
 
+`create-address-file=<path>`
+
 Create an address file for new wallets. 
 
 ---
@@ -232,7 +262,9 @@ Create an address file for new wallets.
 
 ### `wallet-file`
 
-Use wallet 
+`wallet-file=<path>`
+
+Use wallet file at path.
 
 ---
 
@@ -255,6 +287,8 @@ Generate wallet from private keys
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `electrum-seed`
+
+`electrum-seed=<seed>`
 
 Specify Electrum seed for wallet recovery/creation. 
 
@@ -280,6 +314,8 @@ Generate incoming-only wallet from view key.
 
 ### `restore-height`
 
+`restore-height=<height>`
+
 Restore from specific blockchain height. 
 
 ---
@@ -288,6 +324,8 @@ Restore from specific blockchain height.
 
 ### `mnemonic-language`
 
+`mnemonic-language=<language>`
+
 Language for mnemonic.  
 
 ---
@@ -295,6 +333,8 @@ Language for mnemonic.
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `wallet-non-deterministic`
+
+`wallet-non-deterministic[=<1|0>]`
 
 Generate non-deterministic view and spend keys
 
@@ -312,6 +352,8 @@ Generate a master wallet from multisig wallet keys
 
 ### `password`
 
+`password=<password>`
+
 Wallet password (escape/quote as needed). 
 
 ---
@@ -319,6 +361,8 @@ Wallet password (escape/quote as needed).
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `password-file`
+
+`password-file=<path>`
 
 Wallet password file. 
 
@@ -328,6 +372,8 @@ Wallet password file.
 
 ### `shared-ringdb-dir`
 
+`shared-ringdb-dir=<path>`
+
 Set shared ring database path. 
 
 ---
@@ -335,6 +381,8 @@ Set shared ring database path.
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `use-english-language-names`
+
+`use-english-language-names[=<1|0>]`
 
 Display English language names. 
 
@@ -344,6 +392,8 @@ Display English language names.
 
 ### `kdf-rounds`
 
+`kdf-rounds=<number-of-rounds>`
+
 Number of rounds for the key derivation function.  
 
 ---
@@ -352,7 +402,9 @@ Number of rounds for the key derivation function.
 
 ### `max-concurrency`
 
-Max number of threads to use for a parallel job.  
+`max-concurrency=<number_of_cpu_threads>`
+
+Set maximum number of CPU threads used by the daemon process for syncronizing blocks and processing transactions.
 
 ---
 
@@ -360,15 +412,20 @@ Max number of threads to use for a parallel job.
 
 ### `tx-notify`                 
 
+`tx-notify=<path>`
+
 Run a program for each new incoming transaction, '%s' will be replaced by the transaction hash. 
+
 
 ---
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
-
 ### `stagenet`
 
-For stagenet. Daemon must also be launched with --stagenet flag
+`stagenet[=<1|0>]`
+
+Run on stagenet. The daemon must be launched with --stagenet flag.
+
 
 ---
 
@@ -381,17 +438,19 @@ Set subaddress lookahead sizes to major:minor
 ---
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
-
 ### `testnet`
 
-For testnet. Daemon must also be launched with --testnet flag
+`testnet[=<1|0>]`
+
+Run on testnet. The daemon must be launched with --testnet flag.
 
 ---
 
 [<span class="label_source"></span>](#){: .md-button }[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+### `version`                            
 
-### `version`
+`version`
 
-Output version information ###Aeon 'Chronos' (v0.14.0.0-release)###
+Output version information.
 
 ---
