@@ -231,7 +231,7 @@ Recover wallet using mnemonic seed.
 
 `restore-multisig-wallet[=<1|0>]`
 
-Recover multisig wallet using mnemonic seed.
+Recover multisig wallet using seed.
 
 ---
 
@@ -273,13 +273,26 @@ Use wallet file at path.
 
 ### `generate-from-json`
 
-Generate wallet from JSON format file. 
+`generate-from-json=<path_to_json>`
 
+Generate wallet from JSON format file with content.
+
+```
+{
+  "version": 1,
+  "filename": "aeonwallet",
+  "scan_from_height": 1796000,
+  "password": "pass",
+  "seed": "some valid seed ..."
+}
+```
 ---
 
 [<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `generate-from-keys`
+
+`generate-from-keys=<path_to_new_wallet>`
 
 Generate wallet from private keys 
 
@@ -299,6 +312,8 @@ Specify Electrum seed for wallet recovery/creation.
 
 ### `generate-from-spend-key`
 
+`generate-from-spend-key=<path_to_new_wallet>`
+
 Generate deterministic wallet from spend key. 
 
 ---
@@ -306,6 +321,8 @@ Generate deterministic wallet from spend key.
 [<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 
 ### `generate-from-view-key`
+
+`generate-from-view-key=<path_to_new_wallet>`
 
 Generate incoming-only wallet from view key. 
 
@@ -345,7 +362,9 @@ Generate non-deterministic view and spend keys
 
 ### `generate-from-multisig-keys`
 
-Generate a master wallet from multisig wallet keys 
+`generate-from-multisig-keys=<path_to_new_wallet>`
+
+Generate a master wallet from multisig wallet keys.
 
 ---
 
@@ -434,7 +453,9 @@ Run on stagenet. The daemon must be launched with --stagenet flag.
 
 ### `subaddress-lookahead`
 
-Set subaddress lookahead sizes to major:minor
+`subaddress-lookahead=<num_accounts>:<num_subaddresses>`
+
+When pair with a new wallet, creates a lookup table of `num_accounts` each with `num_subaddresses`. In total, `num_accounts * num_subaddresses` addresses.
 
 ---
 

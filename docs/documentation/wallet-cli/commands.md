@@ -100,63 +100,124 @@ Sets the label of the address specified by `<index>` to the provided label text.
 
 [<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 ### `address_book`
-`[(add ((<address> [pid <id>])|<integrated address>) [<description possibly with whitespaces>])|(delete <index>)]`
 
+`address_book`
+
+Print all saved addresses in local storage.
+
+```
+>>> address_book
+address_book
+Index: 0
+Address: WmsBWTyNwnbDwjkU1LDTNRaeYK2XNASvHFfHxxxxxxxxxS74f8q3CVwL3RigWN7WTFaFQg6k3SWUFdn2SSaZuidZ2UAyQ9yVo
+Payment ID: <0000000000000000000000000000000000000000000000000000000000000000>
+Description: test
+
+Index: 1
+Address: WmsBWTyNwnbDwjkU1LDTNRaeYK2XNASvHFfHxxxxxxxxxS74f8q3CVwL3RigWN7WTFaFQg6k3SWUFdn2SSaZuidZ2UAyQ9yVo
+Payment ID: <0000000000000000000000000000000000000000000000000000000000000000>
+Description: test
+```
+
+---
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+### `address_book add`
+
+`address_book add ((<address> [pid <id>])|<integrated address>) [<description possibly with whitespaces>]`
+
+Add an address to the local address book.
+
+```
+>>> address_book add WmsBWTyNwnbDwjkU1LDTNRaeYK2XNASvHFfHxxxxxxxxxS74f8q3CVwL3RigWN7WTFaFQg6k3SWUFdn2SSaZuidZ2UAyQ9yVo test
+Index: 0
+Address: WmsBWTyNwnbDwjkU1LDTNRaeYK2XNASvHFfHcYcQgVsqPS74f8q3CVwL3RigWN7WTFaFQg6k3SWUFdn2SSaZuidZ2UAyQ9yVo
+Payment ID: <0000000000000000000000000000000000000000000000000000000000000000>
+Description: test
+```
+---
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+### `address_book delete`
+`address_book delete <index>`
+
+Delete address at `<index>`.
+
+```
+>>>  address_book delete 1
+```
 ---
 
 [<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 ### `balance`
-`[detail]`
+`balance [detail]`
+
+Show the wallet's balance of the currently selected account.
 
 ---
 
 [<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 ### `bc_height`
 
+`bc_height`
+
+Prints the connected daemon's height.
+
 ---
 
 [<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 ### `check_reserve_proof`
-`<address> <signature_file> [<message>]`
+
+`check_reserve_proof <address> <signature_file> [<message>]`
+
+Check a signature proving that the owner of `<address>` holds at least this much, optionally with a challenge string `<message>`.
+  
+---
+
+[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
+### `check_spend_proof`
+`check_spend_proof <txid> <signature_file> [<message>]`
+
+Check a signature proving that the signer generated `<txid>`, optionally with a challenge string `<message>`.
 
 ---
 
 [<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
-### `check_spend_proof `
-`<txid> <signature_file> [<message>]`
+### `check_tx_key`
+`check_tx_key <txid> <txkey> <address>`
+
+Check the amount going to `<address>` in `<txid>`.
 
 ---
 
 [<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
-### `check_tx_key `
-`<txid> <txkey> <address>`
+### `check_tx_proof`
+`check_tx_proof <txid> <address> <signature_file> [<message>]`
+
+Check the proof for funds going to `<address>` in `<txid>` with the challenge string `<message>` if any.
+
 
 ---
 
 [<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
-### `check_tx_proof `
-`<txid> <address> <signature_file> [<message>]`
+### `donate`
+`donate [index=<N1>[,<N2>,...]] [<priority>] [<ring_size>] <amount> [<payment_id>]`
 
----
-
-[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
-### `donate `
-`[index=<N1>[,<N2>,...]] [<priority>] [<ring_size>] <amount> [<payment_id>]`
-
+Donate `<amount>` to the development team (`donate.aeon.cash`).
+  
 ---
 
 [<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 ### `encrypted_seed`
+
+`encrypted_seed`
+
+Display the encrypted Electrum-style mnemonic seed.
 
 ---
 
 [<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 ### `exchange_multisig_keys `
 
----
-
-[<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
-`<string> [<string>...]`
+`exchange_multisig_keys <string> [<string>...]`
 
 ---
 
