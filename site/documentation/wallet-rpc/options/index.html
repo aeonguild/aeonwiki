@@ -1984,9 +1984,10 @@ HTTP requests.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="config-file"><code>config-file</code></h3>
+<p><code>config-file=&lt;path&gt;</code></p>
 <p>Specify a config file to load options from.</p>
 <p>An example config file is shown below.</p>
-<pre><code class="language-bash"># /aeon-wallet-cli.conf
+<pre><code># /path/to/file/aeond.conf
 
 daemon-address=192.168.0.1:9149
 daemon-login=user:rpcpassword
@@ -1994,31 +1995,36 @@ trusted-daemon=1
 password=walletpassword
 </code></pre>
 <p>Then launch wallet-cli with the following command:</p>
-<pre><code>./aeon-wallet-cli --config-file=/path/to/file/aeon-wallet-cli.conf
+<pre><code>./aeond --config-file=/path/to/file/aeond.conf
 </code></pre>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="help"><code>help</code></h3>
-<p>Produce a help message with a list of these available options.</p>
+<p><code>help</code></p>
+<p>Produce a help message with this list available options.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="log-file"><code>log-file</code></h3>
+<p><code>log-file=&lt;path&gt;</code></p>
 <p>The path to be used for the log file.</p>
 <p>Default argument: <code>aeon-wallet-cli.log</code></p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="max-log-file-size"><code>max-log-file-size</code></h3>
+<p><code>max-log-file-size=&lt;bytes&gt;</code></p>
 <p>Maximum log file size in bytes.</p>
 <p>Default argument: <code>104850000</code></p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="max-log-files"><code>max-log-files</code></h3>
+<p><code>max-log-files=&lt;number&gt;</code></p>
 <p>Maximum number of rotated log files to be saved (no limit by setting to 0).  </p>
 <p>Default argument: <code>50</code></p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="log-level"><code>log-level</code></h3>
-<p>Accepts arugments of <code>&lt;level|category&gt;</code>. Aeon source code has five log levels: 0 ERROR, 1 WARN, 2 INFO, 3 DEBUG, 4 TRACE. Each of the higher log levels contains the log levels below them. So for example</p>
+<p><code>log-level=&lt;level|category&gt;</code></p>
+<p>Aeon source code has five log levels: 0 ERROR, 1 WARN, 2 INFO, 3 DEBUG, 4 TRACE. Each of the higher log levels contains the log levels below them. So for example</p>
 <pre><code>--log-level=3
 </code></pre>
 <p>will display levels 0, 1, 2, and 3. To restrict the log to a specific category, you can use the following example</p>
@@ -2028,31 +2034,37 @@ password=walletpassword
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="daemon-address"><code>daemon-address</code></h3>
+<p><code>daemon-address=&lt;ip_address&gt;:&lt;port&gt;</code></p>
 <p>Use aeon daemon at ip-address:port. </p>
 <pre><code>--daemon-address=192.168.0.1:9149
 </code></pre>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="daemon-host"><code>daemon-host</code></h3>
+<p><code>daemon-host=&lt;ip_address&gt;</code></p>
 <p>Use daemon instance at specific IP address instead of localhost.</p>
 <pre><code>--daemon-host=192.168.0.1
 </code></pre>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="confirm-external-bind"><code>confirm-external-bind</code></h3>
-<p>Confirm rpc-bind-ip value is NOT a loopback (local) IP. </p>
+<p><code>confirm-external-bind[=&lt;1|0&gt;]</code></p>
+<p>Confirm ip value is NOT a loopback (local) IP.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="daemon-login"><code>daemon-login</code></h3>
+<p><code>daemon-login=&lt;username&gt;[:&lt;password&gt;]</code></p>
 <p><code>username:password</code> or <code>username</code> credentials for daemon RPC client. </p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="daemon-port"><code>daemon-port</code></h3>
+<p><code>daemon-port=&lt;port&gt;</code></p>
 <p>Use daemon instance at specified port. </p>
 <p>Default argument: <code>11181</code></p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="trusted-daemon"><code>trusted-daemon</code></h3>
+<p><code>trusted-daemon[=&lt;1|0&gt;]</code></p>
 <p>Enable the following commands which rely on a trusted daemon:</p>
 <ul>
 <li><code>rescan_spent</code></li>
@@ -2064,6 +2076,7 @@ password=walletpassword
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="untrusted-daemon"><code>untrusted-daemon</code></h3>
+<p><code>untrusted-daemon[=&lt;1|0&gt;]</code></p>
 <p>Disable the following commands which rely on a trusted daemon:</p>
 <ul>
 <li><code>rescan_spent</code></li>
@@ -2075,91 +2088,113 @@ password=walletpassword
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="password"><code>password</code></h3>
-<p>Wallet password (escape/quote as needed)</p>
+<p><code>password=&lt;password&gt;</code></p>
+<p>Wallet password (escape/quote as needed). </p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="password-file"><code>password-file</code></h3>
-<p>Wallet password file</p>
+<p><code>password-file=&lt;path&gt;</code></p>
+<p>Wallet password file. </p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="prompt-for-password"><code>prompt-for-password</code></h3>
+<p><code>prompt-for-password[=&lt;1|0&gt;</code></p>
 <p>Prompts for password when not provided. </p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="rpc-bind-ip"><code>rpc-bind-ip</code></h3>
-<p>Specify IP to bind RPC server. </p>
+<p><code>rpc-bind-ip=&lt;ip_address&gt;</code></p>
+<p>Specify IP to bind RPC server.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="rpc-login"><code>rpc-login</code></h3>
-<p>Specify <code>username[:password]</code> required for RPC server</p>
+<p><code>rpc-login=&lt;username&gt;[:&lt;password&gt;]</code></p>
+<p>Specify <code>username[:password]</code> required for RPC server.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="disable-rpc-login"><code>disable-rpc-login</code></h3>
-<p>Disable HTTP authentication for RPC connections served by this process.  </p>
+<p><code>disable-rpc-login[=&lt;1|0&gt;</code>
+Disable HTTP authentication for RPC connections served by this process.  </p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="rpc-access-control-origins"><code>rpc-access-control-origins</code></h3>
+<p><code>rpc-access-control-origins=&lt;list,of,comma,separated,urls&gt;</code></p>
 <p>Specify a comma separated list of origins to allow cross origin resource sharing. </p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="rpc-bind-port"><code>rpc-bind-port</code></h3>
-<p>Sets bind port for server. </p>
+<p><code>rpc-bind-port=&lt;port&gt;</code></p>
+<p>Specify IP to bind RPC server.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="restricted-rpc"><code>restricted-rpc</code></h3>
-<p>Restricts to view-only commands. </p>
+<p><code>restricted-rpc[=&lt;1|0&gt;]</code></p>
+<p>Restrict RPC to view only commands and do not return privacy sensitive data in RPC calls.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="wallet-dir"><code>wallet-dir</code></h3>
-<p>Directory for newly created wallets</p>
+<p><code>wallet-dir=&lt;path&gt;</code>
+Directory for newly created wallets.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="wallet-file"><code>wallet-file</code></h3>
-<p>Use wallet &lt;&gt;</p>
+<p><code>wallet-file=&lt;path&gt;</code></p>
+<p>Use wallet file at <code>path</code>.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="generate-from-json"><code>generate-from-json</code></h3>
+<p><code>generate-from-json=&lt;path_to_json&gt;</code></p>
 <p>Generate wallet from JSON format file.  </p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="shared-ringdb-dir"><code>shared-ringdb-dir</code></h3>
+<p><code>shared-ringdb-dir=&lt;path&gt;</code></p>
 <p>Set shared ring database path. </p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="detach"><code>detach</code></h3>
-<p>Run as daemon. </p>
+<p><code>detach[=&lt;0|1&gt;]</code>
+Run as daemon. </p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="kdf-rounds"><code>kdf-rounds</code></h3>
-<p>Number of rounds for the key derivation function. </p>
+<p><code>kdf-rounds=&lt;number-of-rounds&gt;</code></p>
+<p>Number of rounds for the key derivation function.  </p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="max-concurrency"><code>max-concurrency</code></h3>
-<p>Max number of threads to use for a parallel job. </p>
+<p><code>max-concurrency=&lt;number_of_cpu_threads&gt;</code></p>
+<p>Set maximum number of CPU threads used by the daemon process for syncronizing blocks and processing transactions.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="non-interactive"><code>non-interactive</code></h3>
+<p><code>non-interactive[=&lt;0|1&gt;]</code></p>
 <p>Run non-interactive</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="tx-notify"><code>tx-notify</code></h3>
+<p><code>tx-notify=&lt;path&gt;</code></p>
 <p>Run a program for each new incoming transaction, '%s' will be replaced by the transaction hash. </p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="pidfile"><code>pidfile</code></h3>
+<p><code>pidfile=&lt;path_to_file&gt;</code></p>
 <p>File path to write the rpc's PID to (optional, requires --detach). </p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="stagenet"><code>stagenet</code></h3>
-<p>For stagenet. Daemon must also be launched with --stagenet flag</p>
+<p><code>stagenet[=&lt;1|0&gt;]</code></p>
+<p>Run on stagenet. The daemon must be launched with --stagenet flag.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="testnet"><code>testnet</code></h3>
-<p>For testnet. Daemon must also be launched with --testnet flag</p>
+<p><code>testnet[=&lt;1|0&gt;]</code></p>
+<p>Run on testnet. The daemon must be launched with --testnet flag.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="version"><code>version</code></h3>
-<p>Output version information</p>
+<p><code>version</code></p>
+<p>Output version information.</p>
                 
               
               
