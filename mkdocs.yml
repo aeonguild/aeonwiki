@@ -18,14 +18,14 @@ nav:
   - The project:
     - Bug report: 'the-project/bug-report.md'
     - Code of conduct: 'the-project/code-of-conduct.md'
+    - Contributing: 'the-project/contributing-guidelines.md'
     - Dependencies: 'the-project/dependencies.md'
     - Donate: 'the-project/donate.md'
     - Features: 'the-project/features.md'
     - History: 'the-project/history.md'
     - Install: 'the-project/install.md'
     - Known bugs: 'the-project/known-bugs.md'
-    - Releases:
-      - Chronos: 'the-project/releases/chronos.md'
+    - Releases: 'the-project/releases.md'
     - TODO: 'the-project/todo.md'
     - Website info: 'the-project/web-site-info.md'
   - Network info: 
@@ -72,7 +72,7 @@ nav:
       - Transactions: 'network-info/charts/tx_24h.md'
       - Version: 'network-info/charts/version.md'
   - Who and why:
-    - Companies: 'who-and-why/companies.md'
+    - Contributors: 'https://github.com/aeonix/aeon/graphs/contributors'
     - Copyright: 'who-and-why/copyright.md'
     - Sponsors: 'who-and-why/sponsors.md'
     - Thanks: 'who-and-why/thanks.md'

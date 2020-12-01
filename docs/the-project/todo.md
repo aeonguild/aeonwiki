@@ -1,5 +1,11 @@
 # Welcome to the aeon.wiki
 
-This page is under construction.
+* history
 
-##
+* install
+
+* known bugs
+
+* Thanks
+
+* The name
