@@ -58,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-the-aeonwiki" class="md-skip">
+        <a href="#features" class="md-skip">
           Skip to content
         </a>
       
@@ -458,7 +458,7 @@
 
   <li class="md-nav__item">
     <a href="../contributing-guidelines/" class="md-nav__link">
-      Contributing guidelines
+      Contributing
     </a>
   </li>
 
@@ -578,36 +578,10 @@
           
 
 
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-10" type="checkbox" id="nav-4-10">
-    
-    <label class="md-nav__link" for="nav-4-10">
-      Releases
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Releases" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-10">
-        <span class="md-nav__icon md-icon"></span>
-        Releases
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
   <li class="md-nav__item">
-    <a href="../releases/chronos/" class="md-nav__link">
-      Chronos
+    <a href="../releases/" class="md-nav__link">
+      Releases
     </a>
-  </li>
-
-        
-      </ul>
-    </nav>
   </li>
 
         
@@ -1351,8 +1325,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../who-and-why/companies/" class="md-nav__link">
-      Companies
+    <a href="https://github.com/aeonix/aeon/graphs/contributors" class="md-nav__link">
+      Contributors
     </a>
   </li>
 
@@ -1453,8 +1427,32 @@
               
                 
                 
-                <h1 id="welcome-to-the-aeonwiki">Welcome to the aeon.wiki</h1>
-<p>This page is under construction.</p>
+                <h1 id="features">Features</h1>
+<ul class="banner-list">
+  <li><i class="fa fa-check"></i><em>PoW algorithm:</em> KangarooTwelve</li>
+  <li><i class="fa fa-check"></i><em>Max supply:</em> ~18.4 million</li>
+  <li><i class="fa fa-check"></i><em>Block reward:</em> smoothly decreasing</li>
+  <li><i class="fa fa-check"></i><em>Block time:</em> 240 seconds</li>
+  <li><i class="fa fa-check"></i><em>Difficulty:</em> retargets at every block</li>
+</ul>
+<ul class="steps-list">
+  <li>
+    <h4>ASIC-friendly proof-of-work</h4>
+    <p>We believe ASIC resistance is ultimately futile while imposing various forms of undesirable cost. Our ASIC-friendly PoW (KangarooTwelve) allows for faster verification of the blockchain. This also helps stabilize the protocol as the need for PoW-change hard forks is eliminated.</p>
+  </li>
+  <li>
+    <h4>No use of RingCT</h4>
+    <p>Monero's RingCT for encrypting transaction amounts comes with a theoretical risk of catastrophic collapse of the monetary system due to hidden inflation if the discrete log of the second generator is discovered. Favoring supply soundness over privacy, we choose not to use RingCT until cryptographers invent an efficient commitment scheme with unconditional soundness. We believe practical level of privacy can still be achieved without RingCT. Not using RingCT also contributes to faster syncing.</p>
+  </li>
+  <li>
+    <h4>Smaller Blockchain</h4>
+    <p>AEON's block time is 4 minutes. This halves the number of blocks produced each day compared to Monero, further reducing the cost of running a node.</p>
+  </li>
+  <li>
+    <h4>Smaller ring size</h4>
+    <p>AEON's ring size is fixed to 3 which is the bare minimum needed to prevent chain reactions (<a href="https://lab.getmonero.org/pubs/MRL-0001.pdf">link</a>). Monero's higher ring size means more degree of obfuscation for each transaction, but it also comes at the cost of increased blockchain size and longer verification time. We choose to stick with ring size 3 until a convincing evidence against it is found.</p>
+  </li>
+</ul>
 <h2 id="_1"></h2>
                 
               

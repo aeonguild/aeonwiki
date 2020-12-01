@@ -58,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-the-aeonwiki" class="md-skip">
+        <a href="#dependencies" class="md-skip">
           Skip to content
         </a>
       
@@ -458,7 +458,7 @@
 
   <li class="md-nav__item">
     <a href="../contributing-guidelines/" class="md-nav__link">
-      Contributing guidelines
+      Contributing
     </a>
   </li>
 
@@ -578,36 +578,10 @@
           
 
 
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-10" type="checkbox" id="nav-4-10">
-    
-    <label class="md-nav__link" for="nav-4-10">
-      Releases
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Releases" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-10">
-        <span class="md-nav__icon md-icon"></span>
-        Releases
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
   <li class="md-nav__item">
-    <a href="../releases/chronos/" class="md-nav__link">
-      Chronos
+    <a href="../releases/" class="md-nav__link">
+      Releases
     </a>
-  </li>
-
-        
-      </ul>
-    </nav>
   </li>
 
         
@@ -1351,8 +1325,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../who-and-why/companies/" class="md-nav__link">
-      Companies
+    <a href="https://github.com/aeonix/aeon/graphs/contributors" class="md-nav__link">
+      Contributors
     </a>
   </li>
 
@@ -1453,9 +1427,220 @@
               
                 
                 
-                <h1 id="welcome-to-the-aeonwiki">Welcome to the aeon.wiki</h1>
-<p>This page is under construction.</p>
+                <h1 id="dependencies">Dependencies</h1>
 <h2 id="_1"></h2>
+<p>The following table summarizes the tools and libraries required to build. A
+few of the libraries are also included in this repository (marked as
+"Vendored"). By default, the build uses the library installed on the system,
+and ignores the vendored sources. However, if no library is found installed on
+the system, then the vendored source will be built and used. The vendored
+sources are also used for statically-linked builds because distribution
+packages often include only shared library binaries (<code>.so</code>) but not static
+library archives (<code>.a</code>).</p>
+<table>
+<thead>
+<tr>
+<th>Dep</th>
+<th>Min. version</th>
+<th>Vendored</th>
+<th>Debian/Ubuntu pkg</th>
+<th>Arch pkg</th>
+<th>Fedora</th>
+<th>Optional</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GCC</td>
+<td>4.7.3</td>
+<td>NO</td>
+<td><code>build-essential</code></td>
+<td><code>base-devel</code></td>
+<td><code>gcc</code></td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>CMake</td>
+<td>3.5</td>
+<td>NO</td>
+<td><code>cmake</code></td>
+<td><code>cmake</code></td>
+<td><code>cmake</code></td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>pkg-config</td>
+<td>any</td>
+<td>NO</td>
+<td><code>pkg-config</code></td>
+<td><code>base-devel</code></td>
+<td><code>pkgconf</code></td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>Boost</td>
+<td>1.58</td>
+<td>NO</td>
+<td><code>libboost-all-dev</code></td>
+<td><code>boost</code></td>
+<td><code>boost-devel</code></td>
+<td>NO</td>
+<td>C++ libraries</td>
+</tr>
+<tr>
+<td>OpenSSL</td>
+<td>basically any</td>
+<td>NO</td>
+<td><code>libssl-dev</code></td>
+<td><code>openssl</code></td>
+<td><code>openssl-devel</code></td>
+<td>NO</td>
+<td>sha256 sum</td>
+</tr>
+<tr>
+<td>libzmq</td>
+<td>3.0.0</td>
+<td>NO</td>
+<td><code>libzmq3-dev</code></td>
+<td><code>zeromq</code></td>
+<td><code>cppzmq-devel</code></td>
+<td>NO</td>
+<td>ZeroMQ library</td>
+</tr>
+<tr>
+<td>OpenPGM</td>
+<td>?</td>
+<td>NO</td>
+<td><code>libpgm-dev</code></td>
+<td><code>libpgm</code></td>
+<td><code>openpgm-devel</code></td>
+<td>NO</td>
+<td>For ZeroMQ</td>
+</tr>
+<tr>
+<td>libnorm[2]</td>
+<td>?</td>
+<td>NO</td>
+<td><code>libnorm-dev</code></td>
+<td></td>
+<td>`</td>
+<td>YES</td>
+<td>For ZeroMQ</td>
+</tr>
+<tr>
+<td>libunbound</td>
+<td>1.4.16</td>
+<td>YES</td>
+<td><code>libunbound-dev</code></td>
+<td><code>unbound</code></td>
+<td><code>unbound-devel</code></td>
+<td>NO</td>
+<td>DNS resolver</td>
+</tr>
+<tr>
+<td>libsodium</td>
+<td>?</td>
+<td>NO</td>
+<td><code>libsodium-dev</code></td>
+<td><code>libsodium</code></td>
+<td><code>libsodium-devel</code></td>
+<td>NO</td>
+<td>cryptography</td>
+</tr>
+<tr>
+<td>libunwind</td>
+<td>any</td>
+<td>NO</td>
+<td><code>libunwind-dev</code></td>
+<td><code>libunwind</code></td>
+<td><code>libunwind-devel</code></td>
+<td>YES</td>
+<td>Stack traces</td>
+</tr>
+<tr>
+<td>liblzma</td>
+<td>any</td>
+<td>NO</td>
+<td><code>liblzma-dev</code></td>
+<td><code>xz</code></td>
+<td><code>xz-devel</code></td>
+<td>YES</td>
+<td>For libunwind</td>
+</tr>
+<tr>
+<td>libreadline</td>
+<td>6.3.0</td>
+<td>NO</td>
+<td><code>libreadline-dev</code></td>
+<td><code>readline</code></td>
+<td><code>readline-devel</code></td>
+<td>YES</td>
+<td>Input editing</td>
+</tr>
+<tr>
+<td>ldns</td>
+<td>1.6.17</td>
+<td>NO</td>
+<td><code>libldns-dev</code></td>
+<td><code>ldns</code></td>
+<td><code>ldns-devel</code></td>
+<td>YES</td>
+<td>SSL toolkit</td>
+</tr>
+<tr>
+<td>expat</td>
+<td>1.1</td>
+<td>NO</td>
+<td><code>libexpat1-dev</code></td>
+<td><code>expat</code></td>
+<td><code>expat-devel</code></td>
+<td>YES</td>
+<td>XML parsing</td>
+</tr>
+<tr>
+<td>GTest</td>
+<td>1.5</td>
+<td>YES</td>
+<td><code>libgtest-dev</code>[1]</td>
+<td><code>gtest</code></td>
+<td><code>gtest-devel</code></td>
+<td>YES</td>
+<td>Test suite</td>
+</tr>
+<tr>
+<td>Doxygen</td>
+<td>any</td>
+<td>NO</td>
+<td><code>doxygen</code></td>
+<td><code>doxygen</code></td>
+<td><code>doxygen</code></td>
+<td>YES</td>
+<td>Documentation</td>
+</tr>
+<tr>
+<td>Graphviz</td>
+<td>any</td>
+<td>NO</td>
+<td><code>graphviz</code></td>
+<td><code>graphviz</code></td>
+<td><code>graphviz</code></td>
+<td>YES</td>
+<td>Documentation</td>
+</tr>
+</tbody>
+</table>
+<p>[1] On Debian/Ubuntu <code>libgtest-dev</code> only includes sources and headers. You must
+build the library binary manually. This can be done with the following command <code>sudo apt-get install libgtest-dev &amp;&amp; cd /usr/src/gtest &amp;&amp; sudo cmake . &amp;&amp; sudo make &amp;&amp; sudo mv libg* /usr/lib/</code>
+[2] libnorm-dev is needed if your zmq library was built with libnorm, and not needed otherwise
+[3] Note the differences of Libunwind and Libreadline for 16.04 and 18.04 distros</p>
+<p>Install all dependencies at once on Debian/Ubuntu 16.04: 
+<code>sudo apt update &amp;&amp; sudo apt install build-essential cmake git pkg-config libboost-all-dev libssl-dev libzmq3-dev libunbound-dev libsodium-dev libunwind8-dev liblzma-dev libreadline6-dev libldns-dev libexpat1-dev doxygen graphviz libpgm-dev</code></p>
+<p>Install all dependencies at once on Debian/Ubuntu 18.04: 
+<code>sudo apt update &amp;&amp; sudo apt install build-essential cmake git pkg-config libboost-all-dev libssl-dev libzmq3-dev libunbound-dev libsodium-dev libunwind-dev liblzma-dev libreadline-dev libldns-dev libexpat1-dev doxygen graphviz libpgm-dev libnorm-dev</code></p>
                 
               
               
@@ -1483,7 +1668,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Contributing guidelines
+                Contributing
               </div>
             </div>
           </a>
