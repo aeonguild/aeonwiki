@@ -1,5 +1,7 @@
 # Welcome to the aeon.wiki
 
+* tutorials
+
 * history
 
 * install
