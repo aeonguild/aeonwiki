@@ -114,6 +114,7 @@ This will log all ERROR, WARN, and INFO only for net.p2p. To view all net.p2p lo
 `daemon-address=<ip_address>:<port>`
 
 Use aeon daemon at ip-address:port. 
+
 ```
 --daemon-address=192.168.0.1:9149
 ```
@@ -129,6 +130,7 @@ Use aeon daemon at ip-address:port.
 
 
 Use daemon instance at specific IP address instead of localhost.
+
 ```
 --daemon-host=192.168.0.1
 ``` 
@@ -259,7 +261,9 @@ Specify `username[:password]` required for RPC server.
 
 [<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 ### `disable-rpc-login`       
+
 `disable-rpc-login[=<1|0>`
+
 Disable HTTP authentication for RPC connections served by this process.  
 
 
@@ -299,6 +303,7 @@ Restrict RPC to view only commands and do not return privacy sensitive data in R
 ### `wallet-dir`
 
 `wallet-dir=<path>`
+
 Directory for newly created wallets.
 
 
