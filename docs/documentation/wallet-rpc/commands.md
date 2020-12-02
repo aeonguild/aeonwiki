@@ -1,6 +1,8 @@
 [<span class="label_source"></span>](#){: .md-button }
 # Wallet RPC
 
+This page is still under construction. Follow the progress on [github](https://github.com/ivoryguru/aeonwiki).
+
 ## Usage
 
 `./aeon-wallet-rpc [options]`

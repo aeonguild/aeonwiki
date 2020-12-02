@@ -1,10 +1,13 @@
 # Welcome to aeon.wiki
 
+This website is still under construction but is available. 
+Follow the progress on [github](https://github.com/ivoryguru/aeonwiki).
+
 The wiki is sub divided into several categories. Each category holds a number of documentation pages.
 
 * Tutorial
 
-Getting Started, Basic Examples, FAQ
+Getting Started, Basic Examples, Mining, FAQ
 
 * Documentation
 

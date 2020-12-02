@@ -57,6 +57,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#mining" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -219,10 +224,62 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Mining
+        <span class="md-nav__icon md-icon"></span>
+      </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
       Mining
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#srbminer-multi-v054-windows-linux-cpu-amd" class="md-nav__link">
+    SRBminer-Multi v0.5.4+ (Windows, Linux, CPU, AMD)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xmrig-kangarootwelve-v100-windows-linux-cpu" class="md-nav__link">
+    XMRig KangarooTwelve v1.0.0+ (Windows, Linux, CPU)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulkan-xmr-miner-v041-windows-linux-cpu-gpu" class="md-nav__link">
+    Vulkan XMR Miner v0.4.1+ (Windows, Linux, CPU, GPU)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xmr-node-proxy" class="md-nav__link">
+    xmr-node-proxy
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -1355,24 +1412,67 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#srbminer-multi-v054-windows-linux-cpu-amd" class="md-nav__link">
+    SRBminer-Multi v0.5.4+ (Windows, Linux, CPU, AMD)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xmrig-kangarootwelve-v100-windows-linux-cpu" class="md-nav__link">
+    XMRig KangarooTwelve v1.0.0+ (Windows, Linux, CPU)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulkan-xmr-miner-v041-windows-linux-cpu-gpu" class="md-nav__link">
+    Vulkan XMR Miner v0.4.1+ (Windows, Linux, CPU, GPU)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xmr-node-proxy" class="md-nav__link">
+    xmr-node-proxy
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>Mining</h1>
-                
-                <p>From https://aeon.herominers.com/#how-to-mine-aeon.</p>
-<div class="tab-content">
-
-
-<div role="tabpanel" class="tab-pane" id="SRBMiner">
-<h3><a href="https://github.com/doktor83/SRBMiner-Multi/releases" target="_blank" title="SRBMiner" rel="nofollow noopener noreferrer">SRBminer-Multi v0.5.4+ (Windows, Linux, CPU, AMD)</a></h3>
-
-<div class="card padding-15">
-<p><strong>Method 1:</strong> Run <span class="newspublished">guided_setup.bat</span> file and answer questions:</p>
-<div class="stats">
+                <h1 id="mining">Mining</h1>
+<p>From <a href="https://aeon.herominers.com/#how-to-mine-aeon">Aeon HeroMiners pool</a>.</p>
+<h3 id="srbminer-multi-v054-windows-linux-cpu-amd"><a href="https://github.com/doktor83/SRBMiner-Multi/releases">SRBminer-Multi v0.5.4+ (Windows, Linux, CPU, AMD)</a></h3>
+<p>Method 1: Run <code>guided_setup.bat</code> file and answer questions:</p>
 <pre><code>
 <strong>Configuration name:</strong> <span class="newspublished">aeon-herominers</span>
 <strong>Do you want to use multi algorithm mining?</strong> <span class="newspublished">n</span> or y (optional)
@@ -1385,12 +1485,8 @@
 <strong>Do you want to enable compute mode?</strong> <span class="newspublished">y</span> or n (optional)
 </code>
 </pre>
-</div>
-</div>
 
-<div class="card padding-15">
-<p><strong>Method 2:</strong> Create <span class="newspublished">aeon-herominers.bat</span> file and copy / paste example below.</p>
-<div class="stats">
+<p>Method 2: Create <code>aeon-herominers.bat</code> file and copy / paste example below.</p>
 <pre><code>
 <strong>setx GPU_MAX_HEAP_SIZE 100</strong> 
 <strong>setx GPU_MAX_USE_SYNC_OBJECTS 1</strong>    
@@ -1408,34 +1504,18 @@
 <strong>pause</strong>
 </code>
 </pre>
-</div>
-</div>
-</div>
 
-
-<div role="tabpanel" class="tab-pane" id="XMRig-KangarooTwelve">
-<h3><a href="https://github.com/stoffu/xmrig/releases" target="_blank" title="XMRig-KangarooTwelve" rel="nofollow noopener noreferrer">XMRig KangarooTwelve v1.0.0+ (Windows, Linux, CPU)</a></h3>
-
-<div class="card padding-15">
-<p>Create <span class="newspublished">aeon-herominers.cmd</span> file and copy / paste example below.</p>
-<div class="stats">
+<h3 id="xmrig-kangarootwelve-v100-windows-linux-cpu"><a href="https://github.com/stoffu/xmrig/releases">XMRig KangarooTwelve v1.0.0+ (Windows, Linux, CPU)</a></h3>
+<p>Create  <code>aeon-herominers.cmd</code> file and copy / paste example below.</p>
 <pre><code>
 <strong>@echo off</strong>
 <strong>xmrig.exe --donate-level 1 -o <span class="miningserver">aeon.herominers.com:10651</span> -u <span class="yourwalletaddress">YOUR_AEON_WALLET_ADDRESS</span> -p <span class="yourworkername">YOUR_WORKER_NAME</span> -a <span class="newspublished">k12</span> -k </strong>
 <strong>pause</strong>
 </code>
 </pre>
-</div>
-</div>
-</div>
 
-
-<div role="tabpanel" class="tab-pane" id="Vulkan">
-<h3><a href="https://github.com/enerc/VulkanXMRMiner/releases" target="_blank" title="Vulkan" rel="nofollow noopener noreferrer">Vulkan XMR Miner v0.4.1+ (Windows, Linux, CPU, GPU)</a></h3>
-
-<div class="card padding-15">
-<p>Create <span class="newspublished">aeon-herominers.cmd</span> file and copy / paste example below.</p>
-<div class="stats">
+<h3 id="vulkan-xmr-miner-v041-windows-linux-cpu-gpu"><a href="https://github.com/enerc/VulkanXMRMiner/releases">Vulkan XMR Miner v0.4.1+ (Windows, Linux, CPU, GPU)</a></h3>
+<p>Create <code>aeon-herominers.cmd</code> file and copy / paste example below.</p>
 <pre><code>
 <strong>Your crypto:</strong> <span class="newspublished">2 (Aeon v7/v8)</span>
 <strong>Mining pool address (hostname/IP):</strong> <span class="miningserver">aeon.herominers.com</span>
@@ -1446,18 +1526,8 @@
 </code>
 </pre>
 <p>Answer other questions regarding your GPU cards and mining will start.</p>
-</div>
-</div>
-</div>
-
-
-
-<div role="tabpanel" class="tab-pane active" id="xmr-node-proxy">
-<h3><a href="https://github.com/MoneroOcean/xmr-node-proxy" target="_blank" title="xmr-node-proxy" rel="nofollow noopener noreferrer">xmr-node-proxy</a></h3>
-<div class="card padding-15">
-<p>Example <span class="newspublished">config.json</span></p>
-
-<div class="stats">
+<h3 id="xmr-node-proxy"><a href="https://github.com/MoneroOcean/xmr-node-proxy">xmr-node-proxy</a></h3>
+<p>Example <code>config.json</code>.</p>
 <pre><code> 
 "pools": [
 {
@@ -1476,12 +1546,6 @@
 ],
 </code>
 </pre>
-</div>
-</div>
-</div>
-
-
-</div>
                 
               
               
