@@ -29,7 +29,7 @@ nav:
     - Releases: 'the-project/releases.md'
     - TODO: 'the-project/todo.md'
   - Network info: 
-    - Block explorer: 'network-info/block-explorer'
+    - Block explorer: 'https://explorer.aeon.wiki'
     - Charts: 
       - Block Count:
         - Daily: 'network-info/charts/block_count_24h.md'
