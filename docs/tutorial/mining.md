@@ -1,4 +1,4 @@
-
+[<span class="label_source"></span>](#){: .md-button }
 # Mining
 From [Aeon HeroMiners pool](https://aeon.herominers.com/#how-to-mine-aeon).
 

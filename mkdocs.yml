@@ -71,6 +71,7 @@ nav:
         - Outputs-Inputs: 'network-info/charts/outputs_inputs.md'
       - Transactions: 'network-info/charts/tx_24h.md'
       - Version: 'network-info/charts/version.md'
+    - Open Nodes: 'network-info/open-nodes.md'
   - Who and why:
     - Contributors: 'https://github.com/aeonix/aeon/graphs/contributors'
     - Copyright: 'who-and-why/copyright.md'
