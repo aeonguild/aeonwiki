@@ -4,7 +4,7 @@ nav:
   - Tutorial:
     - Getting started: 'tutorial/getting-started.md'
     - Basic examples: 'tutorial/basic-examples.md'
-    - Mining: 'https://aeon.herominers.com/#how-to-mine-aeon'
+    - Mining: 'tutorial/mining.md'
     - FAQ: 'tutorial/faq.md'
   - Documentation:
     - aeond:
