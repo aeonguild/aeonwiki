@@ -1,45 +1,26 @@
-.md-nav__link {
-    margin: .0em;
-    white-space: nowrap;
+@font-face {
+  font-family: "lindsay-becker";
+  src: url("LindsayBecker.woff") format('woff');
+  src: url("LindsayBecker.woff2") format('woff2');
 }
-.md-typeset h3{
-    margin: 0 0 0 0;
-    line-height: 1;
-}
-.md-typeset hr{
-    margin: 0.5 0 0 0.5;
-    line-height: 1;
-}
-.md-typeset{
-    font-size: .7rem;
-    line-height: 1;
-}
-.md-content {
-  max-width: 100ch;
-}
-p {
-  max-width: 100ch;
-}
-pre {
-  max-width: 100ch;
-}
-.md-sidebar {
-  width:auto; 
+
+h1, .md-header-nav__title, .md-nav--primary .md-nav__title[for="__drawer"]{
+  font-family: 'lindsay-becker', Fallback, mono;
 }
 .md-nav__title[for=__toc]{
   height:0;
 }
-.md-main {
-    margin: 0 auto;
-    width: auto;
-    max-width: fit-content;
-}
-.md-header-nav{
-  max-width: 47rem;
-}
 .md-sidebar__scrollwrap::-webkit-scrollbar {
     width: 0px; 
     background: transparent;  
+}
+.md-typeset .md-button {
+    display: inline;
+    float:right;
+    padding: 0.25em;
+    font-weight: 500;
+    border: 0.01rem solid currentColor;
+    transition: color 125ms,background-color 125ms,border-color 125ms;
 }
 .md-footer-copyright{
     display: none;
@@ -49,14 +30,6 @@ pre {
   --md-primary-fg-color--dark:  #444444;
   --md-primary-fg-color--light: #5fbcd3;
   --md-accent-fg-color: #5fbcd3;
-}
-.md-typeset .md-button {
-    display: inline;
-    float:right;
-    padding: 0.25em;
-    font-weight: 500;
-    border: 0.01rem solid currentColor;
-    transition: color 125ms,background-color 125ms,border-color 125ms;
 }
 .label:after{
     content:'?';

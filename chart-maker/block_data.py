@@ -28,6 +28,7 @@ last_block = {
     'price' : 0,
     'price_btc' : 0,
     'price_xmr' : 0,
+    'supply_circulating' : 0,
     'supply_locked' : 0,
     'supply_total' : 0,
     'tx_24h' : 0,
@@ -107,6 +108,7 @@ def get_block_data():
         last_block['version'] = str(int(x[8]))+"."+str(int(x[9]))
         last_block['block_reward'] = x[3]
         last_block['supply_total'] += x[3]
+        last_block['supply_circulating'] = last_block['supply_total']-last_block['supply_locked']
         last_block['block_size_cum'] += x[6]
         last_block['block_difficulty'] = x[2]
         

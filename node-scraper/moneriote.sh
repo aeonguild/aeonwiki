@@ -32,6 +32,10 @@ echo "# Open Nodes" >> open-nodes.md
 echo "" >> open-nodes.md
 echo "##" >> open-nodes.md
 echo "" >> open-nodes.md
+echo "Each machine that runs the AEON daemon software is considered a node. Public nodes, or open nodes, are nodes ran by unknown operators who allow you to use their node to broadcast your transaction. There are risks to using public nodes, such as IP+time logging, in which operators of the node can tell when your IP started a transaction. Due to the natural privacy of AEON, your destinations are unknown to that node!. 
+
+To see that your node on is added to this list, launch your daemon with the options \`--rpc-bind-ip 0.0.0.0 --rpc-bind-port 11181 --restricted-rpc --confirm-external-bind.\`" >> open-nodes.md
+echo "" >> open-nodes.md
 echo "##############"
 echo "Check network white nodes for domains to add"
 
@@ -75,11 +79,11 @@ do
         echo "################################# Daemon $i is good" 
         if [[ $i == 142.93.155.14 ]]
         then
-        echo "* $i aeon.wiki"  >> open-nodes.md
+        echo "* [$i](http://www.aeon.wiki)"  >> open-nodes.md
         elif [[ $i != 0.0.0.0 ]] 
         then
         HOST=$(host $i | awk '{print substr($NF, 1, length($NF)-1)}')
-        echo "* $i ${HOST}"  >> open-nodes.md
+        echo "* [$i](http://www.${HOST})"  >> open-nodes.md
         fi
 	elif [[ $r_hit ]] || [[ $l_hit ]]; then
 	echo "Either the local or remote is dead"

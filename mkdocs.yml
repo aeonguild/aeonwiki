@@ -59,8 +59,9 @@ nav:
         - USD: 'network-info/charts/price.md'
         - XMR: 'network-info/charts/price_xmr.md'
       - Supply:
-        - Circulating: 'network-info/charts/supply_total.md'
+        - Circulating: 'network-info/charts/supply_circulating.md'
         - Locked: 'network-info/charts/supply_locked.md'
+        - Total: 'network-info/charts/supply_total.md'
       - Transaction Volume: 
         - AEON: 'network-info/charts/volume.md'
         - BTC: 'network-info/charts/volume_btc.md'

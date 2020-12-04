@@ -1,4 +1,10 @@
-# Welcome to aeon.wiki
+<span style="
+align:center;
+    color: black;
+    font-size: 8em;
+    font-family:lindsay-becker"><img src="img.svg" style="width:.75em;height:.75em;">  ÆON</span>
+
+# Welcome to aeon.wiki!
 
 This website is still under construction but is available. 
 Follow the progress on [github](https://github.com/ivoryguru/aeonwiki).
