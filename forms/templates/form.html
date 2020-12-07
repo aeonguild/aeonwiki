@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+<div style="max-width: calc(80em * 0.5);word-wrap: break-word;">
+<h1><a href="/">Aeon Form Explorer</a></h1>
+<form method="post" action="/">
+  <input type="text" id="search" name="search" placeholder="form_id">  <input type="submit" value="Search">
+</form>
+<br>
+<a href="{{form.form_id}}/response">Share response to this form</a>
+<h3>Form Info</h3>
+Form ID: {{form.form_id}} <br>
+Block Start: {{form.block_begin}} <br>
+Block End: {{form.block_end}} <br>
+Amount Requirement: {{form.amount_req}} <br>
+Status: {{form.status}} <br>
+Expiration Type: {{form.expiration}} <br>
+<h3>Questions</h3>
+{% for x in form.questions %} 
+{{x.body}}<br>
+(Must choose at least {{x.num_answers_min}} and no more than {{x.num_answers_max}} answers.)<br>
+    <table>
+        <tr>
+            <th>Option</th>
+            <th>Count</th>
+            <th>Coins</th>
+        </tr>
+        {% if x.isFreeResponse %}
+            {% for o in x.options %}
+                <tr>
+                    <td>{{x.options[o].body}}</td>
+                    <td>{{x.options[o].tally}}</td>
+                    <td>{{x.options[o].amount}}</td>
+                </tr> 
+            {%endfor%} 
+        {% else %}
+            {% for o in x.options %}
+                <tr>
+                    <td>{{o.body}}</td>
+                    <td>{{o.tally}}</td>
+                    <td>{{o.amount}}</td>
+                </tr> 
+            {%endfor%} 
+        {% endif %}
+    </table>
+    <br><br>
+{%endfor%} 
+<h3>Responses</h3>
+<table>
+    <tr>
+        <th>Transaction ID</th>
+        <th>Response</th>
+        <th>Coins</th>
+    </tr> 
+{% for x in form.responses %} 
+    <tr>
+        <td><a href="../form/{{form.form_id}}/{{x}}">{{x}}</a></td>
+        <td>{{form.responses[x].msg}}</td>
+        <td>{{form.responses[x].amount}}</td>
+    </tr> 
+{%endfor%} 
+</table>
+</div>
+</html>

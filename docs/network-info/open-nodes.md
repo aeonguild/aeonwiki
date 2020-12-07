@@ -6,8 +6,8 @@ Each machine that runs the AEON daemon software is considered a node. Public nod
 
 To see that your node on is added to this list, launch your daemon with the options `--rpc-bind-ip 0.0.0.0 --rpc-bind-port 11181 --restricted-rpc --confirm-external-bind.`
 
-* [144.76.113.157](http://www.hashvault.pro)
 * [95.111.247.164](http://www.vmi390948.contaboserver.net)
+* [144.76.113.157](http://www.hashvault.pro)
 * [95.216.145.71](http://www.defusion.de)
 * [5.9.16.30](http://www.static.30.16.9.5.clients.your-server.de)
 * [142.93.155.14](http://www.aeon.wiki)

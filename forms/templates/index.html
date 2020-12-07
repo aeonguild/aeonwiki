@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+<div style="max-width: calc(80em * 0.5);
+   word-wrap: break-word;">
+<h1><a href="/">Aeon Form Explorer</a></h1>
+
+Create polls, surveys, or other forms on the Aeon blockchain.
+<br><br>
+<a href="/form">Create a Form</a>  <br>
+<a href="/response">Share Response</a>  
+<br><br>
+<form method="post">
+  <input type="text" id="search" name="search" placeholder="form_id">  <input type="submit" value="Search">
+</form>
+
+
+<h3>Forms</h3>
+
+<h4>Form structure</h4>
+Forms can have many questions each with different types of responses. 
+Each question will have a prompt and a list of options that can be used to respond to that prompt.
+Questions can have a minimum and maximum number of answers in their response. 
+<br>
+<br>
+Forms also have different expiration conditions such as when a certain amount of blocks have passed or when a certain amount of coins have been registered to the form. When a form expires, the responses are saved and publicly available here, on forms.aeon.wiki. 
+<br>
+<br>
+Each response is cryptographically signed and backed by a certain number of coins. The information of responses are independently verifiable by anyone using a block explorer or the Aeon CLI tools.
+
+<h4>Creating a Form</h4>
+<h5>Method 1: <a href="/form">Form Creator</a>
+<h5>Method 2: <a href="/form">Submit JSON</a></h5>
+Forms submitted to <a href="/">forms.aeon.wiki</a> follow a JSON format structure:
+<pre>
+{
+    "form_id":
+        [
+            block_begin,
+            block_end,
+            amount_req=0,
+            expiration="duration",
+            [
+                "prompt_1",
+                ["option_1","option_2",...,"option_n"],
+                num_responses_min=1,
+                num_responses_max=1
+            ], 
+            [
+                "prompt_2",
+                ["option_1","option_2",...,"option_n"],
+                num_responses_min=1,
+                num_responses_max=1
+            ], 
+            ... 
+        ]
+}
+</pre>
+For example,
+<pre>
+{"2054":[230512,233512,["Hardfork at height 250000",["Y","N"]]]}
+</pre>
+
+
+<h3>Responses</h3>
+<h4>Create the hexadecimal response message</h4>
+The response format to use is also JSON: 
+<pre>{"form_id":[[choices for prompt 1 separated by commas], [choices for prompt 2 separated by commas], ... ]}</pre>
+As an example, 
+<pre>{"1":[[1,2],["superman"]]}</pre> 
+This is a response to form with ID 1 with choices 1 and 2 for prompt 1 and answer "superman" for prompt 3. Be sure to surround any free form input with double quotations. 
+<br>
+<br>
+Next, encode this data to hex using any ascii-to-hex converter. Our response <pre style="display:inline">{"1":[[1,2],["superman"]]}</pre> now becomes
+<pre>7b2231223a5b5b312c325d2c5b2273757065726d616e225d5d7d</pre>
+If the response is less than 64 chacters, pad the front with left so it is exactly 64 hexadecimal characters.
+<pre>0000000000007b2231223a5b5b312c325d2c5b2273757065726d616e225d5d7d</pre>
+This is the final form of the response. 
+
+<h4>Share the message</h4>
+<h5>Method 1: Embed response in Payment ID.</h5>
+Make a transfer with the padded hexadecimal response as a payment ID. Payment IDs can only be at most 64 characters, so if your final response is longer than 64 characters, you are required to use method 2.
+
+<h5>Method 2: Sign a message with Tx Priv Key.</h5>
+If you already have a transaction you would like to use to respond to a form, you can generate a signature where the message is your response according to the format above. This can be accomplished through the aeon-wallet-cli tools using the command "get-tx-proof". After the signature is calculated, the response information can shared publicly and added to the database hosted here.
+</div>
+</html>

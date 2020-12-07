@@ -91,3 +91,8 @@ do
 	echo "$i is closed"
 	fi
 done
+
+
+echo "To use with aeon-wallet-cli, use these commands
+* Windows : \`aeon-wallet-cli.exe --daemon-address ADDRESS.OF.HOST:11181\`
+* Unix-type (ubuntu, MacOS) : \`./aeon-wallet-cli --daemon-address ADDRESS.OF.HOST:11181\`"
