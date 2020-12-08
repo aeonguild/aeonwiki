@@ -6,7 +6,7 @@
   `./aeon-wallet-cli [options] [commands]`
 
 ## Description
-This is the command line Aeon wallet. It is a tool to manage aeon
+This is the command line Aeon wallet. It is the perfect tool to manage aeon
 transfers and addresses. It needs to connect to an Aeon daemon to 
 work correctly.
 
