@@ -2817,6 +2817,11 @@ Description: test
 <h3 id="check_tx_proof"><code>check_tx_proof</code></h3>
 <p><code>check_tx_proof &lt;txid&gt; &lt;address&gt; &lt;signature_file&gt; [&lt;message&gt;]</code></p>
 <p>Check the proof for funds going to <code>&lt;address&gt;</code> in <code>&lt;txid&gt;</code> with the challenge string <code>&lt;message&gt;</code> if any.</p>
+<pre><code>&gt;&gt;&gt; check_tx_proof txid WmsxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxVo aeon_tx_proof yes
+Good signature
+WmsxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxVo received 10.000000000 in txid &lt;e2xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&gt;
+This transaction has 359 confirmations
+</code></pre>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="donate"><code>donate</code></h3>
@@ -2831,244 +2836,422 @@ Description: test
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="exchange_multisig_keys"><code>exchange_multisig_keys</code></h3>
 <p><code>exchange_multisig_keys &lt;string&gt; [&lt;string&gt;...]</code></p>
+<p>Performs extra multisig keys exchange rounds. Needed for arbitrary M/N multisig wallets. See <a href="https://monero.stackexchange.com/questions/5646/how-to-use-monero-multisignature-wallets-2-2-2-3">MultiSig Guide</a>.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="export_key_images"><code>export_key_images</code></h3>
-<p><code>&lt;file&gt;</code></p>
+<p><code>export_key_images &lt;file&gt;</code></p>
+<p>Export a signed set of key images to a <code>&lt;file&gt;</code>.</p>
+<pre><code>&gt;&gt;&gt; export_key_images key_file
+Wallet password: ***************************
+Signed key images exported to key_file
+</code></pre>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="export_multisig_info"><code>export_multisig_info</code></h3>
-<p><code>&lt;filename&gt;</code></p>
+<p><code>export_multisig_info &lt;filename&gt;</code></p>
+<p>Export multisig info for other participants. See <a href="https://monero.stackexchange.com/questions/5646/how-to-use-monero-multisignature-wallets-2-2-2-3">MultiSig Guide</a>.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="export_outputs"><code>export_outputs</code></h3>
-<p><code>&lt;file&gt;</code></p>
+<p><code>export_outputs &lt;file&gt;</code></p>
+<p>Export the set of outputs owned by this wallet.</p>
+<pre><code>&gt;&gt;&gt; export_outputs file
+Wallet password: ***************************
+Outputs exported to file
+</code></pre>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="export_raw_multisig_tx"><code>export_raw_multisig_tx</code></h3>
-<p><code>&lt;filename&gt;</code></p>
+<p><code>export_raw_multisig_tx &lt;filename&gt;</code></p>
+<p>Export a signed multisig transaction to a file. See <a href="https://monero.stackexchange.com/questions/5646/how-to-use-monero-multisignature-wallets-2-2-2-3">MultiSig Guide</a>.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="export_transfers"><code>export_transfers</code></h3>
-<p><code>[in|out|all|pending|failed|coinbase] [index=&lt;N1&gt;[,&lt;N2&gt;,...]] [&lt;min_height&gt; [&lt;max_height&gt;]] [output=&lt;filepath&gt;]</code></p>
+<p><code>export_transfers [in|out|all|pending|failed|coinbase] [index=&lt;N1&gt;[,&lt;N2&gt;,...]] [&lt;min_height&gt; [&lt;max_height&gt;]] [output=&lt;filepath&gt;]</code></p>
+<p>Export to CSV the incoming/outgoing transfers within an optional height range.</p>
+<pre><code>&gt;&gt;&gt; export_transfers
+CSV exported to output0.csv
+</code></pre>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="finalize_multisig"><code>finalize_multisig</code></h3>
-<p><code>&lt;string&gt; [&lt;string&gt;...]</code></p>
+<p><code>finalize_multisig &lt;string&gt; [&lt;string&gt;...]</code></p>
+<p>Turn this wallet into a multisig wallet, extra step for N-1/N wallets. See <a href="https://monero.stackexchange.com/questions/5646/how-to-use-monero-multisignature-wallets-2-2-2-3">MultiSig Guide</a>.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="get_description"><code>get_description</code></h3>
+<p><code>get_description</code></p>
+<p>Get the description of the wallet.</p>
+<pre><code>&gt;&gt;&gt; get_description
+description found: My Favorite Wallet
+</code></pre>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="get_reserve_proof"><code>get_reserve_proof</code></h3>
-<p><code>(all|&lt;amount&gt;) [&lt;message&gt;]</code></p>
+<p><code>get_reserve_proof (all|&lt;amount&gt;) [&lt;message&gt;]</code></p>
+<p>Generate a signature proving that you own at least this much, optionally with a challenge string <code>&lt;message&gt;</code>.  If <code>all</code> is specified, you prove the entire sum of all of your existing accounts' balances.
+Otherwise, you prove the reserve of the smallest possible amount above <code>&lt;amount&gt;</code> available in your current account.</p>
+<pre><code>&gt;&gt;&gt; get_reserve_proof 10 I-have-ten-coins
+Wallet password: ****************
+signature file saved to: aeon_reserve_proof
+</code></pre>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="get_spend_proof"><code>get_spend_proof</code></h3>
-<p><code>&lt;txid&gt; [&lt;message&gt;]</code></p>
+<p><code>get_spend_proof &lt;txid&gt; [&lt;message&gt;]</code></p>
+<p>Generate a signature proving that you generated <code>&lt;txid&gt;</code> using the spend secret key, optionally with a challenge string <code>&lt;message&gt;</code>.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="get_tx_key"><code>get_tx_key</code></h3>
-<p><code>&lt;txid&gt;</code></p>
+<p><code>get_tx_key &lt;txid&gt;</code></p>
+<p>Get the transaction private key. This can be used to prove coins have been sent but does not prove who sent the transaction. </p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="get_tx_note"><code>get_tx_note</code></h3>
-<p><code>&lt;txid&gt;</code></p>
+<p><code>get_tx_note &lt;txid&gt;</code></p>
+<p>Get the note attached to a transaction id.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="get_tx_proof"><code>get_tx_proof</code></h3>
-<p><code>&lt;txid&gt; &lt;address&gt; [&lt;message&gt;]</code></p>
+<p><code>get_tx_proof &lt;txid&gt; &lt;address&gt; [&lt;message&gt;]</code></p>
+<p>Generate a signature proving funds sent to <code>&lt;address&gt;</code> in <code>&lt;txid&gt;</code>, optionally with a challenge string <code>&lt;message&gt;</code>, using either the transaction secret key (when <code>&lt;address&gt;</code> is not your wallet's address) or the view secret key (otherwise), which does not disclose the secret key.</p>
+<pre><code>&gt;&gt;&gt; get_tx_proof e2xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx WmsxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxVo yes
+Wallet password: 
+signature file saved to: aeon_tx_proof
+</code></pre>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="help"><code>help</code></h3>
-<p><code>[&lt;command&gt;]</code></p>
+<p><code>help [&lt;command&gt;]</code></p>
+<p>Get documentation information.</p>
+<pre><code>&gt;&gt;&gt; help get_tx_key
+Command usage: 
+  get_tx_key &lt;txid&gt;
+
+Command description: 
+  Get the transaction key (r) for a given &lt;txid&gt;
+</code></pre>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="import_key_images"><code>import_key_images</code></h3>
-<p><code>&lt;file&gt;</code></p>
+<p><code>import_key_images &lt;file&gt;</code></p>
+<p>Import a signed key images list and verify their spent status. This could be used to verify a cold wallet balance. </p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="import_multisig_info"><code>import_multisig_info</code></h3>
-<p><code>&lt;filename&gt; [&lt;filename&gt;...]</code></p>
+<p><code>import_multisig_info &lt;filename&gt; [&lt;filename&gt;...]</code></p>
+<p>Import multisig info from other participants.  See <a href="https://monero.stackexchange.com/questions/5646/how-to-use-monero-multisignature-wallets-2-2-2-3">MultiSig Guide</a>.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="import_outputs"><code>import_outputs</code></h3>
-<p><code>&lt;file&gt;</code></p>
+<p><code>import_outputs &lt;file&gt;</code></p>
+<p>Import a set of outputs owned by this wallet. This could be used to load transactions to an offline wallet. </p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="incoming_transfers"><code>incoming_transfers</code></h3>
-<p><code>[available|unavailable] [verbose] [index=&lt;N1&gt;[,&lt;N2&gt;[,...]]]</code></p>
+<p><code>incoming_transfers [available|unavailable] [verbose] [index=&lt;N1&gt;[,&lt;N2&gt;[,...]]]</code></p>
+<p>Show the incoming transfers, all or filtered by availability and address index.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="integrated_address"><code>integrated_address</code></h3>
-<p><code>[&lt;payment_id&gt; | &lt;address&gt;]</code></p>
+<p><code>integrated_address [&lt;payment_id&gt; | &lt;address&gt;]</code></p>
+<p>Encode a payment ID into an integrated address for the current wallet public address (no argument uses a random payment ID), or decode an integrated address to standard address and payment ID.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="is_output_spent"><code>is_output_spent</code></h3>
-<p><code>&lt;amount&gt;/&lt;offset&gt;</code></p>
+<p><code>is_output_spent &lt;amount&gt;/&lt;key_offset&gt;</code></p>
+<p>Checks whether an output is marked as spent.</p>
+<pre><code>&gt;&gt;&gt; mark_output_spent 500/2657
+&gt;&gt;&gt; is_output_spent 500/2657
+Spent: 500/2657
+&gt;&gt;&gt; mark_output_unspent 500/2657
+&gt;&gt;&gt; is_output_spent 500/2657
+Not spent: 500/2657
+</code></pre>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="locked_sweep_all"><code>locked_sweep_all</code></h3>
-<p><code>[index=&lt;N1&gt;[,&lt;N2&gt;,...]] [&lt;priority&gt;] [&lt;ring_size&gt;] &lt;address&gt; &lt;lockblocks&gt; [&lt;payment_id&gt;]</code></p>
+<p><code>locked_sweep_all [index=&lt;N1&gt;[,&lt;N2&gt;,...]] [&lt;priority&gt;] [&lt;ring_size&gt;] &lt;address&gt; &lt;lockblocks&gt; [&lt;payment_id&gt;]</code></p>
+<p>Send all unlocked balance to an address and lock it for <code>&lt;lockblocks&gt;</code> (max. 1000000). If the parameter <code>index&lt;N1&gt;[,&lt;N2&gt;,...]</code> is specified, the wallet sweeps outputs received by those address indices. <code>&lt;priority&gt;</code> is the priority of the sweep. The higher the priority, the higher the transaction fee. Valid values in priority order (from lowest to highest) are: unimportant, normal, elevated, priority. If omitted, the default value (see the command <code>set priority</code>) is used. <code>&lt;ring_size&gt;</code> is the number of inputs to include for untraceability.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="locked_transfer"><code>locked_transfer</code></h3>
-<p><code>[index=&lt;N1&gt;[,&lt;N2&gt;,...]] [&lt;priority&gt;] [&lt;ring_size&gt;] (&lt;URI&gt; | &lt;addr&gt; &lt;amount&gt;) &lt;lockblocks&gt; [&lt;payment_id&gt;]</code></p>
+<p><code>locked_transfer [index=&lt;N1&gt;[,&lt;N2&gt;,...]] [&lt;priority&gt;] [&lt;ring_size&gt;] (&lt;URI&gt; | &lt;addr&gt; &lt;amount&gt;) &lt;lockblocks&gt; [&lt;payment_id&gt;]</code></p>
+<p>Transfer <code>&lt;amount&gt;</code> to <code>&lt;address&gt;</code> and lock it for <code>&lt;lockblocks&gt;</code> (max. 1000000). If the parameter <code>index=&lt;N1&gt;[,&lt;N2&gt;,...]</code> is specified, the wallet uses outputs received by addresses of those indices. <code>&lt;priority&gt;</code> is the priority of the transaction. The higher the priority, the higher the transaction fee. Valid values in priority order (from lowest to highest) are: unimportant, normal, elevated, priority. If omitted, the default value (see the command <code>set priority</code>) is used. <code>&lt;ring_size&gt;</code> is the number of inputs to include for untraceability. Multiple payments can be made at once by adding URI_2 or <code>&lt;address_2&gt; &lt;amount_2&gt;</code> etc. (before the payment ID, if it's included).</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="make_multisig"><code>make_multisig</code></h3>
-<p><code>&lt;threshold&gt; &lt;string1&gt; [&lt;string&gt;...]</code></p>
+<p><code>make_multisig &lt;threshold&gt; &lt;string1&gt; [&lt;string&gt;...]</code></p>
+<p>Turn this wallet into a multisig wallet. See <a href="https://monero.stackexchange.com/questions/5646/how-to-use-monero-multisignature-wallets-2-2-2-3">MultiSig Guide</a>.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="mark_output_spent"><code>mark_output_spent</code></h3>
-<p><code>&lt;amount&gt;/&lt;offset&gt; | &lt;filename&gt; [add]</code></p>
+<p><code>mark_output_spent &lt;amount&gt;/&lt;offset&gt; | &lt;filename&gt; [add]</code>
+  Mark output(s) as spent so they never get selected as fake outputs in a ring.</p>
+<pre><code>&gt;&gt;&gt; mark_output_spent 500/2657
+&gt;&gt;&gt; is_output_spent 500/2657
+Spent: 500/2657
+&gt;&gt;&gt; mark_output_unspent 500/2657
+&gt;&gt;&gt; is_output_spent 500/2657
+Not spent: 500/2657
+</code></pre>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="mark_output_unspent"><code>mark_output_unspent</code></h3>
-<p><code>&lt;amount&gt;/&lt;offset&gt;</code></p>
+<p><code>mark_output_unspent &lt;amount&gt;/&lt;offset&gt;</code></p>
+<p>Marks an output as unspent so it may get selected as a fake output in a ring.</p>
+<pre><code>&gt;&gt;&gt; mark_output_spent 500/2657
+&gt;&gt;&gt; is_output_spent 500/2657
+Spent: 500/2657
+&gt;&gt;&gt; mark_output_unspent 500/2657
+&gt;&gt;&gt; is_output_spent 500/2657
+Not spent: 500/2657
+</code></pre>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="password"><code>password</code></h3>
+<p><code>password</code></p>
+<p>Change the wallet's password.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="payment_id"><code>payment_id</code></h3>
+<p><code>payment_id</code></p>
+<p>Generate a new random full size payment id. These will be unencrypted on the blockchain, see <code>integrated_address</code> for encrypted short payment ids.</p>
+<pre><code>&gt;&gt;&gt; payment_id
+Random payment ID: &lt;3b9c33d3444a1e8f489f9669f0c83cc72a6fef93c5133dfea3401d976dba32ec&gt;
+</code></pre>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="payments"><code>payments</code></h3>
-<p><code>&lt;PID_1&gt; [&lt;PID_2&gt; ... &lt;PID_N&gt;]</code></p>
+<p><code>payments &lt;PID_1&gt; [&lt;PID_2&gt; ... &lt;PID_N&gt;]</code></p>
+<p>Show the payments for the given payment IDs.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="prepare_multisig"><code>prepare_multisig</code></h3>
+<p><code>prepare_multisig</code></p>
+<p>Export data needed to create a multisig wallet. See <a href="https://monero.stackexchange.com/questions/5646/how-to-use-monero-multisignature-wallets-2-2-2-3">MultiSig Guide</a>.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="print_ring"><code>print_ring</code></h3>
-<p><code>&lt;key_image&gt; | &lt;txid&gt;</code></p>
+<p><code>print_ring &lt;key_image&gt; | &lt;txid&gt;</code></p>
+<p>Print the ring(s) used to spend a given key image or transaction (if the ring size is &gt; 1).</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="refresh"><code>refresh</code></h3>
+<p><code>refresh</code></p>
+<p>Synchronize with daemon. </p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="rescan_bc"><code>rescan_bc</code></h3>
+<p><code>rescan_bc</code></p>
+<p>Rescan the blockchain from scratch, losing any information which can not be recovered from the blockchain itself.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="rescan_spent"><code>rescan_spent</code></h3>
+<p><code>rescan_spent</code></p>
+<p>Rescan the blockchain for spent outputs.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="save"><code>save</code></h3>
+<p><code>save</code></p>
+<p>Save the wallet data including key images, transaction history, etc.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="save_bc"><code>save_bc</code></h3>
+<p><code>save_bc</code></p>
+<p>Save the current blockchain data.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="save_known_rings"><code>save_known_rings</code></h3>
+<p><code>save_known_rings</code></p>
+<p>Save known rings to the shared rings database</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="save_watch_only"><code>save_watch_only</code></h3>
+<p><code>save_watch_only</code></p>
+<p>Save a watch-only keys file.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="seed"><code>seed</code></h3>
+<p><code>seed</code></p>
+<p>Display the Electrum-style mnemonic seed</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="set"><code>set</code></h3>
-<p><code>&lt;option&gt; [&lt;value&gt;]</code></p>
+<p><code>set &lt;option&gt; [&lt;value&gt;]</code></p>
+<p>This command is used to set a variety of options in the wallet CLI.</p>
+<p>Available options:</p>
+<ul>
+<li><code>seed language</code> Set the wallet's seed language.</li>
+<li><code>always-confirm-transfers &lt;1|0&gt;</code> Whether to confirm unsplit txes.</li>
+<li><code>print-ring-members &lt;1|0&gt;</code> Whether to print detailed information about ring members during confirmation.</li>
+<li><code>store-tx-info &lt;1|0&gt;</code> Whether to store outgoing tx info (destination address, payment ID, tx secret key) for future reference.</li>
+<li><code>default-ring-size &lt;n&gt;</code> Set the default ring size (obsolete).</li>
+<li><code>auto-refresh &lt;1|0&gt;</code> Whether to automatically synchronize new blocks from the daemon.</li>
+<li><code>refresh-type &lt;full|optimize-coinbase|no-coinbase|default&gt;</code> Set the wallet's refresh behaviour.</li>
+<li><code>priority [0|1|2|3|4]</code> Set the fee to default/unimportant/normal/elevated/priority.</li>
+<li><code>confirm-missing-payment-id &lt;1|0&gt;</code></li>
+<li><code>ask-password &lt;0|1|2   (or never|action|decrypt)&gt;</code></li>
+<li><code>unit &lt;aeon|milliaeon|microaeon|nanoaeon|picoaeon&gt;</code> Set the default aeon (sub-)unit.</li>
+<li><code>min-outputs-count [n]</code> Try to keep at least that many outputs of value at least min-outputs-value.</li>
+<li><code>min-outputs-value [n]</code> Try to keep at least min-outputs-count outputs of at least that value.</li>
+<li><code>merge-destinations &lt;1|0&gt;</code> Whether to merge multiple payments to the same destination address.</li>
+<li><code>confirm-backlog &lt;1|0&gt;</code> Whether to warn if there is transaction backlog.</li>
+<li><code>confirm-backlog-threshold [n]</code> Set a threshold for confirm-backlog to only warn if the transaction backlog is greater than n blocks.</li>
+<li><code>refresh-from-block-height [n]</code> Set the height before which to ignore blocks.</li>
+<li><code>auto-low-priority &lt;1|0&gt;</code> Whether to automatically use the low priority fee level when it's safe to do so.</li>
+<li><code>segregate-pre-fork-outputs &lt;1|0&gt;</code> Set this if you intend to spend outputs on both Aeon AND a key reusing fork.</li>
+<li><code>key-reuse-mitigation2 &lt;1|0&gt;</code> Set this if you are not sure whether you will spend on a key reusing Aeon fork later.</li>
+<li><code>subaddress-lookahead &lt;major&gt;:&lt;minor&gt;</code> Set the lookahead sizes for the subaddress hash table.</li>
+<li><code>segregation-height &lt;n&gt;</code> Set to the height of a key reusing fork you want to use, 0 to use default.</li>
+<li><code>ignore-outputs-above &lt;amount&gt;</code> Ignore outputs of amount above this threshold when spending. Value 0 is translated to the maximum value (18 million) which disables this filter.</li>
+<li><code>ignore-outputs-below &lt;amount&gt;</code> Ignore outputs of amount below this threshold when spending.</li>
+</ul>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="set_daemon"><code>set_daemon</code></h3>
-<p><code>&lt;host&gt;[:&lt;port&gt;] [trusted|untrusted]</code></p>
+<p><code>set_daemon &lt;host&gt;[:&lt;port&gt;] [trusted|untrusted]</code></p>
+<p>Set another daemon to connect to.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="set_description"><code>set_description</code></h3>
-<p><code>[free text note]</code></p>
+<p><code>set_description [free text note]</code></p>
+<pre><code>&gt;&gt;&gt; set_description My Favorite Wallet
+&gt;&gt;&gt; get_description
+description found: My Favortite Wallet
+</code></pre>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="set_log"><code>set_log</code></h3>
-<p><code>&lt;level&gt;|{+,-,}&lt;categories&gt;</code></p>
+<p><code>set_log &lt;level&gt;|{+,-,}&lt;categories&gt;</code></p>
+<p>Aeon source code has five log levels: 0 ERROR, 1 WARN, 2 INFO, 3 DEBUG, 4 TRACE. Each of the higher log levels contains the log levels below them. So for example</p>
+<pre><code>set_log 3
+</code></pre>
+<p>will display levels 0, 1, 2, and 3. To restrict the log to a specific category, you can use the following example</p>
+<pre><code>set_log net.p2p:INFO
+</code></pre>
+<p>This will log all ERROR, WARN, and INFO only for net.p2p. To view all net.p2p logs use <code>net.p2p:TRACE</code> as that will log all lower levels.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="set_ring"><code>set_ring</code></h3>
-<p><code>&lt;filename&gt; | ( &lt;key_image&gt; absolute|relative &lt;index&gt; [&lt;index&gt;...] )</code></p>
+<p><code>set_ring &lt;filename&gt; | ( &lt;key_image&gt; absolute|relative &lt;index&gt; [&lt;index&gt;...] )</code></p>
+<p>Set the ring used for a given key image, so it can be reused in a fork.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="set_tx_key"><code>set_tx_key</code></h3>
-<p><code>&lt;txid&gt; &lt;tx_key&gt;</code></p>
+<p><code>set_tx_key &lt;txid&gt; &lt;tx_key&gt;</code></p>
+<p>Set the transaction key <code>r</code> for a given <code>&lt;txid&gt;</code> in case the tx was made by some other device or 3rd party wallet.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="set_tx_note"><code>set_tx_note</code></h3>
-<p><code>&lt;txid&gt; [free text note]</code></p>
+<p><code>set_tx_note &lt;txid&gt; [free text note]</code></p>
+<p>Set an arbitrary string note for a <code>&lt;txid&gt;</code>.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="show_transfer"><code>show_transfer</code></h3>
-<p><code>&lt;txid&gt;</code></p>
+<p><code>show_transfer &lt;txid&gt;</code></p>
+<p>Show information about a transfer to/from this address.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="show_transfers"><code>show_transfers</code></h3>
-<p><code>[in|out|pending|failed|pool|coinbase] [index=&lt;N1&gt;[,&lt;N2&gt;,...]] [&lt;min_height&gt; [&lt;max_height&gt;]]</code></p>
+<p><code>show_transfers [in|out|pending|failed|pool|coinbase] [index=&lt;N1&gt;[,&lt;N2&gt;,...]] [&lt;min_height&gt; [&lt;max_height&gt;]]</code></p>
+<p>Show the incoming/outgoing transfers within an optional height range.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="sign"><code>sign</code></h3>
-<p><code>&lt;file&gt;</code></p>
+<p><code>sign &lt;file&gt;</code></p>
+<p>Sign the contents of a file.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="sign_multisig"><code>sign_multisig</code></h3>
-<p><code>&lt;filename&gt;</code></p>
+<p><code>sign_multisig &lt;filename&gt;</code></p>
+<p>Sign a multisig transaction from a file. See <a href="https://monero.stackexchange.com/questions/5646/how-to-use-monero-multisignature-wallets-2-2-2-3">MultiSig Guide</a>.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="sign_transfer"><code>sign_transfer</code></h3>
-<p><code>[export_raw]</code></p>
+<p><code>sign_transfer [export_raw]</code></p>
+<p>Sign a transaction from a file. If the parameter "export_raw" is specified, transaction raw hex data suitable for the daemon RPC /sendrawtransaction is exported.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="spendkey"><code>spendkey</code></h3>
+<p><code>spendkey</code>  </p>
+<p>Display the private spend key.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="start_mining"><code>start_mining</code></h3>
-<p><code>[&lt;number_of_threads&gt;] [bg_mining] [ignore_battery]</code></p>
+<p><code>start_mining [&lt;number_of_threads&gt;] [bg_mining] [ignore_battery]</code></p>
+<p>Start mining thread. </p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="status"><code>status</code></h3>
+<p><code>status</code></p>
+<p>Show synchronization status</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="stop_mining"><code>stop_mining</code></h3>
+<p><code>stop_mining</code></p>
+<p>Kills mining threads.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="submit_multisig"><code>submit_multisig</code></h3>
-<p><code>&lt;filename&gt;</code></p>
+<p><code>submit_multisig &lt;filename&gt;</code></p>
+<p>Submit a signed multisig transaction from a file</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="submit_transfer"><code>submit_transfer</code></h3>
+<p><code>submit_transfer</code></p>
+<p>Submit a signed transaction from a file.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="sweep_all"><code>sweep_all</code></h3>
-<p><code>[index=&lt;N1&gt;[,&lt;N2&gt;,...]] [&lt;priority&gt;] [&lt;ring_size&gt;] &lt;address&gt; [&lt;payment_id&gt;]</code></p>
+<p><code>sweep_all [index=&lt;N1&gt;[,&lt;N2&gt;,...]] [&lt;priority&gt;] [&lt;ring_size&gt;] &lt;address&gt; [&lt;payment_id&gt;]</code></p>
+<p>Send all unlocked balance to an address.  If the parameter <code>index&lt;N1&gt;[,&lt;N2&gt;,...]</code> is specified, the wallet sweeps outputs received by those address indices. If omitted, the wallet sweeps outputs received by all address indices.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="sweep_below"><code>sweep_below</code></h3>
-<p><code>&lt;amount_threshold&gt; [index=&lt;N1&gt;[,&lt;N2&gt;,...]] [&lt;priority&gt;] [&lt;ring_size&gt;] &lt;address&gt; [&lt;payment_id&gt;]</code></p>
+<p><code>sweep_below &lt;amount_threshold&gt; [index=&lt;N1&gt;[,&lt;N2&gt;,...]] [&lt;priority&gt;] [&lt;ring_size&gt;] &lt;address&gt; [&lt;payment_id&gt;]</code></p>
+<p>Send all unlocked outputs below an amount to an address. If the parameter <code>index&lt;N1&gt;[,&lt;N2&gt;,...]</code> is specified, the wallet sweeps outputs received by those address indices. If omitted, the wallet sweeps outputs received by all address indices.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="sweep_single"><code>sweep_single</code></h3>
-<p><code>[&lt;priority&gt;] [&lt;ring_size&gt;] &lt;key_image&gt; &lt;address&gt; [&lt;payment_id&gt;]</code></p>
+<p><code>sweep_single [&lt;priority&gt;] [&lt;ring_size&gt;] &lt;key_image&gt; &lt;address&gt; [&lt;payment_id&gt;]</code></p>
+<p>Send a single output to an address. </p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="sweep_unmixable"><code>sweep_unmixable</code></h3>
+<p><code>sweep_unmixable</code></p>
+<p>Send all unmixable outputs to yourself with ring_size 1</p>
+<hr />
+<p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="transfer"><code>transfer</code></h3>
-<p><code>[index=&lt;N1&gt;[,&lt;N2&gt;,...]] [&lt;priority&gt;] [&lt;ring_size&gt;] (&lt;URI&gt; | &lt;address&gt; &lt;amount&gt;) [&lt;payment_id&gt;]</code></p>
+<p><code>transfer [index=&lt;N1&gt;[,&lt;N2&gt;,...]] [&lt;priority&gt;] [&lt;ring_size&gt;] (&lt;URI&gt; | &lt;address&gt; &lt;amount&gt;) [&lt;payment_id&gt;]</code></p>
+<p>Transfer <code>&lt;amount&gt;</code> to <code>&lt;address&gt;</code>. If the parameter <code>index=&lt;N1&gt;[,&lt;N2&gt;,...]</code> is specified, the wallet uses outputs received by addresses of those indices. <code>&lt;priority&gt;</code> is the priority of the transaction. The higher the priority, the higher the transaction fee. Valid values in priority order (from lowest to highest) are: unimportant, normal, elevated, priority. If omitted, the default value (see the command <code>set priority</code>) is used. <code>&lt;ring_size&gt;</code> is the number of inputs to include for untraceability. Multiple payments can be made at once by adding URI_2 or <code>&lt;address_2&gt; &lt;amount_2&gt;</code> etc. (before the payment ID, if it's included)</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="unspent_outputs"><code>unspent_outputs</code></h3>
-<p><code>[index=&lt;N1&gt;[,&lt;N2&gt;,...]] [&lt;min_amount&gt; [&lt;max_amount&gt;]]</code></p>
+<p><code>unspent_outputs [index=&lt;N1&gt;[,&lt;N2&gt;,...]] [&lt;min_amount&gt; [&lt;max_amount&gt;]]</code></p>
+<p>Show the unspent outputs of a specified address within an optional amount range.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="verify"><code>verify</code></h3>
-<p><code>&lt;filename&gt; &lt;address&gt; &lt;signature&gt;</code></p>
+<p><code>verify &lt;filename&gt; &lt;address&gt; &lt;signature&gt;</code></p>
+<p>Verify a signature on the contents of a file.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="version"><code>version</code></h3>
+<p><code>version</code></p>
+<p>Returns version information</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="viewkey"><code>viewkey</code></h3>
+<p><code>viewkey</code></p>
+<p>Display the private view key.</p>
 <hr />
 <p><a class="md-button" href="https://github.com/ivoryguru/aeondocs/issues/new?labels=question"><span class="label"></span></a></p>
 <h3 id="wallet_info"><code>wallet_info</code></h3>
+<p><code>wallet_info</code></p>
+<p>Show the wallet's information.</p>
 <hr />
                 
               

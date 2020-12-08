@@ -632,53 +632,33 @@ Save the wallet data including key images, transaction history, etc.
 
 This command is used to set a variety of options in the wallet CLI.
 
-  Available options:
-   * `seed language`
-     Set the wallet's seed language.
-   * `always-confirm-transfers <1|0>`
-     Whether to confirm unsplit txes.
-   * `print-ring-members <1|0>`
-     Whether to print detailed information about ring members during confirmation.
-   * `store-tx-info <1|0>`
-     Whether to store outgoing tx info (destination address, payment ID, tx secret key) for future reference.
-   * `default-ring-size <n>`
-     Set the default ring size (obsolete).
-   * `auto-refresh <1|0>`
-     Whether to automatically synchronize new blocks from the daemon.
-   * `refresh-type <full|optimize-coinbase|no-coinbase|default>`
-     Set the wallet's refresh behaviour.
-   * `priority [0|1|2|3|4]`
-     Set the fee to default/unimportant/normal/elevated/priority.
-   * `confirm-missing-payment-id <1|0>`
-   * `ask-password <0|1|2   (or never|action|decrypt)>`
-   * `unit <aeon|milliaeon|microaeon|nanoaeon|picoaeon>`
-     Set the default aeon (sub-)unit.
-   * `min-outputs-count [n]`
-     Try to keep at least that many outputs of value at least min-outputs-value.
-   * `min-outputs-value [n]`
-     Try to keep at least min-outputs-count outputs of at least that value.
-   * `merge-destinations <1|0>`
-     Whether to merge multiple payments to the same destination address.
-   * `confirm-backlog <1|0>`
-     Whether to warn if there is transaction backlog.
-   * `confirm-backlog-threshold [n]`
-     Set a threshold for confirm-backlog to only warn if the transaction backlog is greater than n blocks.
-   * `refresh-from-block-height [n]`
-     Set the height before which to ignore blocks.
-   * `auto-low-priority <1|0>`
-     Whether to automatically use the low priority fee level when it's safe to do so.
-   * `segregate-pre-fork-outputs <1|0>`
-     Set this if you intend to spend outputs on both Aeon AND a key reusing fork.
-   * `key-reuse-mitigation2 <1|0>`
-     Set this if you are not sure whether you will spend on a key reusing Aeon fork later.
-  * `subaddress-lookahead <major>:<minor>`
-     Set the lookahead sizes for the subaddress hash table.
-   * `segregation-height <n>`
-     Set to the height of a key reusing fork you want to use, 0 to use default.
-  *  `ignore-outputs-above <amount>`
-     Ignore outputs of amount above this threshold when spending. Value 0 is translated to the maximum value (18 million) which disables this filter.
-  *  `ignore-outputs-below <amount>`
-     Ignore outputs of amount below this threshold when spending.
+Available options:
+
+* `seed language` Set the wallet's seed language.
+* `always-confirm-transfers <1|0>` Whether to confirm unsplit txes.
+* `print-ring-members <1|0>` Whether to print detailed information about ring members during confirmation.
+* `store-tx-info <1|0>` Whether to store outgoing tx info (destination address, payment ID, tx secret key) for future reference.
+* `default-ring-size <n>` Set the default ring size (obsolete).
+* `auto-refresh <1|0>` Whether to automatically synchronize new blocks from the daemon.
+* `refresh-type <full|optimize-coinbase|no-coinbase|default>` Set the wallet's refresh behaviour.
+* `priority [0|1|2|3|4]` Set the fee to default/unimportant/normal/elevated/priority.
+* `confirm-missing-payment-id <1|0>`
+* `ask-password <0|1|2   (or never|action|decrypt)>`
+* `unit <aeon|milliaeon|microaeon|nanoaeon|picoaeon>` Set the default aeon (sub-)unit.
+* `min-outputs-count [n]` Try to keep at least that many outputs of value at least min-outputs-value.
+* `min-outputs-value [n]` Try to keep at least min-outputs-count outputs of at least that value.
+* `merge-destinations <1|0>` Whether to merge multiple payments to the same destination address.
+* `confirm-backlog <1|0>` Whether to warn if there is transaction backlog.
+* `confirm-backlog-threshold [n]` Set a threshold for confirm-backlog to only warn if the transaction backlog is greater than n blocks.
+* `refresh-from-block-height [n]` Set the height before which to ignore blocks.
+* `auto-low-priority <1|0>` Whether to automatically use the low priority fee level when it's safe to do so.
+* `segregate-pre-fork-outputs <1|0>` Set this if you intend to spend outputs on both Aeon AND a key reusing fork.
+* `key-reuse-mitigation2 <1|0>` Set this if you are not sure whether you will spend on a key reusing Aeon fork later.
+* `subaddress-lookahead <major>:<minor>` Set the lookahead sizes for the subaddress hash table.
+* `segregation-height <n>` Set to the height of a key reusing fork you want to use, 0 to use default.
+*  `ignore-outputs-above <amount>` Ignore outputs of amount above this threshold when spending. Value 0 is translated to the maximum value (18 million) which disables this filter.
+*  `ignore-outputs-below <amount>` Ignore outputs of amount below this threshold when spending.
+
 ---
 
 [<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
@@ -774,6 +754,7 @@ Show the incoming/outgoing transfers within an optional height range.
 
 [<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 ### `sign_multisig`
+
 `sign_multisig <filename>`
 
   Sign a multisig transaction from a file. See [MultiSig Guide](https://monero.stackexchange.com/questions/5646/how-to-use-monero-multisignature-wallets-2-2-2-3).
@@ -782,6 +763,7 @@ Show the incoming/outgoing transfers within an optional height range.
 
 [<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 ### `sign_transfer`
+
 `sign_transfer [export_raw]`
 
 Sign a transaction from a file. If the parameter "export_raw" is specified, transaction raw hex data suitable for the daemon RPC /sendrawtransaction is exported.
@@ -790,7 +772,8 @@ Sign a transaction from a file. If the parameter "export_raw" is specified, tran
 ---
 
 [<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
-### `spendkey`  
+### `spendkey`
+  
 `spendkey`  
 
 Display the private spend key.
@@ -800,6 +783,7 @@ Display the private spend key.
 
 [<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 ### `start_mining`
+
 `start_mining [<number_of_threads>] [bg_mining] [ignore_battery]`
 
 Start mining thread. 
@@ -808,6 +792,7 @@ Start mining thread.
 
 [<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 ### `status`
+
  `status`
 
 Show synchronization status
@@ -816,6 +801,7 @@ Show synchronization status
 
 [<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 ### `stop_mining`
+
 `stop_mining`
 
 Kills mining threads.
@@ -824,6 +810,7 @@ Kills mining threads.
 
 [<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 ### `submit_multisig`
+
 `submit_multisig <filename>`
 
   Submit a signed multisig transaction from a file
@@ -832,6 +819,7 @@ Kills mining threads.
 
 [<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 ### `submit_transfer`
+
 `submit_transfer`
 
   Submit a signed transaction from a file.
@@ -841,14 +829,17 @@ Kills mining threads.
 
 [<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 ### `sweep_all`
+
 `sweep_all [index=<N1>[,<N2>,...]] [<priority>] [<ring_size>] <address> [<payment_id>]`
 
 Send all unlocked balance to an address.  If the parameter `index<N1>[,<N2>,...]` is specified, the wallet sweeps outputs received by those address indices. If omitted, the wallet sweeps outputs received by all address indices.
+
 
 ---
 
 [<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 ### `sweep_below `
+
 `sweep_below <amount_threshold> [index=<N1>[,<N2>,...]] [<priority>] [<ring_size>] <address> [<payment_id>]`
 
 Send all unlocked outputs below an amount to an address. If the parameter `index<N1>[,<N2>,...]` is specified, the wallet sweeps outputs received by those address indices. If omitted, the wallet sweeps outputs received by all address indices.
@@ -875,6 +866,7 @@ Send a single output to an address.
 
 [<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 ### `transfer`
+
 `transfer [index=<N1>[,<N2>,...]] [<priority>] [<ring_size>] (<URI> | <address> <amount>) [<payment_id>]`
 
 
@@ -884,6 +876,7 @@ Transfer `<amount>` to `<address>`. If the parameter `index=<N1>[,<N2>,...]` is 
 
 [<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 ### `unspent_outputs`
+
 `unspent_outputs [index=<N1>[,<N2>,...]] [<min_amount> [<max_amount>]]`
 
 
@@ -893,6 +886,7 @@ Transfer `<amount>` to `<address>`. If the parameter `index=<N1>[,<N2>,...]` is 
 
 [<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 ### `verify`
+
 `verify <filename> <address> <signature>`
 
   Verify a signature on the contents of a file.
@@ -901,21 +895,27 @@ Transfer `<amount>` to `<address>`. If the parameter `index=<N1>[,<N2>,...]` is 
 
 [<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 ### `version`
+
 `version`
+
   Returns version information
 
 ---
 
 [<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 ### `viewkey`
+
 `viewkey`
+
   Display the private view key.
 
 ---
 
 [<span class="label"></span>](https://github.com/ivoryguru/aeondocs/issues/new?labels=question){: .md-button }
 ### `wallet_info`
+
  `wallet_info`
+ 
   Show the wallet's information.
 
 ---

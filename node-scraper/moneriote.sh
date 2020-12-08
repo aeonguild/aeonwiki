@@ -32,10 +32,6 @@ echo "# Open Nodes" >> open-nodes.md
 echo "" >> open-nodes.md
 echo "##" >> open-nodes.md
 echo "" >> open-nodes.md
-echo "Each machine that runs the AEON daemon software is considered a node. Public nodes, or open nodes, are nodes ran by unknown operators who allow you to use their node to broadcast your transaction. There are risks to using public nodes, such as IP+time logging, in which operators of the node can tell when your IP started a transaction. Due to the natural privacy of AEON, your destinations are unknown to that node!. 
-
-To see that your node on is added to this list, launch your daemon with the options \`--rpc-bind-ip 0.0.0.0 --rpc-bind-port 11181 --restricted-rpc --confirm-external-bind.\`" >> open-nodes.md
-echo "" >> open-nodes.md
 echo "##############"
 echo "Check network white nodes for domains to add"
 
@@ -66,7 +62,7 @@ do
 	echo "Checking ip: "$i
 	#Uncomment the below to check within the loop
 	#l_hit="$(curl -X POST http://$daemon:$bport/getheight -H 'Content-Type: application/json' | grep height | cut -f 2 -d : | cut -f 1 -d ,)"
-  #attempt to connect to each node, allowing 0.5 seconds for connection
+    #attempt to connect to each node, allowing 0.5 seconds for connection
 	r_hit="$(curl -m 0.5 -X POST http://$i:$port/getheight -H 'Content-Type: application/json' | grep height | cut -f 2 -d : | cut -f 1 -d ,)"
 	echo "Local Height: "$l_hit
 	echo "Remote Height: "$r_hit
@@ -91,8 +87,13 @@ do
 	echo "$i is closed"
 	fi
 done
+echo "" >> open-nodes.md
+echo "Each machine that runs the AEON daemon software is considered a node. Public nodes, or open nodes, are nodes ran by unknown operators who allow you to use their node to broadcast your transaction. There are risks to using public nodes, such as IP+time logging, in which operators of the node can tell when your IP started a transaction. Due to the natural privacy of AEON, your destinations are unknown to that node!. 
 
-
-echo "To use with aeon-wallet-cli, use these commands
-* Windows : \`aeon-wallet-cli.exe --daemon-address ADDRESS.OF.HOST:11181\`
-* Unix-type (ubuntu, MacOS) : \`./aeon-wallet-cli --daemon-address ADDRESS.OF.HOST:11181\`"
+To see that your node on is added to this list, launch your daemon with the options \`--rpc-bind-ip 0.0.0.0 --rpc-bind-port 11181 --restricted-rpc --confirm-external-bind.\`" >> open-nodes.md
+echo "" >> open-nodes.md
+echo "To use with aeon-wallet-cli, use these commands">>open-nodes.md
+echo "" >> open-nodes.md
+echo "* Windows : \`aeon-wallet-cli.exe --daemon-address ADDRESS.OF.HOST:11181\`">>open-nodes.md
+echo "" >> open-nodes.md
+echo "* Unix-type (ubuntu, MacOS) : \`./aeon-wallet-cli --daemon-address ADDRESS.OF.HOST:11181\`">> open-nodes.md

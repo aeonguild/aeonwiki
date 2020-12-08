@@ -1435,14 +1435,23 @@
                 
                 <h1 id="open-nodes">Open Nodes</h1>
 <h2 id="_1"></h2>
-<p>Each machine that runs the AEON daemon software is considered a node. Public nodes, or open nodes, are nodes ran by unknown operators who allow you to use their node to broadcast your transaction. There are risks to using public nodes, such as IP+time logging, in which operators of the node can tell when your IP started a transaction. Due to the natural privacy of AEON, your destinations are unknown to that node!. </p>
-<p>To see that your node on is added to this list, launch your daemon with the options <code>--rpc-bind-ip 0.0.0.0 --rpc-bind-port 11181 --restricted-rpc --confirm-external-bind.</code></p>
 <ul>
-<li><a href="http://www.vmi390948.contaboserver.net">95.111.247.164</a></li>
 <li><a href="http://www.hashvault.pro">144.76.113.157</a></li>
+<li><a href="http://www.vmi390948.contaboserver.net">95.111.247.164</a></li>
 <li><a href="http://www.defusion.de">95.216.145.71</a></li>
 <li><a href="http://www.static.30.16.9.5.clients.your-server.de">5.9.16.30</a></li>
 <li><a href="http://www.aeon.wiki">142.93.155.14</a></li>
+</ul>
+<p>Each machine that runs the AEON daemon software is considered a node. Public nodes, or open nodes, are nodes ran by unknown operators who allow you to use their node to broadcast your transaction. There are risks to using public nodes, such as IP+time logging, in which operators of the node can tell when your IP started a transaction. Due to the natural privacy of AEON, your destinations are unknown to that node!. </p>
+<p>To see that your node on is added to this list, launch your daemon with the options <code>--rpc-bind-ip 0.0.0.0 --rpc-bind-port 11181 --restricted-rpc --confirm-external-bind.</code></p>
+<p>To use with aeon-wallet-cli, use these commands</p>
+<ul>
+<li>
+<p>Windows : <code>aeon-wallet-cli.exe --daemon-address ADDRESS.OF.HOST:11181</code></p>
+</li>
+<li>
+<p>Unix-type (ubuntu, MacOS) : <code>./aeon-wallet-cli --daemon-address ADDRESS.OF.HOST:11181</code></p>
+</li>
 </ul>
                 
               
