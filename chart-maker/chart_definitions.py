@@ -1,6 +1,6 @@
 definitions = {
     'block_count_24h': {
-        'title' : 'Block Count (Previous 24h)',
+        'title' : 'Aeon Block Count (Previous 24h)',
         'file-name' : 'block_count_24h',
         'x-axis' : 'date',
         'y-axis' : 'Blocks',
@@ -14,7 +14,7 @@ definitions = {
         'interval' : '100',
     } , 
     'block_difficulty': {
-        'title' : 'Network Difficulty',
+        'title' : 'Aeon Difficulty',
         'file-name' : 'block_difficulty',
         'x-axis' : 'Date',
         'y-axis' : 'Hashes/Block',
@@ -28,7 +28,7 @@ definitions = {
         'interval' : '100',
     } , 
     'block_height': {
-        'title' : 'Block Height',
+        'title' : 'Aeon Block Height',
         'file-name' : 'block_height',
         'x-axis' : 'Date',
         'y-axis' : 'Blocks',
@@ -42,7 +42,7 @@ definitions = {
         'interval' : '100',
     } , 
     'block_reward': {
-        'title' : "Miner's Block Reward (Per Block)",
+        'title' : "Aeon Block Reward (Per Block)",
         'file-name' : 'block_reward',
         'x-axis' : 'Date',
         'y-axis' : 'Coins',
@@ -56,7 +56,7 @@ definitions = {
         'interval' : '100',
     } , 
     'block_size_cum': {
-        'title' : 'Blockchain Size',
+        'title' : 'Aeon Blockchain Size',
         'file-name' : 'block_size_cum',
         'x-axis' : 'Date',
         'y-axis' : 'b',
@@ -70,7 +70,7 @@ definitions = {
         'interval' : '100',
     } , 
     'block_size': {
-        'title' : 'Block Size Sum 30 days',
+        'title' : 'Aeon Blockchain Size Monthly Growth',
         'file-name' : 'block_size',
         'x-axis' : 'Date',
         'y-axis' : 'b',
@@ -84,7 +84,7 @@ definitions = {
         'interval' : '100',
     } , 
     'fee': {
-        'title' : 'Fee',
+        'title' : 'Aeon Transaction Fees',
         'file-name' : 'fee',
         'x-axis' : 'Date',
         'y-axis' : 'Coins',
@@ -98,7 +98,7 @@ definitions = {
         'interval' : '100',
     } , 
     'fee_usd': {
-        'title' : 'Fee $',
+        'title' : 'Aeon Transaction Fees in USD',
         'file-name' : 'fee_usd',
         'x-axis' : 'Date',
         'y-axis' : '$',
@@ -126,7 +126,7 @@ definitions = {
         'interval' : '100',
     } ,
     'inputs': {
-        'title' : 'Tx Inputs',
+        'title' : 'Aeon Transaction Inputs',
         'file-name' : 'inputs',
         'x-axis' : 'Date',
         'y-axis' : '#',
@@ -140,7 +140,7 @@ definitions = {
         'interval' : '100',
     } , 
     'marketcap': {
-        'title' : 'Value of Circulating Supply',
+        'title' : 'Aeon Marketcap Value of Total Supply',
         'file-name' : 'marketcap',
         'x-axis' : 'Date',
         'y-axis' : '$',
@@ -154,7 +154,7 @@ definitions = {
         'interval' : '100',
     } , 
     'marketcap_btc': {
-        'title' : 'Value of Circulating Supply (BTC)',
+        'title' : 'Aeon Marketcap Value of Total Supply Measured in Bitcoins',
         'file-name' : 'marketcap_btc',
         'x-axis' : 'Date',
         'y-axis' : 'BTC',
@@ -168,7 +168,7 @@ definitions = {
         'interval' : '100',
     } , 
     'marketcap_xmr': {
-        'title' : 'Value of Circulating Supply (XMR)',
+        'title' : 'Aeon Marketcap Value of Total Supply Measured in Monero',
         'file-name' : 'marketcap_xmr',
         'x-axis' : 'Date',
         'y-axis' : 'XMR',
@@ -182,7 +182,7 @@ definitions = {
         'interval' : '100',
     } , 
     'miner_revenue': {
-        'title' : "Miner's Revenue (Emission + Fees)",
+        'title' : "Aeon Miner's Revenue (Emission + Fees)",
         'file-name' : 'miner_revenue',
         'x-axis' : 'Date',
         'y-axis' : '$',
@@ -196,7 +196,7 @@ definitions = {
         'interval' : '100',
     } ,
     'nonce': {
-        'title' : 'Nonces',
+        'title' : 'Aeon Nonces',
         'file-name' : 'nonce',
         'x-axis' : 'Date',
         'y-axis' : 'Nonce Value Normalized by Maximum Nonce Value',
@@ -210,7 +210,7 @@ definitions = {
         'interval' : '50',
     } , 
     'nonce_dist': {
-        'title' : 'Nonce Distribution as Compared to a Uniform Distribution',
+        'title' : 'Aeon Nonce Randomness (100 is most random, 0 is less random)',
         'file-name' : 'nonce_dist',
         'x-axis' : 'Date',
         'y-axis' : 'Uniformity',
@@ -224,7 +224,7 @@ definitions = {
         'interval' : '100',
     } , 
     'outputs': {
-        'title' : 'Tx Outputs',
+        'title' : 'Aeon Transaction Outputs',
         'file-name' : 'outputs',
         'x-axis' : 'Date',
         'y-axis' : '#',
@@ -238,7 +238,7 @@ definitions = {
         'interval' : '100',
     } , 
     'outputs_inputs': {
-        'title' : 'Tx Outputs minus Inputs',
+        'title' : 'Aeon Transaction Outputs minus Inputs',
         'file-name' : 'outputs_inputs',
         'x-axis' : 'Date',
         'y-axis' : '#',
@@ -252,7 +252,7 @@ definitions = {
         'interval' : '100',
     } , 
     'price': {
-        'title' : 'Price',
+        'title' : 'Aeon Price in Dollars',
         'file-name' : 'price',
         'x-axis' : 'Date',
         'y-axis' : '$',
@@ -266,7 +266,7 @@ definitions = {
         'interval' : '100',
     } , 
     'price_btc': {
-        'title' : 'Price (BTC)',
+        'title' : 'Aeon Price in Bitcoins',
         'file-name' : 'price_btc',
         'x-axis' : 'Date',
         'y-axis' : 'BTC',
@@ -280,7 +280,7 @@ definitions = {
         'interval' : '100',
     } , 
     'price_xmr': {
-        'title' : 'Price (XMR)',
+        'title' : 'Aeon Price in Monero',
         'file-name' : 'price_xmr',
         'x-axis' : 'Date',
         'y-axis' : 'XMR',
@@ -294,7 +294,7 @@ definitions = {
         'interval' : '100',
     } , 
     'supply_circulating': {
-        'title' : 'Circulating Supply',
+        'title' : 'Aeon Circulating Supply',
         'file-name' : 'supply_circulating',
         'x-axis' : 'Date',
         'y-axis' : 'Coins',
@@ -308,7 +308,7 @@ definitions = {
         'interval' : '100',
     } , 
     'supply_locked': {
-        'title' : 'Locked Aeon',
+        'title' : 'Locked Aeon Supply',
         'file-name' : 'supply_locked',
         'x-axis' : 'Date',
         'y-axis' : 'Coins',
@@ -322,7 +322,7 @@ definitions = {
         'interval' : '100',
     } ,
     'supply_total': {
-        'title' : 'Total Supply',
+        'title' : 'Aeon Total Supply',
         'file-name' : 'supply_total',
         'x-axis' : 'Date',
         'y-axis' : 'Coins',
@@ -336,7 +336,7 @@ definitions = {
         'interval' : '100',
     } , 
     'tx': {
-        'title' : 'Transactions',
+        'title' : 'Aeon Transactions',
         'file-name' : 'tx',
         'x-axis' : 'Date',
         'y-axis' : 'Transactions',
@@ -350,7 +350,7 @@ definitions = {
         'interval' : '100',
     } , 
     'version': {
-        'title' : 'Version',
+        'title' : 'Aeon Version',
         'file-name' : 'version',
         'x-axis' : 'Date',
         'y-axis' : '#',
@@ -364,7 +364,7 @@ definitions = {
         'interval' : '100',
     } , 
     'volume': {
-        'title' : 'Transaction Output Volume',
+        'title' : 'Aeon Transaction Output Volume',
         'file-name' : 'volume',
         'x-axis' : 'Date',
         'y-axis' : 'Coins',
@@ -378,7 +378,7 @@ definitions = {
         'interval' : '100',
     } , 
     'volume_usd': {
-        'title' : 'Transaction Output Volume $',
+        'title' : 'Aeon Transaction Output Volume Measured in Dollars',
         'file-name' : 'volume_usd',
         'x-axis' : 'Date',
         'y-axis' : '$',
@@ -392,7 +392,7 @@ definitions = {
         'interval' : '100',
     } , 
     'volume_btc': {
-        'title' : 'Transaction Output Volume BTC',
+        'title' : 'Aeon Transaction Output Volume Measured in Bitcoins',
         'file-name' : 'volume_btc',
         'x-axis' : 'Date',
         'y-axis' : 'BTC',

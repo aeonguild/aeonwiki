@@ -53,11 +53,8 @@ def get_block_data():
     by_month['timestamp'] = blocks[-1][0]
     #initiate price
     p = price.pop()    
-    by_block['price'] = p[1]
     p_btc = price_btc.pop()    
-    by_block['btc_price'] = p_btc[1]
     p_xmr = price_xmr.pop()    
-    by_block['xmr_price'] = p_xmr[1]
     
     
     #stacks for fast processing
@@ -130,7 +127,7 @@ def get_block_data():
         while p[0] < x[0] and price:
             p = price.pop()
             by_block['price'] = p[1]
-        if(  by_block['price'] != None):
+        if(by_block['price'] != None):
             by_block['marketcap']=by_block['supply_total']*by_block['price']
             if(by_month['miner_revenue'] == None):
                 by_month['miner_revenue'] = 0
@@ -139,16 +136,22 @@ def get_block_data():
             by_month['miner_revenue'] += (x[3]+x[5])*by_block['price']
             by_month['volume_usd'] += x[13]*by_block['price']/(1.0*10**12)
             by_month['fee_usd'] += x[5]*by_block['price']
+        else:
+            by_month['miner_revenue'] = None
+            by_month['volume_usd'] = None
+            by_month['fee_usd'] = None
             
         #btc_price
         while p_btc[0] < x[0] and price_btc:
             p_btc = price_btc.pop()
             by_block['price_btc'] = p_btc[1]
-        if(  by_block['price_btc'] != None):
+        if(by_block['price_btc'] != None):
             if(by_month['volume_btc'] == None):
                 by_month['volume_btc'] = 0
             by_block['marketcap_btc']=by_block['supply_total']*by_block['price_btc']
             by_month['volume_btc'] += x[13]*by_block['price_btc']/(1.0*10**12)
+        else:
+            by_month['volume_btc'] = None
             
         #xmr_price
         while p_xmr[0] < x[0] and price_xmr:
