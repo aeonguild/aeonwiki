@@ -2,44 +2,47 @@ from cache import get_csv
 from collections import deque
 from statistics import median
 from math import exp, log
-
-last_block = {
-    'timestamp' : 0,
-    'block_count_24h' : 0,
-    'block_difficulty' : 0.1,
-    'block_height' : 0,
-    'block_reward' : 0,
-    'block_size_cum' : 0,
-    'block_size_30d' : 0,
-    'fee_24h' : 0,
-    'fee_24h_usd' : 0,
-    'inflation_1Y' : 0,
-    'inputs' : 0,
-    'marketcap' : 0,
-    'marketcap_btc' : 0,
-    'marketcap_xmr' : 0,
-    'miner_revenue_1Y': 0,
-    'miner_revenue_30d' : 0,
-    'nonce_dist' : 1,
-    'nonce' : 1,
-    'outputs' : 0,
-    'outputs_inputs' : 0,
-    'price' : 0,
-    'price_btc' : 0,
-    'price_xmr' : 0,
-    'supply_circulating' : 0,
-    'supply_locked' : 0,
-    'supply_total' : 0,
-    'tx_24h' : 0,
-    'version' : "0.0",
-    'volume_30d' : 0,
-    'volume_usd_30d' : 0,
-    'volume_btc_30d' : 0
-}
+from datetime import datetime
 
 def get_block_data():
+    by_block = {
+        'timestamp' : 0,
+        'block_count_24h' : None,
+        'block_difficulty' : None,
+        'block_height' : 0,
+        'block_reward' : None,
+        'block_size_cum' : 0,
+        'inflation_1Y' : 0,
+        'marketcap' : None,
+        'marketcap_btc' : None,
+        'marketcap_xmr' : None,
+        'nonce_dist' : 1,
+        'nonce' : 1,
+        'price' : None,
+        'price_btc' : None,
+        'price_xmr' : None,
+        'supply_circulating' : 0,
+        'supply_locked' : 0,
+        'supply_total' : 0,
+        'version' : "0.0",
+    }
+    by_month = {
+        'timestamp' : 0,
+        'block_size' : 0,
+        'fee' : 0,
+        'fee_usd' : None,
+        'inputs' : 0,
+        'miner_revenue' : None,
+        'outputs' : 0,
+        'outputs_inputs' : 0,
+        'tx' : 0,
+        'volume' : 0,
+        'volume_usd' : None,
+        'volume_btc' : None
+    }
     #setup output list with keys as first element
-    output = [[i] for i in list(last_block.keys())]
+    block_output = [[i] for i in list(by_block.keys())]
+    month_output = [[i] for i in list(by_month.keys())]
     
     #import data from csv
     blocks = get_csv("blocks")[::-1]
@@ -47,13 +50,14 @@ def get_block_data():
     price_btc = get_csv("price_btc")[::-1]
     price_xmr = get_csv("price_xmr")[::-1]
     
+    by_month['timestamp'] = blocks[-1][0]
     #initiate price
     p = price.pop()    
-    last_block['price'] = p[1]
+    by_block['price'] = p[1]
     p_btc = price_btc.pop()    
-    last_block['btc_price'] = p_btc[1]
+    by_block['btc_price'] = p_btc[1]
     p_xmr = price_xmr.pop()    
-    last_block['xmr_price'] = p_xmr[1]
+    by_block['xmr_price'] = p_xmr[1]
     
     
     #stacks for fast processing
@@ -74,7 +78,7 @@ def get_block_data():
     
     #block reward over 1y
     reward_1y = 0
-    
+    block_count = 0
     while blocks:
         #block data
         x = blocks.pop()
@@ -84,15 +88,15 @@ def get_block_data():
         #locked_txs
         if len(x[10])>0:
             locked_txs = locked_txs + [list(y) for y in x[10]]
-            last_block['supply_locked'] += sum([y[0] for y in x[10]])
+            by_block['supply_locked'] += sum([y[0] for y in x[10]])
         new_locked_txs = []
         while locked_txs:
             tx = locked_txs.pop()
             if tx[1] > 500000000 and tx[1] < x[0]:
-                last_block['supply_locked'] -= tx[0]
+                by_block['supply_locked'] -= tx[0]
             elif tx[1] == 1:
-                last_block['supply_locked'] -= tx[0]
-            elif tx[1]< last_block['timestamp']:
+                by_block['supply_locked'] -= tx[0]
+            elif tx[1]< by_block['timestamp']:
                 tx[1] = int(tx[1] - 1)
                 new_locked_txs.append(tx)
             else:
@@ -100,84 +104,79 @@ def get_block_data():
         locked_txs=new_locked_txs
             
         #no calculation data
-        last_block['timestamp'] = x[0]
-        last_block['block_height'] = int(x[1])
-        last_block['version'] = str(int(x[8]))+"."+str(int(x[9]))
-        last_block['block_reward'] = x[3]
-        last_block['supply_total'] += x[3]
-        last_block['supply_circulating'] = last_block['supply_total']-last_block['supply_locked']
-        last_block['block_size_cum'] += x[6]
-        last_block['block_difficulty'] = x[2]
+        by_block['timestamp'] = x[0]
+        by_block['block_height'] = int(x[1])
+        by_block['version'] = str(int(x[8]))+"."+str(int(x[9]))
+        by_block['supply_total'] += x[3]
+        by_block['supply_circulating'] = by_block['supply_total']-by_block['supply_locked']
+        by_block['block_size_cum'] += x[6]
+        if(x[1]>2000):
+            by_block['block_difficulty'] = x[2]
+            by_block['block_reward'] = x[3]
+            if(by_block['block_count_24h'] == None):
+                by_block['block_count_24h'] = block_count
+            
+        day.append(x[0]) 
+        block_count += 1   
+        if(by_block['block_count_24h'] != None):
+            by_block['block_count_24h'] += 1
+        while day[0] < x[0] - 24*60*60:
+            head = day.popleft()
+            block_count -= 1
+            if(by_block['block_count_24h'] != None):
+                by_block['block_count_24h'] -= 1
         
         #price
         while p[0] < x[0] and price:
             p = price.pop()
-            last_block['price'] = p[1]
+            by_block['price'] = p[1]
+        if(  by_block['price'] != None):
+            by_block['marketcap']=by_block['supply_total']*by_block['price']
+            if(by_month['miner_revenue'] == None):
+                by_month['miner_revenue'] = 0
+                by_month['volume_usd'] = 0
+                by_month['fee_usd'] = 0
+            by_month['miner_revenue'] += (x[3]+x[5])*by_block['price']
+            by_month['volume_usd'] += x[13]*by_block['price']/(1.0*10**12)
+            by_month['fee_usd'] += x[5]*by_block['price']
             
         #btc_price
         while p_btc[0] < x[0] and price_btc:
             p_btc = price_btc.pop()
-            last_block['price_btc'] = p_btc[1]
+            by_block['price_btc'] = p_btc[1]
+        if(  by_block['price_btc'] != None):
+            if(by_month['volume_btc'] == None):
+                by_month['volume_btc'] = 0
+            by_block['marketcap_btc']=by_block['supply_total']*by_block['price_btc']
+            by_month['volume_btc'] += x[13]*by_block['price_btc']/(1.0*10**12)
             
         #xmr_price
         while p_xmr[0] < x[0] and price_xmr:
             p_xmr = price_xmr.pop()
-            last_block['price_xmr'] = p_xmr[1]
+            by_block['price_xmr'] = p_xmr[1]
+        if(  by_block['price_xmr'] != None):
+            by_block['marketcap_xmr']=by_block['supply_total']*by_block['price_xmr']
             
-        #24h stats
-        day.append([x[0],x[4],x[5],x[11],x[12]])
-        last_block['block_count_24h'] += 1
-        last_block['tx_24h'] += x[4]
-        last_block['fee_24h'] += x[5]
-        last_block['inputs'] += x[11]
-        last_block['outputs'] += x[12]
-        last_block['outputs_inputs'] += (x[12]-x[11])
-        
-        #remove old data
-        while day[0][0] < x[0] - 24*60*60:
-            head = day.popleft()
-            last_block['block_count_24h'] -= 1
-            last_block['tx_24h'] -= head[1]
-            last_block['fee_24h'] -= head[2]
-            last_block['inputs'] -= head[3]
-            last_block['outputs'] -= head[4]
             
-        last_block['fee_24h_usd'] = last_block['fee_24h']*last_block['price']
-        
-        #month stats
-        month.append([x[0],x[3],x[5],x[6],x[13],last_block['price_btc'],last_block['price']])
-        last_block['miner_revenue_30d'] += (x[3]+x[5])*last_block['price']
-        last_block['volume_30d'] += x[13]/(1.0*10**12)
-        last_block['volume_usd_30d'] += x[13]*last_block['price']/(1.0*10**12)
-        last_block['volume_btc_30d'] += x[13]*last_block['price_btc']/(1.0*10**12)
-        last_block['block_size_30d'] += x[6]
-        
-        #remove old data
-        while month[0][0] < x[0] - 30*24*60*60:
-            head = month.popleft()
-            last_block['miner_revenue_30d'] -= (head[1]+head[2])*head[6]
-            last_block['volume_30d'] -= head[4]/(1.0*10**12)
-            last_block['volume_usd_30d'] -= head[4]*head[6]/(1.0*10**12)
-            last_block['volume_btc_30d'] -= head[4]*head[5]/(1.0*10**12)
-            last_block['block_size_30d'] -= head[3]
+        by_month['fee'] += x[5]
+        by_month['tx'] += x[4]
+        by_month['volume'] += x[13]/(1.0*10**12)
+        by_month['block_size'] += x[6]
+        by_month['inputs'] += x[11]
+        by_month['outputs'] += x[12]
+        by_month['outputs_inputs'] += (x[12]-x[11])
         
         #inflation 1y %
-        year.append([x[0],x[3],x[5],last_block['price']])
+        year.append([x[0],x[3]])
         reward_1y += x[3]
-        last_block['miner_revenue_1Y'] += last_block['price']*(x[3]+x[5])
         while year[0][0] < x[0] - 365*24*60*60:
             amt = year.popleft()
             reward_1y -= amt[1]
-            last_block['miner_revenue_1Y'] -= amt[3]*(amt[1]+amt[2])
-        last_block['inflation_1Y']  = 100 * reward_1y / last_block['supply_total']
-        last_block['marketcap']=last_block['supply_total']*last_block['price']
-        last_block['marketcap_btc']=last_block['supply_total']*last_block['price_btc']
-        last_block['marketcap_xmr']=last_block['supply_total']*last_block['price_xmr']
+        by_block['inflation_1Y']  = 100 * reward_1y / by_block['supply_total']
    	    
         #nonce uniformity
         #calculate which bin the nonce belongs in like a histogram
-
-        if last_block['block_height']==1146200:
+        if by_block['block_height']==1146200:
             #nonce uniformity constants
             #there are 2160 nonces and 2160 bins
             max_nonce = 2**64
@@ -202,10 +201,30 @@ def get_block_data():
                 singleton_bins -= 1
         #assuming the nonces are uniformly random, singleton_bins / 2160 == 1 / e
         #thus e * singleton_bins / 2160 == 1
-        last_block['nonce_dist'] = (exp(1)*singleton_bins/(360*3))*100
-        last_block['nonce'] = int(x[7])*100/max_nonce
+        by_block['nonce_dist'] = (exp(1)*singleton_bins/(360*3))*100
+        by_block['nonce'] = int(x[7])*100/max_nonce
             
-        for i in range(len(output)):
-            output[i].append(list(last_block.values())[i])
+        for i in range(len(block_output)):
+            block_output[i].append(list(by_block.values())[i])
         
-    return output
+        if datetime.fromtimestamp(x[0]).strftime('%B') != datetime.fromtimestamp(by_month['timestamp']).strftime('%B'):
+            for i in range(len(month_output)):
+                month_output[i].append(list(by_month.values())[i])
+            by_month = {
+                'timestamp' : x[0],
+                'block_size' : 0,
+                'fee' : 0,
+                'fee_usd' : 0,
+                'inputs' : 0,
+                'miner_revenue' : 0,
+                'outputs' : 0,
+                'outputs_inputs' : 0,
+                'tx' : 0,
+                'volume' : 0,
+                'volume_usd' : 0,
+                'volume_btc' : 0
+            }
+        else:
+            by_month['timestamp'] = x[0]
+        
+    return [block_output,month_output]

@@ -31,25 +31,21 @@ nav:
   - Network info: 
     - Block explorer: 'https://explorer.aeon.wiki'
     - Charts: 
-      - Block Count:
-        - Daily: 'network-info/charts/block_count_24h.md'
-        - Total: 'network-info/charts/block_height.md'
-      - Block Difficulty: 'network-info/charts/block_difficulty.md'
-      - Block Reward: 'network-info/charts/block_reward.md'
-      - Block Size: 
-        - Monthly: 'network-info/charts/block_size_30d.md'
-        - Total: 'network-info/charts/block_size_cum.md'
-      - Fees:
-        - AEON: 'network-info/charts/fee_24h.md'
-        - USD: 'network-info/charts/fee_24h_usd.md'
+      - Blocks:
+          - Count:
+            - Daily: 'network-info/charts/block_count_24h.md'
+            - Total: 'network-info/charts/block_height.md'
+          - Reward: 'network-info/charts/block_reward.md'
+          - Size: 
+            - Monthly: 'network-info/charts/block_size.md'
+            - Total: 'network-info/charts/block_size_cum.md'
+      - Difficulty: 'network-info/charts/block_difficulty.md'
       - Inflation: 'network-info/charts/inflation_1Y.md'
       - Marketcap:
         - USD: 'network-info/charts/marketcap.md'
         - BTC: 'network-info/charts/marketcap_btc.md'
         - XMR: 'network-info/charts/marketcap_xmr.md'
-      - Miner Revenue:
-        - Monthly: 'network-info/charts/miner_revenue_30d.md'
-        - Yearly: 'network-info/charts/miner_revenue_1Y.md'
+      - Miner Revenue: 'network-info/charts/miner_revenue.md'
       - Nonces:
         - Values: 'network-info/charts/nonce.md'
         - Randomness: 'network-info/charts/nonce_dist.md'
@@ -61,15 +57,19 @@ nav:
         - Circulating: 'network-info/charts/supply_circulating.md'
         - Locked: 'network-info/charts/supply_locked.md'
         - Total: 'network-info/charts/supply_total.md'
-      - Transaction Volume: 
-        - AEON: 'network-info/charts/volume_30d.md'
-        - BTC: 'network-info/charts/volume_btc_30d.md'
-        - USD: 'network-info/charts/volume_usd_30d.md'
-      - Transaction Signatures: 
-        - Inputs: 'network-info/charts/inputs.md'
-        - Outputs: 'network-info/charts/outputs.md'
-        - Outputs-Inputs: 'network-info/charts/outputs_inputs.md'
-      - Transactions: 'network-info/charts/tx_24h.md'
+      - Transactions:
+          - Count: 'network-info/charts/tx.md'
+          - Fees:
+            - AEON: 'network-info/charts/fee.md'
+            - USD: 'network-info/charts/fee_usd.md'
+          - Volume: 
+            - AEON: 'network-info/charts/volume.md'
+            - BTC: 'network-info/charts/volume_btc.md'
+            - USD: 'network-info/charts/volume_usd.md'
+          - Inputs/Outputs: 
+            - Inputs: 'network-info/charts/inputs.md'
+            - Outputs: 'network-info/charts/outputs.md'
+            - Outputs-Inputs: 'network-info/charts/outputs_inputs.md'
       - Version: 'network-info/charts/version.md'
     - Open Nodes: 'network-info/open-nodes.md'
   - Who and why:
@@ -80,7 +80,7 @@ nav:
     - The name: 'who-and-why/the-name.md'
 theme: 
   logo: img.svg
-  favicon: img.svg
+  favicon: shield-ae.png
   palette:
     scheme: default
   name: material
