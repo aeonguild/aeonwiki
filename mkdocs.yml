@@ -37,9 +37,8 @@ nav:
       - Block Difficulty: 'network-info/charts/block_difficulty.md'
       - Block Reward: 'network-info/charts/block_reward.md'
       - Block Size: 
-        - Median: 'network-info/charts/block_size_median_24h.md'
+        - Monthly: 'network-info/charts/block_size_30d.md'
         - Total: 'network-info/charts/block_size_cum.md'
-      - Block Time: 'network-info/charts/block_time_median_24h.md'
       - Fees:
         - AEON: 'network-info/charts/fee_24h.md'
         - USD: 'network-info/charts/fee_24h_usd.md'
@@ -49,7 +48,7 @@ nav:
         - BTC: 'network-info/charts/marketcap_btc.md'
         - XMR: 'network-info/charts/marketcap_xmr.md'
       - Miner Revenue:
-        - Daily: 'network-info/charts/miner_revenue_24h.md'
+        - Monthly: 'network-info/charts/miner_revenue_30d.md'
         - Yearly: 'network-info/charts/miner_revenue_1Y.md'
       - Nonces:
         - Values: 'network-info/charts/nonce.md'
@@ -63,9 +62,9 @@ nav:
         - Locked: 'network-info/charts/supply_locked.md'
         - Total: 'network-info/charts/supply_total.md'
       - Transaction Volume: 
-        - AEON: 'network-info/charts/volume.md'
-        - BTC: 'network-info/charts/volume_btc.md'
-        - USD: 'network-info/charts/volume_usd.md'
+        - AEON: 'network-info/charts/volume_30d.md'
+        - BTC: 'network-info/charts/volume_btc_30d.md'
+        - USD: 'network-info/charts/volume_usd_30d.md'
       - Transaction Signatures: 
         - Inputs: 'network-info/charts/inputs.md'
         - Outputs: 'network-info/charts/outputs.md'

@@ -10,8 +10,7 @@ last_block = {
     'block_height' : 0,
     'block_reward' : 0,
     'block_size_cum' : 0,
-    'block_size_median_24h' : 0,
-    'block_time_median_24h' : 10,
+    'block_size_30d' : 0,
     'fee_24h' : 0,
     'fee_24h_usd' : 0,
     'inflation_1Y' : 0,
@@ -19,8 +18,8 @@ last_block = {
     'marketcap' : 0,
     'marketcap_btc' : 0,
     'marketcap_xmr' : 0,
-    'miner_revenue_1Y': 0.0,
-    'miner_revenue_24h' : 0,
+    'miner_revenue_1Y': 0,
+    'miner_revenue_30d' : 0,
     'nonce_dist' : 1,
     'nonce' : 1,
     'outputs' : 0,
@@ -33,9 +32,9 @@ last_block = {
     'supply_total' : 0,
     'tx_24h' : 0,
     'version' : "0.0",
-    'volume' : 0,
-    'volume_usd' : 0,
-    'volume_btc' : 0
+    'volume_30d' : 0,
+    'volume_usd_30d' : 0,
+    'volume_btc_30d' : 0
 }
 
 def get_block_data():
@@ -59,11 +58,10 @@ def get_block_data():
     
     #stacks for fast processing
     day = deque([])
+    month = deque([])
     year = deque([])
     nonces = deque([])
-    block_size = deque([])
-    block_time = deque([])
-    last_time = blocks[-1][0]-240
+    
     #nonce uniformity constants
     #there are 2160 nonces and 2160 bins
     max_nonce=2**32
@@ -73,10 +71,9 @@ def get_block_data():
     #the number of bins with exactly 1 nonce should be about 1/e
     singleton_bins = 0
     locked_txs=[]
+    
     #block reward over 1y
     reward_1y = 0
-    #fees 24h
-    fee_24h = 0
     
     while blocks:
         #block data
@@ -128,39 +125,42 @@ def get_block_data():
             last_block['price_xmr'] = p_xmr[1]
             
         #24h stats
-        day.append([x[0],x[3],x[4],x[5],x[11],x[12],x[13],x[13]*last_block['price'],x[13]*last_block['price_btc'],last_block['price']])
+        day.append([x[0],x[4],x[5],x[11],x[12]])
         last_block['block_count_24h'] += 1
-        last_block['miner_revenue_24h'] += (x[3]+x[5])*last_block['price']
         last_block['tx_24h'] += x[4]
         last_block['fee_24h'] += x[5]
         last_block['inputs'] += x[11]
         last_block['outputs'] += x[12]
         last_block['outputs_inputs'] += (x[12]-x[11])
-        last_block['volume'] += x[13]/(1.0*10**12)
-        last_block['volume_usd'] += x[13]*last_block['price']/(1.0*10**12)
-        last_block['volume_btc'] += x[13]*last_block['price_btc']/(1.0*10**12)
-        block_time.append(x[0]-last_time)
-        last_time = x[0]
-        block_size.append(x[6])
         
         #remove old data
         while day[0][0] < x[0] - 24*60*60:
             head = day.popleft()
             last_block['block_count_24h'] -= 1
-            last_block['miner_revenue_24h'] -= (head[1]+head[3])*head[9]
-            last_block['tx_24h'] -= head[2]
-            last_block['fee_24h'] -= head[3]
-            last_block['inputs'] -= head[4]
-            last_block['outputs'] -= head[5]
-            last_block['volume'] -= head[6]/(1.0*10**12)
-            last_block['volume_usd'] -= head[7]/(1.0*10**12)
-            last_block['volume_btc'] -= head[8]/(1.0*10**12)
-            block_size.popleft()
-            block_time.popleft()
-            last_block['block_size_median_24h'] = median(block_size)
-            last_block['block_time_median_24h'] = median(block_time)
-        
+            last_block['tx_24h'] -= head[1]
+            last_block['fee_24h'] -= head[2]
+            last_block['inputs'] -= head[3]
+            last_block['outputs'] -= head[4]
+            
         last_block['fee_24h_usd'] = last_block['fee_24h']*last_block['price']
+        
+        #month stats
+        month.append([x[0],x[3],x[5],x[6],x[13],last_block['price_btc'],last_block['price']])
+        last_block['miner_revenue_30d'] += (x[3]+x[5])*last_block['price']
+        last_block['volume_30d'] += x[13]/(1.0*10**12)
+        last_block['volume_usd_30d'] += x[13]*last_block['price']/(1.0*10**12)
+        last_block['volume_btc_30d'] += x[13]*last_block['price_btc']/(1.0*10**12)
+        last_block['block_size_30d'] += x[6]
+        
+        #remove old data
+        while month[0][0] < x[0] - 30*24*60*60:
+            head = month.popleft()
+            last_block['miner_revenue_30d'] -= (head[1]+head[2])*head[6]
+            last_block['volume_30d'] -= head[4]/(1.0*10**12)
+            last_block['volume_usd_30d'] -= head[4]*head[6]/(1.0*10**12)
+            last_block['volume_btc_30d'] -= head[4]*head[5]/(1.0*10**12)
+            last_block['block_size_30d'] -= head[3]
+        
         #inflation 1y %
         year.append([x[0],x[3],x[5],last_block['price']])
         reward_1y += x[3]
