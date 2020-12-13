@@ -1,3 +1,7 @@
+---
+template: base.html
+title: "aeon-wallet-rpc Documentation (Commands)"
+---
 [<span class="label_source"></span>](#){: .md-button }
 # Wallet RPC
 

@@ -1,45 +1,10 @@
-from cache import get_csv
+from data import get_csv
 from collections import deque
-from statistics import median
 from math import exp, log
 from datetime import datetime
 
 def get_block_data():
-    by_block = {
-        'timestamp' : 0,
-        'block_count_24h' : None,
-        'block_difficulty' : None,
-        'block_height' : 0,
-        'block_reward' : None,
-        'block_size_cum' : 0,
-        'inflation_1Y' : 0,
-        'marketcap' : None,
-        'marketcap_btc' : None,
-        'marketcap_xmr' : None,
-        'nonce_dist' : 1,
-        'nonce' : 1,
-        'price' : None,
-        'price_btc' : None,
-        'price_xmr' : None,
-        'supply_circulating' : 0,
-        'supply_locked' : 0,
-        'supply_total' : 0,
-        'version' : "0.0",
-    }
-    by_month = {
-        'timestamp' : 0,
-        'block_size' : 0,
-        'fee' : 0,
-        'fee_usd' : None,
-        'inputs' : 0,
-        'miner_revenue' : None,
-        'outputs' : 0,
-        'outputs_inputs' : 0,
-        'tx' : 0,
-        'volume' : 0,
-        'volume_usd' : None,
-        'volume_btc' : None
-    }
+    from template import by_block, by_month
     #setup output list with keys as first element
     block_output = [[i] for i in list(by_block.keys())]
     month_output = [[i] for i in list(by_month.keys())]
@@ -210,7 +175,7 @@ def get_block_data():
         for i in range(len(block_output)):
             block_output[i].append(list(by_block.values())[i])
         
-        if datetime.fromtimestamp(x[0]).strftime('%B') != datetime.fromtimestamp(by_month['timestamp']).strftime('%B'):
+        if datetime.fromtimestamp(x[0]).strftime('%B') != datetime.fromtimestamp(by_month['timestamp']).strftime('%B') or len(blocks)==0:
             for i in range(len(month_output)):
                 month_output[i].append(list(by_month.values())[i])
             by_month = {
@@ -229,5 +194,4 @@ def get_block_data():
             }
         else:
             by_month['timestamp'] = x[0]
-        
     return [block_output,month_output]

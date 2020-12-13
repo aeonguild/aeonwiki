@@ -1,4 +1,6 @@
-# [Code of Conduct (22/C4.1)](http://rfc.zeromq.org/spec:22)
+# Code of Conduct 
+
+[Code of Conduct (22/C4.1)](http://rfc.zeromq.org/spec:22)
 
 ## License
 

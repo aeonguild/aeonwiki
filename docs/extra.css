@@ -23,7 +23,7 @@ h1, .md-header-nav__title, .md-nav--primary .md-nav__title[for="__drawer"]{
     transition: color 125ms,background-color 125ms,border-color 125ms;
 }
 .md-footer-copyright{
-    display: none;
+    content: "APACHE LICENSE 2.0";
 }
 :root {
   --md-primary-fg-color:        #000000;

@@ -1,3 +1,8 @@
+---
+template: base.html
+title: "aeond Documentation (Commands)"
+---
+
 [<span class="label_source"></span>](#){: .md-button }
 # aeond
 

@@ -1,7 +1,7 @@
 <span style="margin:auto; display:table;
     color: black;
-    font-size: 8em;
-    font-family:lindsay-becker"><img src="img.svg" style="width:.75em;height:.75em;">    ÆON    <img src="ae-coin.svg" style="width:.75em;height:.75em;"></span>
+    font-size: 6em;
+    font-family:lindsay-becker">ÆON.WIKI</span>
 
 # Welcome to aeon.wiki!
 

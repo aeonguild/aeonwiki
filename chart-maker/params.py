@@ -1,4 +1,4 @@
-definitions = {
+params = {
     'block_count_24h': {
         'title' : 'Aeon Block Count (Previous 24h)',
         'file-name' : 'block_count_24h',
@@ -396,7 +396,7 @@ definitions = {
         'file-name' : 'volume_btc',
         'x-axis' : 'Date',
         'y-axis' : 'BTC',
-        'logScale' : 'true',
+        'logScale' : 'none',
         'lineWidth' : '1',
         'curveType' : 'none',
         'format' : '0.000E+00',
@@ -404,7 +404,7 @@ definitions = {
         'chartType': 'ColumnChart',
         'pointSize' : '0',
         'interval' : '100',
-    } , 
+    } 
 }
 
 

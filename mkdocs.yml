@@ -80,7 +80,7 @@ nav:
     - The name: 'who-and-why/the-name.md'
 theme: 
   logo: img.svg
-  favicon: shield-ae.png
+  favicon: ae-coin.png
   palette:
     scheme: default
   name: material
@@ -88,7 +88,13 @@ theme:
   font:
     text: Ubuntu Mono
     code: Courier
+extra:
+    social:
+        - icon: fontawesome/brands/twitter
+          link: https://twitter.com/AeonCommunity
+          name: AeonCommunity on Twitter
 markdown_extensions:
   - attr_list
+copyright: Copyright 2020 aeon.wiki. <br> Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. <br>You may obtain a copy of the License at <a href="http://www.apache.org/licenses/LICENSE-2.0">apache.org</a>
 extra_css:
   - extra.css
