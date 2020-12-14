@@ -1,5 +1,5 @@
 ---
 template: data.html
-title: "Aeon Block Reward"
+title: "Aeon Block Reward Chart"
 ---
 

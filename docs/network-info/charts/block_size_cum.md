@@ -1,5 +1,5 @@
 ---
 template: data.html
-title: "Aeon Blockchain Size"
+title: "Aeon Blockchain Size Chart"
 ---
 

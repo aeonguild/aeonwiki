@@ -22,14 +22,11 @@ h1, .md-header-nav__title, .md-nav--primary .md-nav__title[for="__drawer"]{
     border: 0.01rem solid currentColor;
     transition: color 125ms,background-color 125ms,border-color 125ms;
 }
-.md-footer-copyright{
-    content: "APACHE LICENSE 2.0";
-}
 :root {
-  --md-primary-fg-color:        #000000;
-  --md-primary-fg-color--dark:  #444444;
-  --md-primary-fg-color--light: #5fbcd3;
-  --md-accent-fg-color: #5fbcd3;
+  --md-primary-fg-color:        #8b6b61;
+  --md-primary-fg-color--dark:  #005662;
+  --md-primary-fg-color--light: #4fb3bf;
+  --md-accent-fg-color: #00838f;
 }
 .label:after{
     content:'?';

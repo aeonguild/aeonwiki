@@ -1,8 +1,8 @@
-cd chart-maker/
+cd charts/
 python3 exec.py
 cd ..
 rm -r docs/network-info/charts/*/
-cp -r chart-maker/charts/* docs/network-info/charts/
+cp -r charts/charts/* docs/network-info/charts/
 
 #./node-scraper/moneriote.sh
 #mv node-scraper/open-nodes.md docs/network-info/

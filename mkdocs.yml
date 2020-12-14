@@ -49,6 +49,7 @@ nav:
       - Nonces:
         - Values: 'network-info/charts/nonce.md'
         - Randomness: 'network-info/charts/nonce_dist.md'
+        - Recent Values: 'network-info/charts/nonce_recent.md'
       - Price:
         - BTC: 'network-info/charts/price_btc.md'
         - USD: 'network-info/charts/price.md'
