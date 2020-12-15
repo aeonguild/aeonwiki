@@ -140,7 +140,7 @@ def get_block_data():
         while year[0][0] < x[0] - 365*24*60*60:
             amt = year.popleft()
             reward_1y -= amt[1]
-        by_block['inflation_1Y']  = 100 * reward_1y / by_block['supply_total']
+        by_block['inflation_1Y']  = reward_1y / by_block['supply_total']
    	    
         #nonce uniformity
         #calculate which bin the nonce belongs in like a histogram
@@ -169,8 +169,8 @@ def get_block_data():
                 singleton_bins -= 1
         #assuming the nonces are uniformly random, singleton_bins / 2160 == 1 / e
         #thus e * singleton_bins / 2160 == 1
-        by_block['nonce_dist'] = (exp(1)*singleton_bins/(360*3))*100
-        by_block['nonce'] = int(x[7])*100/max_nonce
+        by_block['nonce_dist'] = (exp(1)*singleton_bins/(360*3))
+        by_block['nonce'] = int(x[7])/max_nonce
             
         for i in range(len(block_output)):
             block_output[i].append(list(by_block.values())[i])
